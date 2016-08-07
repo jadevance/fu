@@ -13,6 +13,8 @@
 		01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4571D57D2CA00C972C3 /* Assets.xcassets */; };
 		01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */; };
 		01ADD4661D57D2CA00C972C3 /* Fuzz_TherapyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4651D57D2CA00C972C3 /* Fuzz_TherapyTests.swift */; };
+		9EAD50AB34D779E0A23B0AE2 /* Pods_Fuzz_Therapy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD4EBBF3CB9E5118425E455 /* Pods_Fuzz_Therapy.framework */; };
+		C3AD7E0FB537D731009F7573 /* Pods_Fuzz_TherapyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C0F97922918A5B9E2A7AAC /* Pods_Fuzz_TherapyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,12 @@
 		01ADD4611D57D2CA00C972C3 /* Fuzz TherapyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fuzz TherapyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADD4651D57D2CA00C972C3 /* Fuzz_TherapyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuzz_TherapyTests.swift; sourceTree = "<group>"; };
 		01ADD4671D57D2CA00C972C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C0725DAE2AC67EB2AC541A3 /* Pods-Fuzz TherapyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fuzz TherapyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fuzz TherapyTests/Pods-Fuzz TherapyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		64C0F97922918A5B9E2A7AAC /* Pods_Fuzz_TherapyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fuzz_TherapyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71502F4D950FE5773A7B7DBD /* Pods-Fuzz Therapy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fuzz Therapy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fuzz Therapy/Pods-Fuzz Therapy.release.xcconfig"; sourceTree = "<group>"; };
+		7E1E28C65058D8322D65CFE8 /* Pods-Fuzz TherapyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fuzz TherapyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fuzz TherapyTests/Pods-Fuzz TherapyTests.release.xcconfig"; sourceTree = "<group>"; };
+		AAD4CD877C0E515AB5DA8693 /* Pods-Fuzz Therapy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fuzz Therapy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fuzz Therapy/Pods-Fuzz Therapy.debug.xcconfig"; sourceTree = "<group>"; };
+		DFD4EBBF3CB9E5118425E455 /* Pods_Fuzz_Therapy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fuzz_Therapy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EAD50AB34D779E0A23B0AE2 /* Pods_Fuzz_Therapy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AD7E0FB537D731009F7573 /* Pods_Fuzz_TherapyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 				01ADD44F1D57D2CA00C972C3 /* Fuzz Therapy */,
 				01ADD4641D57D2CA00C972C3 /* Fuzz TherapyTests */,
 				01ADD44E1D57D2CA00C972C3 /* Products */,
+				8EF25A5B56B3F2D025F9B7B8 /* Pods */,
+				7AFF24913A19BC74FA299B9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +108,26 @@
 			path = "Fuzz TherapyTests";
 			sourceTree = "<group>";
 		};
+		7AFF24913A19BC74FA299B9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFD4EBBF3CB9E5118425E455 /* Pods_Fuzz_Therapy.framework */,
+				64C0F97922918A5B9E2A7AAC /* Pods_Fuzz_TherapyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EF25A5B56B3F2D025F9B7B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAD4CD877C0E515AB5DA8693 /* Pods-Fuzz Therapy.debug.xcconfig */,
+				71502F4D950FE5773A7B7DBD /* Pods-Fuzz Therapy.release.xcconfig */,
+				5C0725DAE2AC67EB2AC541A3 /* Pods-Fuzz TherapyTests.debug.xcconfig */,
+				7E1E28C65058D8322D65CFE8 /* Pods-Fuzz TherapyTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01ADD46A1D57D2CA00C972C3 /* Build configuration list for PBXNativeTarget "Fuzz Therapy" */;
 			buildPhases = (
+				F14F8DACEBA5605EAA0A1489 /* [CP] Check Pods Manifest.lock */,
 				01ADD4491D57D2CA00C972C3 /* Sources */,
 				01ADD44A1D57D2CA00C972C3 /* Frameworks */,
 				01ADD44B1D57D2CA00C972C3 /* Resources */,
+				4F863F11237ABFFC2084DD5F /* [CP] Embed Pods Frameworks */,
+				C738255F00B170D64687F1E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01ADD46D1D57D2CA00C972C3 /* Build configuration list for PBXNativeTarget "Fuzz TherapyTests" */;
 			buildPhases = (
+				FF453C4478D09618A4B517E2 /* [CP] Check Pods Manifest.lock */,
 				01ADD45D1D57D2CA00C972C3 /* Sources */,
 				01ADD45E1D57D2CA00C972C3 /* Frameworks */,
 				01ADD45F1D57D2CA00C972C3 /* Resources */,
+				C1BEA324D4E7AA4850DC785F /* [CP] Embed Pods Frameworks */,
+				95B86AF327E035714C00B520 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +229,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F863F11237ABFFC2084DD5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fuzz Therapy/Pods-Fuzz Therapy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95B86AF327E035714C00B520 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fuzz TherapyTests/Pods-Fuzz TherapyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1BEA324D4E7AA4850DC785F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fuzz TherapyTests/Pods-Fuzz TherapyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C738255F00B170D64687F1E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fuzz Therapy/Pods-Fuzz Therapy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F14F8DACEBA5605EAA0A1489 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF453C4478D09618A4B517E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01ADD4491D57D2CA00C972C3 /* Sources */ = {
@@ -327,6 +458,7 @@
 		};
 		01ADD46B1D57D2CA00C972C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAD4CD877C0E515AB5DA8693 /* Pods-Fuzz Therapy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Fuzz Therapy/Info.plist";
@@ -338,6 +470,7 @@
 		};
 		01ADD46C1D57D2CA00C972C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71502F4D950FE5773A7B7DBD /* Pods-Fuzz Therapy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Fuzz Therapy/Info.plist";
@@ -349,6 +482,7 @@
 		};
 		01ADD46E1D57D2CA00C972C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0725DAE2AC67EB2AC541A3 /* Pods-Fuzz TherapyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Fuzz TherapyTests/Info.plist";
@@ -361,6 +495,7 @@
 		};
 		01ADD46F1D57D2CA00C972C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E1E28C65058D8322D65CFE8 /* Pods-Fuzz TherapyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Fuzz TherapyTests/Info.plist";
@@ -390,6 +525,7 @@
 				01ADD46C1D57D2CA00C972C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01ADD46D1D57D2CA00C972C3 /* Build configuration list for PBXNativeTarget "Fuzz TherapyTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +534,7 @@
 				01ADD46F1D57D2CA00C972C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
