@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */; };
+		01ADD4531D57D2CA00C972C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4521D57D2CA00C972C3 /* ViewController.swift */; };
+		01ADD4561D57D2CA00C972C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4541D57D2CA00C972C3 /* Main.storyboard */; };
+		01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4571D57D2CA00C972C3 /* Assets.xcassets */; };
+		01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */; };
+		01ADD4661D57D2CA00C972C3 /* Fuzz_TherapyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4651D57D2CA00C972C3 /* Fuzz_TherapyTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01ADD4621D57D2CA00C972C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01ADD4451D57D2CA00C972C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01ADD44C1D57D2CA00C972C3;
+			remoteInfo = "Fuzz Therapy";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01ADD44D1D57D2CA00C972C3 /* Fuzz Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuzz Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01ADD4521D57D2CA00C972C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01ADD4551D57D2CA00C972C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01ADD4571D57D2CA00C972C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01ADD45A1D57D2CA00C972C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01ADD45C1D57D2CA00C972C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01ADD4611D57D2CA00C972C3 /* Fuzz TherapyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fuzz TherapyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01ADD4651D57D2CA00C972C3 /* Fuzz_TherapyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuzz_TherapyTests.swift; sourceTree = "<group>"; };
+		01ADD4671D57D2CA00C972C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01ADD44A1D57D2CA00C972C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01ADD45E1D57D2CA00C972C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01ADD4441D57D2CA00C972C3 = {
+			isa = PBXGroup;
+			children = (
+				01ADD44F1D57D2CA00C972C3 /* Fuzz Therapy */,
+				01ADD4641D57D2CA00C972C3 /* Fuzz TherapyTests */,
+				01ADD44E1D57D2CA00C972C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01ADD44E1D57D2CA00C972C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01ADD44D1D57D2CA00C972C3 /* Fuzz Therapy.app */,
+				01ADD4611D57D2CA00C972C3 /* Fuzz TherapyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01ADD44F1D57D2CA00C972C3 /* Fuzz Therapy */ = {
+			isa = PBXGroup;
+			children = (
+				01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */,
+				01ADD4521D57D2CA00C972C3 /* ViewController.swift */,
+				01ADD4541D57D2CA00C972C3 /* Main.storyboard */,
+				01ADD4571D57D2CA00C972C3 /* Assets.xcassets */,
+				01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */,
+				01ADD45C1D57D2CA00C972C3 /* Info.plist */,
+			);
+			path = "Fuzz Therapy";
+			sourceTree = "<group>";
+		};
+		01ADD4641D57D2CA00C972C3 /* Fuzz TherapyTests */ = {
+			isa = PBXGroup;
+			children = (
+				01ADD4651D57D2CA00C972C3 /* Fuzz_TherapyTests.swift */,
+				01ADD4671D57D2CA00C972C3 /* Info.plist */,
+			);
+			path = "Fuzz TherapyTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01ADD44C1D57D2CA00C972C3 /* Fuzz Therapy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01ADD46A1D57D2CA00C972C3 /* Build configuration list for PBXNativeTarget "Fuzz Therapy" */;
+			buildPhases = (
+				01ADD4491D57D2CA00C972C3 /* Sources */,
+				01ADD44A1D57D2CA00C972C3 /* Frameworks */,
+				01ADD44B1D57D2CA00C972C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fuzz Therapy";
+			productName = "Fuzz Therapy";
+			productReference = 01ADD44D1D57D2CA00C972C3 /* Fuzz Therapy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01ADD4601D57D2CA00C972C3 /* Fuzz TherapyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01ADD46D1D57D2CA00C972C3 /* Build configuration list for PBXNativeTarget "Fuzz TherapyTests" */;
+			buildPhases = (
+				01ADD45D1D57D2CA00C972C3 /* Sources */,
+				01ADD45E1D57D2CA00C972C3 /* Frameworks */,
+				01ADD45F1D57D2CA00C972C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01ADD4631D57D2CA00C972C3 /* PBXTargetDependency */,
+			);
+			name = "Fuzz TherapyTests";
+			productName = "Fuzz TherapyTests";
+			productReference = 01ADD4611D57D2CA00C972C3 /* Fuzz TherapyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01ADD4451D57D2CA00C972C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jade Vance";
+				TargetAttributes = {
+					01ADD44C1D57D2CA00C972C3 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					01ADD4601D57D2CA00C972C3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 01ADD44C1D57D2CA00C972C3;
+					};
+				};
+			};
+			buildConfigurationList = 01ADD4481D57D2CA00C972C3 /* Build configuration list for PBXProject "Fuzz Therapy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01ADD4441D57D2CA00C972C3;
+			productRefGroup = 01ADD44E1D57D2CA00C972C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01ADD44C1D57D2CA00C972C3 /* Fuzz Therapy */,
+				01ADD4601D57D2CA00C972C3 /* Fuzz TherapyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01ADD44B1D57D2CA00C972C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */,
+				01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */,
+				01ADD4561D57D2CA00C972C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01ADD45F1D57D2CA00C972C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01ADD4491D57D2CA00C972C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01ADD4531D57D2CA00C972C3 /* ViewController.swift in Sources */,
+				01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01ADD45D1D57D2CA00C972C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01ADD4661D57D2CA00C972C3 /* Fuzz_TherapyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01ADD4631D57D2CA00C972C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01ADD44C1D57D2CA00C972C3 /* Fuzz Therapy */;
+			targetProxy = 01ADD4621D57D2CA00C972C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01ADD4541D57D2CA00C972C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01ADD4551D57D2CA00C972C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01ADD45A1D57D2CA00C972C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01ADD4681D57D2CA00C972C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01ADD4691D57D2CA00C972C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01ADD46B1D57D2CA00C972C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Fuzz Therapy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jvance-fuzz-therapy.Fuzz-Therapy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		01ADD46C1D57D2CA00C972C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Fuzz Therapy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jvance-fuzz-therapy.Fuzz-Therapy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		01ADD46E1D57D2CA00C972C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Fuzz TherapyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jvance-fuzz-therapy.Fuzz-TherapyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fuzz Therapy.app/Fuzz Therapy";
+			};
+			name = Debug;
+		};
+		01ADD46F1D57D2CA00C972C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Fuzz TherapyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jvance-fuzz-therapy.Fuzz-TherapyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fuzz Therapy.app/Fuzz Therapy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01ADD4481D57D2CA00C972C3 /* Build configuration list for PBXProject "Fuzz Therapy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01ADD4681D57D2CA00C972C3 /* Debug */,
+				01ADD4691D57D2CA00C972C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01ADD46A1D57D2CA00C972C3 /* Build configuration list for PBXNativeTarget "Fuzz Therapy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01ADD46B1D57D2CA00C972C3 /* Debug */,
+				01ADD46C1D57D2CA00C972C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		01ADD46D1D57D2CA00C972C3 /* Build configuration list for PBXNativeTarget "Fuzz TherapyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01ADD46E1D57D2CA00C972C3 /* Debug */,
+				01ADD46F1D57D2CA00C972C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01ADD4451D57D2CA00C972C3 /* Project object */;
+}
