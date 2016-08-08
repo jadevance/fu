@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B0BBF002901ADE5B2820F15C865E2AC /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B9BBA8F5B33E56C38F5546432F66B7 /* SwiftyJSON-dummy.m */; };
-		5223919EB9FD5CFF5C08BE86ADB898B6 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05CA09B061E193906653AC21FD3A94F1 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B0BBF002901ADE5B2820F15C865E2AC /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5462B15C60F77B7A26C83A6DC9A05E /* SwiftyJSON-dummy.m */; };
+		5223919EB9FD5CFF5C08BE86ADB898B6 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 360F828A88DDFBAEF99F7DA726061F4E /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BB23D25AE5B534D0E106C71842CEDEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		64CC27B578E91E0B1D970E6BF3B2C5D4 /* Pods-Fuzz TherapyTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F2609BEDB245BDEE510565DD4F9DC7C /* Pods-Fuzz TherapyTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		68CC79946F61C3DC5809955DB2700283 /* Pods-Fuzz Therapy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAAA363A75267B9EBD877A290B13229 /* Pods-Fuzz Therapy-dummy.m */; };
-		D019890CD07DCD4FFD30094984559AA1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */; };
+		D019890CD07DCD4FFD30094984559AA1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84516719E660DA2489F94B7ECE8B3F /* SwiftyJSON.swift */; };
 		E1A5A2BA66AFDB62AB87F64074282965 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		E4FCCE01E06747EE29C3C38DDD82A36E /* Pods-Fuzz TherapyTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C098D3616FE67BF9B9828ED7A3A765E0 /* Pods-Fuzz TherapyTests-dummy.m */; };
 		F293A17A09CA21AD69B089B5C49C27F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
@@ -31,34 +31,52 @@
 
 /* Begin PBXFileReference section */
 		01B0FFA7AB6360CEA799CB3A2EDD7B36 /* Pods-Fuzz TherapyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Fuzz TherapyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		05CA09B061E193906653AC21FD3A94F1 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		08C01A3DBB9051E4DCAB69D8A837CE08 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		091BAA34B0BEACD73E106CE2C2D08352 /* Pods-Fuzz TherapyTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Fuzz TherapyTests-frameworks.sh"; sourceTree = "<group>"; };
 		096D3D46E6947ACF7C46724EEFF6B399 /* Pods_Fuzz_Therapy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fuzz_Therapy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DCD20B268E6F38B4870FAB831582F94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FF7350DA80DFE9CC3B2F8600720C1FA /* Core.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Core.h; path = Headers/Core.h; sourceTree = "<group>"; };
 		23B4B4BE42D1E35EA602F7812D2FABA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25824AE72C3FA44165A46B7F5A7D9FA0 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		2A601F39FE3EC5E7D565DDDE6CA4D159 /* Pods-Fuzz Therapy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Fuzz Therapy-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		32B9BBA8F5B33E56C38F5546432F66B7 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		2D01395C2FD0DC9C458B10751C616CF8 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = Frameworks/GoogleAppUtilities.framework; sourceTree = "<group>"; };
+		360F828A88DDFBAEF99F7DA726061F4E /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		3A7997C284F4E6EFE7EBEA0B577FA78B /* Pods-Fuzz TherapyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Fuzz TherapyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A84516719E660DA2489F94B7ECE8B3F /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		3E689928600C94FB1CC48C1F4DD4894A /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		3FC6C2DA22053F1ADAE89912587899BD /* Pods_Fuzz_TherapyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fuzz_TherapyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		475C6C5E7BDF27C8D660DF3997C9D6AF /* Pods-Fuzz Therapy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Fuzz Therapy.release.xcconfig"; sourceTree = "<group>"; };
 		52AB5A770DDFE13979172DFC6DECB8AC /* Pods-Fuzz TherapyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Fuzz TherapyTests.modulemap"; sourceTree = "<group>"; };
+		5D8F3ED71166C4F622F99A1840D7A5A6 /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAuthUtilities.framework; path = Frameworks/GoogleAuthUtilities.framework; sourceTree = "<group>"; };
 		67DA848282B3A95F797B18C4C4C97722 /* Pods-Fuzz Therapy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Fuzz Therapy-umbrella.h"; sourceTree = "<group>"; };
+		6F01C8CC0083BB0AF1F71F277F8A355A /* SignIn-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SignIn-Module.h"; path = "Headers/ModuleHeaders/SignIn-Module.h"; sourceTree = "<group>"; };
+		6FFDBA1184FBCF7FBFC1A0D4F820F967 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		793DA80A177CD786AFF369550F55B91A /* Pods-Fuzz TherapyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Fuzz TherapyTests.release.xcconfig"; sourceTree = "<group>"; };
+		7C5462B15C60F77B7A26C83A6DC9A05E /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		7D4AB29ADA749B566DC4E16DA1D3A2FB /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = Frameworks/GoogleSignIn.framework; sourceTree = "<group>"; };
 		7F2609BEDB245BDEE510565DD4F9DC7C /* Pods-Fuzz TherapyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Fuzz TherapyTests-umbrella.h"; sourceTree = "<group>"; };
+		84D64A44223AB44E431A6721915C06D9 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		86960B6D84B47DA46F036A5E3BEA975E /* GoogleSignIn.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = Resources/GoogleSignIn.bundle; sourceTree = "<group>"; };
+		8852D1A33DFF8B8589E8A7FB57271C1F /* GGLCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GGLCore.framework; path = Frameworks/GGLCore.framework; sourceTree = "<group>"; };
 		8D6204D3C2EC1AA12839644F1DAD010C /* Pods-Fuzz Therapy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Fuzz Therapy-resources.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BBF610E40BDF6E542FA21FF7E5491205 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		9352F23AEB500AB97D709E5494017F0F /* Core-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Core-Module.h"; path = "Headers/ModuleHeaders/Core-Module.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; };
+		93F476BC1105D7C873C68F0D9A8E60CC /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		993CE0D8F6F9A4B4F24A8C476AF8AD9D /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		AA2F1240922AA183C388AEB55C68551A /* SignIn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SignIn.h; path = Headers/SignIn.h; sourceTree = "<group>"; };
 		BF3D1FEDDB65DE7624BC5486580FB70C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C098D3616FE67BF9B9828ED7A3A765E0 /* Pods-Fuzz TherapyTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Fuzz TherapyTests-dummy.m"; sourceTree = "<group>"; };
 		C2A3E8353E0B2D39A1EF606EE53FB65B /* Pods-Fuzz Therapy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Fuzz Therapy.modulemap"; sourceTree = "<group>"; };
-		C4A9A658C966F6BB111BEDBDEA1F874A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61B41DF00B8CF4A8D8DB15B5A18BF70 /* Pods-Fuzz Therapy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Fuzz Therapy-acknowledgements.plist"; sourceTree = "<group>"; };
+		C6537521E3A3522707D049695C7D2E80 /* Analytics-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Analytics-Module.h"; path = "Headers/ModuleHeaders/Analytics-Module.h"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D032A29E584B77AE187E586922267CF5 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		D0E78C6D54E2F3642432AE27275982E3 /* Pods-Fuzz Therapy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Fuzz Therapy.debug.xcconfig"; sourceTree = "<group>"; };
 		D3373ABD145BD6700F58ABFE37D0274B /* Pods-Fuzz Therapy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Fuzz Therapy-frameworks.sh"; sourceTree = "<group>"; };
+		D551F87EFC70A55EE385599A0F793482 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		D98E64E9A14E561DED3ADD9D6BB4FDE7 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		DA16A41C536E40A77EF3672FBAA691AC /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		DBA110A1E4512338A464370D6F612F48 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		EEE4BA1E0C7E06680A0CE61EBEBF3C67 /* GGLSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GGLSignIn.framework; path = Frameworks/GGLSignIn.framework; sourceTree = "<group>"; };
 		F6655C50F66A0DF01713EC8337DC8DFE /* Pods-Fuzz TherapyTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Fuzz TherapyTests-resources.sh"; sourceTree = "<group>"; };
 		F68636184A21BD12F6E96C069ED583E2 /* Pods-Fuzz TherapyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Fuzz TherapyTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FAAAA363A75267B9EBD877A290B13229 /* Pods-Fuzz Therapy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Fuzz Therapy-dummy.m"; sourceTree = "<group>"; };
@@ -92,6 +110,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		029D51809313DC8892BDEC780FE80B90 /* GoogleNetworkingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				785E3D6223EB69DBBD6C648235B12AC1 /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
+			sourceTree = "<group>";
+		};
+		082F1571CFF98E27AC2BC4C790D7CCFA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C6537521E3A3522707D049695C7D2E80 /* Analytics-Module.h */,
+				0FF7350DA80DFE9CC3B2F8600720C1FA /* Core.h */,
+				9352F23AEB500AB97D709E5494017F0F /* Core-Module.h */,
+				6F01C8CC0083BB0AF1F71F277F8A355A /* SignIn-Module.h */,
+				870AFE927674CAEB6C86AD0BDF97C8CA /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		0860E9C2DF4D2A539D7DFBA0EFF125D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBA110A1E4512338A464370D6F612F48 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F7345C652F6B476EAF4AD39CF44CD5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D4AB29ADA749B566DC4E16DA1D3A2FB /* GoogleSignIn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11B16E6B7F615EE0A7E2E8EB4AAFCFF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4BA1E0C7E06680A0CE61EBEBF3C67 /* GGLSignIn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1D9A23E887AB57ED2FA77C34B0848BA2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +161,23 @@
 				F8D97578540CFFBEFA85CDEFDA0F72A2 /* Pods-Fuzz TherapyTests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		35559D10314FF72895DBD476D66693C0 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				BEC35FB6F0824D55067AEA4F755D73A1 /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		382CFD67F0B437868F68BEA8BF12B98F /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				3A84516719E660DA2489F94B7ECE8B3F /* SwiftyJSON.swift */,
+				E99C278EF620D66E27A4A110C9538B18 /* Support Files */,
+			);
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -119,13 +198,36 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		70A8E4D3C62B6C203D238581DA091C21 /* SwiftyJSON */ = {
+		6038D032D3FEEA5532ECDBFF3C80039C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */,
-				8EC39E1DC11846207722B71AAFE40F98 /* Support Files */,
+				86960B6D84B47DA46F036A5E3BEA975E /* GoogleSignIn.bundle */,
 			);
-			path = SwiftyJSON;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6CEFB310C8181D5C8445499703317A22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				993CE0D8F6F9A4B4F24A8C476AF8AD9D /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		785E3D6223EB69DBBD6C648235B12AC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D98E64E9A14E561DED3ADD9D6BB4FDE7 /* GoogleNetworkingUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79AFD0EB457EC42B67BA86DAA7FBB72C /* GoogleAppUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				8950E610EB967FF9856D621B0E665620 /* Frameworks */,
+			);
+			path = GoogleAppUtilities;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -133,24 +235,43 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BD1E3C710F12F4B4C092FC8E2AD22110 /* Pods */,
+				B357C7260B84AEE2B408D67725E04E76 /* Pods */,
 				3E380FEC3C2E6657A01D39D62F86B472 /* Products */,
 				1D9A23E887AB57ED2FA77C34B0848BA2 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8EC39E1DC11846207722B71AAFE40F98 /* Support Files */ = {
+		85C4B2B9CEAB36F192B57BFA3C93EF09 /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				C4A9A658C966F6BB111BEDBDEA1F874A /* Info.plist */,
-				D032A29E584B77AE187E586922267CF5 /* SwiftyJSON.modulemap */,
-				2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */,
-				32B9BBA8F5B33E56C38F5546432F66B7 /* SwiftyJSON-dummy.m */,
-				BBF610E40BDF6E542FA21FF7E5491205 /* SwiftyJSON-prefix.pch */,
-				05CA09B061E193906653AC21FD3A94F1 /* SwiftyJSON-umbrella.h */,
+				FCEBAD4532AC8DA92CD8EAF9A9E9CE66 /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		870AFE927674CAEB6C86AD0BDF97C8CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8852D1A33DFF8B8589E8A7FB57271C1F /* GGLCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8950E610EB967FF9856D621B0E665620 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D01395C2FD0DC9C458B10751C616CF8 /* GoogleAppUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A882F2FDFC64F8EE9AEA3608E261CDA6 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				93F476BC1105D7C873C68F0D9A8E60CC /* FIRInstanceID.h */,
+				E8F737F69D500E61DB68692100628FB7 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
 		B007229B0E1224447CA38D8EE250DA5C /* Pods-Fuzz Therapy */ = {
@@ -171,6 +292,33 @@
 			path = "Target Support Files/Pods-Fuzz Therapy";
 			sourceTree = "<group>";
 		};
+		B357C7260B84AEE2B408D67725E04E76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85C4B2B9CEAB36F192B57BFA3C93EF09 /* FirebaseAnalytics */,
+				A882F2FDFC64F8EE9AEA3608E261CDA6 /* FirebaseInstanceID */,
+				B75E63C6E922AF24AAB4B42E98431C2D /* Google */,
+				79AFD0EB457EC42B67BA86DAA7FBB72C /* GoogleAppUtilities */,
+				BF2D4B0F05D22C410A61340293AF8097 /* GoogleAuthUtilities */,
+				CEC31A5455540027A6C4B9A8FA0FFD8C /* GoogleInterchangeUtilities */,
+				029D51809313DC8892BDEC780FE80B90 /* GoogleNetworkingUtilities */,
+				E0E23893D4EEE5233208B3286B42CC8E /* GoogleSignIn */,
+				35559D10314FF72895DBD476D66693C0 /* GoogleSymbolUtilities */,
+				E9A02913EA5E00233A1E2E6717D6EFCB /* GoogleUtilities */,
+				382CFD67F0B437868F68BEA8BF12B98F /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B75E63C6E922AF24AAB4B42E98431C2D /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				082F1571CFF98E27AC2BC4C790D7CCFA /* Core */,
+				EB249098A8341B7C9100A8DFA41472B4 /* SignIn */,
+			);
+			path = Google;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,12 +327,84 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BD1E3C710F12F4B4C092FC8E2AD22110 /* Pods */ = {
+		BEC35FB6F0824D55067AEA4F755D73A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				70A8E4D3C62B6C203D238581DA091C21 /* SwiftyJSON */,
+				84D64A44223AB44E431A6721915C06D9 /* GoogleSymbolUtilities.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF2D4B0F05D22C410A61340293AF8097 /* GoogleAuthUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				DEA48FF440CE6BA181D1892A2AA852C8 /* Frameworks */,
+			);
+			path = GoogleAuthUtilities;
+			sourceTree = "<group>";
+		};
+		CEC31A5455540027A6C4B9A8FA0FFD8C /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				0860E9C2DF4D2A539D7DFBA0EFF125D6 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		DEA48FF440CE6BA181D1892A2AA852C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D8F3ED71166C4F622F99A1840D7A5A6 /* GoogleAuthUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0E23893D4EEE5233208B3286B42CC8E /* GoogleSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				0F7345C652F6B476EAF4AD39CF44CD5D /* Frameworks */,
+				6038D032D3FEEA5532ECDBFF3C80039C /* Resources */,
+			);
+			path = GoogleSignIn;
+			sourceTree = "<group>";
+		};
+		E8F737F69D500E61DB68692100628FB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA16A41C536E40A77EF3672FBAA691AC /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E99C278EF620D66E27A4A110C9538B18 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DCD20B268E6F38B4870FAB831582F94 /* Info.plist */,
+				D551F87EFC70A55EE385599A0F793482 /* SwiftyJSON.modulemap */,
+				3E689928600C94FB1CC48C1F4DD4894A /* SwiftyJSON.xcconfig */,
+				7C5462B15C60F77B7A26C83A6DC9A05E /* SwiftyJSON-dummy.m */,
+				25824AE72C3FA44165A46B7F5A7D9FA0 /* SwiftyJSON-prefix.pch */,
+				360F828A88DDFBAEF99F7DA726061F4E /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		E9A02913EA5E00233A1E2E6717D6EFCB /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				6CEFB310C8181D5C8445499703317A22 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		EB249098A8341B7C9100A8DFA41472B4 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				AA2F1240922AA183C388AEB55C68551A /* SignIn.h */,
+				11B16E6B7F615EE0A7E2E8EB4AAFCFF0 /* Frameworks */,
+			);
+			name = SignIn;
 			sourceTree = "<group>";
 		};
 		F8D97578540CFFBEFA85CDEFDA0F72A2 /* Pods-Fuzz TherapyTests */ = {
@@ -203,6 +423,14 @@
 			);
 			name = "Pods-Fuzz TherapyTests";
 			path = "Target Support Files/Pods-Fuzz TherapyTests";
+			sourceTree = "<group>";
+		};
+		FCEBAD4532AC8DA92CD8EAF9A9E9CE66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FFDBA1184FBCF7FBFC1A0D4F820F967 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,7 +724,7 @@
 		};
 		A7A83F6262F8F5357D56B33EF5F6206E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 3E689928600C94FB1CC48C1F4DD4894A /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -597,7 +825,7 @@
 		};
 		E4E69B2184E74FBD9C92DB08D0ECFA8C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 3E689928600C94FB1CC48C1F4DD4894A /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
