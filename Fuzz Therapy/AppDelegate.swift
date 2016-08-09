@@ -1,17 +1,13 @@
-//
-//  AppDelegate.swift
-//  Fuzz Therapy
-//
-//  Created by Jade Vance on 8/7/16.
-//  Copyright © 2016 Jade Vance. All rights reserved.
-//
 import UIKit
+import Google
 
 @UIApplicationMain
+// [START appdelegate_interfaces]
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-
+    // [END appdelegate_interfaces]
     var window: UIWindow?
     
+    // [START didfinishlaunching]
     func application(application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Initialize sign-in
@@ -23,14 +19,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         return true
     }
+    // [END didfinishlaunching]
     
+    // [START openurl]
     func application(application: UIApplication,
-                     openURL url: NSURL, options: [String: AnyObject]) -> Bool {
+                     openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return GIDSignIn.sharedInstance().handleURL(url,
-                                                    sourceApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey] as? String,
+                                                    sourceApplication: sourceApplication,
+                                                    annotation: annotation)
+    }
+    // [END openurl]
+    
+    @available(iOS 9.0, *)
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        return GIDSignIn.sharedInstance().handleURL(url,
+                                                    sourceApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey] as! String?,
                                                     annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
     }
     
+    // [START signin_handler]
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
                 withError error: NSError!) {
         if (error == nil) {
@@ -41,62 +48,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let givenName = user.profile.givenName
             let familyName = user.profile.familyName
             let email = user.profile.email
-            
-            // get the user token , sign in to backend API
-//            NSString idToken = user.authentication.idToken
-//            NSString signinEndpoint = @"https://fuzztherapy.com/user/signin";
-//            NSDictionary *params = @{@"idtoken": idToken};
-//            
-//            NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:signinEndpoint];
-//            [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-//            [request setHTTPMethod:@"POST"];
-//            [request setHTTPBody:[self httpBodyForParamsDictionary:params]];
-//            
-//            NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-//            [NSURLConnection sendAsynchronousRequest:request
-//            queue:queue
-//            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-//            if (error) {
-//            NSLog(@"Error: %@", error.localizedDescription);
-//            } else {
-//            NSLog(@"Signed in as %@", data.bytes);
-//            }
-//            }];
-            
+            // [START_EXCLUDE]
+            NSNotificationCenter.defaultCenter().postNotificationName(
+                "ToggleAuthUINotification",
+                object: nil,
+                userInfo: ["statusText": "Signed in user:\n\(fullName)"])
+            // [END_EXCLUDE]
         } else {
             print("\(error.localizedDescription)")
+            // [START_EXCLUDE silent]
+            NSNotificationCenter.defaultCenter().postNotificationName(
+                "ToggleAuthUINotification", object: nil, userInfo: nil)
+            // [END_EXCLUDE]
         }
     }
+    // [END signin_handler]
     
+    // [START disconnect_handler]
     func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
                 withError error: NSError!) {
         // Perform any operations when the user disconnects from app here.
-        // ...
+        // [START_EXCLUDE]
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            "ToggleAuthUINotification",
+            object: nil,
+            userInfo: ["statusText": "User has disconnected."])
+        // [END_EXCLUDE]
     }
-
+    // [END disconnect_handler]
     
-    func applicationWillResignActive(application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
 }
-

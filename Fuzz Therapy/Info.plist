@@ -24,16 +24,6 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>BundleID</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>jvance-fuzz-therapy.Fuzz-Therapy</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
 			<string>Reverse Client ID</string>
 			<key>CFBundleURLSchemes</key>
 			<array>

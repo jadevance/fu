@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		017308DB1D5939430079B366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017308DA1D5939430079B366 /* ViewController.swift */; };
-		017308DE1D59397A0079B366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017308DC1D59397A0079B366 /* Main.storyboard */; };
-		017308E01D593F9E0079B366 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017308DF1D593F9E0079B366 /* GoogleService-Info.plist */; };
 		017308E31D594C030079B366 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 017308E11D594C030079B366 /* GoogleSignIn.bundle */; };
 		017308E41D594C030079B366 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E21D594C030079B366 /* GoogleSignIn.framework */; };
 		017308E61D594D780079B366 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E51D594D780079B366 /* SystemConfiguration.framework */; };
 		017308E81D594D820079B366 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E71D594D820079B366 /* StoreKit.framework */; };
 		017308EA1D594D960079B366 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E91D594D960079B366 /* AddressBook.framework */; };
+		017308FB1D5A55380079B366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017308FA1D5A55380079B366 /* ViewController.swift */; };
+		017308FD1D5A55C80079B366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017308FC1D5A55C80079B366 /* Main.storyboard */; };
+		017309061D5A61870079B366 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017309051D5A61870079B366 /* SafariServices.framework */; };
+		017309081D5A61980079B366 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017309071D5A61980079B366 /* MessageUI.framework */; };
+		0173090A1D5A61A10079B366 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017309091D5A61A10079B366 /* CoreMotion.framework */; };
+		017309101D5A67330079B366 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0173090F1D5A67330079B366 /* GoogleService-Info.plist */; };
 		01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */; };
 		01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4571D57D2CA00C972C3 /* Assets.xcassets */; };
 		01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */; };
@@ -36,15 +39,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		017308D31D5908330079B366 /* Fuzz Therapy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fuzz Therapy-Bridging-Header.h"; sourceTree = "<group>"; };
-		017308DA1D5939430079B366 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../Hello_World/Hello World/ViewController.swift"; sourceTree = "<group>"; };
-		017308DD1D59397A0079B366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../Hello_World/Hello World/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
-		017308DF1D593F9E0079B366 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		017308E11D594C030079B366 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = ../../../Downloads/google_signin_sdk_2_1_0/GoogleSignIn.bundle; sourceTree = "<group>"; };
-		017308E21D594C030079B366 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = ../../../Downloads/google_signin_sdk_2_1_0/GoogleSignIn.framework; sourceTree = "<group>"; };
+		017308E11D594C030079B366 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = ../../Downloads/google_signin_sdk_2_1_0/GoogleSignIn.bundle; sourceTree = "<group>"; };
+		017308E21D594C030079B366 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = ../../Downloads/google_signin_sdk_2_1_0/GoogleSignIn.framework; sourceTree = "<group>"; };
 		017308E51D594D780079B366 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		017308E71D594D820079B366 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		017308E91D594D960079B366 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		017308FA1D5A55380079B366 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		017308FC1D5A55C80079B366 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		017308FE1D5A576E0079B366 /* Fuzz Therapy-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Fuzz Therapy-Bridging-Header.h"; path = "Supporting Files/Fuzz Therapy-Bridging-Header.h"; sourceTree = "<group>"; };
+		017309051D5A61870079B366 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		017309071D5A61980079B366 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		017309091D5A61A10079B366 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		0173090F1D5A67330079B366 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01ADD44D1D57D2CA00C972C3 /* Fuzz Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuzz Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01ADD4571D57D2CA00C972C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0173090A1D5A61A10079B366 /* CoreMotion.framework in Frameworks */,
+				017309081D5A61980079B366 /* MessageUI.framework in Frameworks */,
+				017309061D5A61870079B366 /* SafariServices.framework in Frameworks */,
 				017308EA1D594D960079B366 /* AddressBook.framework in Frameworks */,
 				017308E81D594D820079B366 /* StoreKit.framework in Frameworks */,
 				017308E61D594D780079B366 /* SystemConfiguration.framework in Frameworks */,
@@ -110,18 +119,16 @@
 		01ADD44F1D57D2CA00C972C3 /* Fuzz Therapy */ = {
 			isa = PBXGroup;
 			children = (
-				017308DF1D593F9E0079B366 /* GoogleService-Info.plist */,
+				0173090F1D5A67330079B366 /* GoogleService-Info.plist */,
+				017308FE1D5A576E0079B366 /* Fuzz Therapy-Bridging-Header.h */,
 				01C4689A1D5843D8004FB4E4 /* Podfile */,
 				01C4689B1D5843D8004FB4E4 /* Podfile.lock */,
 				01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */,
-				017308DA1D5939430079B366 /* ViewController.swift */,
-				017308DC1D59397A0079B366 /* Main.storyboard */,
+				017308FC1D5A55C80079B366 /* Main.storyboard */,
+				017308FA1D5A55380079B366 /* ViewController.swift */,
 				01ADD4571D57D2CA00C972C3 /* Assets.xcassets */,
 				01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */,
 				01ADD45C1D57D2CA00C972C3 /* Info.plist */,
-				017308E11D594C030079B366 /* GoogleSignIn.bundle */,
-				017308E21D594C030079B366 /* GoogleSignIn.framework */,
-				017308D31D5908330079B366 /* Fuzz Therapy-Bridging-Header.h */,
 			);
 			path = "Fuzz Therapy";
 			sourceTree = "<group>";
@@ -138,6 +145,11 @@
 		7AFF24913A19BC74FA299B9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				017309091D5A61A10079B366 /* CoreMotion.framework */,
+				017309071D5A61980079B366 /* MessageUI.framework */,
+				017309051D5A61870079B366 /* SafariServices.framework */,
+				017308E11D594C030079B366 /* GoogleSignIn.bundle */,
+				017308E21D594C030079B366 /* GoogleSignIn.framework */,
 				017308E91D594D960079B366 /* AddressBook.framework */,
 				017308E71D594D820079B366 /* StoreKit.framework */,
 				017308E51D594D780079B366 /* SystemConfiguration.framework */,
@@ -214,6 +226,7 @@
 				TargetAttributes = {
 					01ADD44C1D57D2CA00C972C3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = XN4U6DSLR9;
 					};
 					01ADD4601D57D2CA00C972C3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -245,13 +258,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				017308DE1D59397A0079B366 /* Main.storyboard in Resources */,
+				017308FD1D5A55C80079B366 /* Main.storyboard in Resources */,
 				01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */,
 				01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */,
 				01C4689D1D5843D8004FB4E4 /* Podfile.lock in Resources */,
 				01C4689C1D5843D8004FB4E4 /* Podfile in Resources */,
 				017308E31D594C030079B366 /* GoogleSignIn.bundle in Resources */,
-				017308E01D593F9E0079B366 /* GoogleService-Info.plist in Resources */,
+				017309101D5A67330079B366 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				017308DB1D5939430079B366 /* ViewController.swift in Sources */,
+				017308FB1D5A55380079B366 /* ViewController.swift in Sources */,
 				01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,14 +399,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		017308DC1D59397A0079B366 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				017308DD1D59397A0079B366 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,6 +451,9 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				"SWIFT_INSTALL_OBJC_HEADER[arch=*]" = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -485,6 +493,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -496,6 +506,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = "Fuzz Therapy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jvance-fuzz-therapy.Fuzz-Therapy";
@@ -511,6 +524,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = "Fuzz Therapy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jvance-fuzz-therapy.Fuzz-Therapy";
