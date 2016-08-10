@@ -2,25 +2,19 @@ import UIKit
 import Google
 
 @UIApplicationMain
-// [START appdelegate_interfaces]
+
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-    // [END appdelegate_interfaces]
     var window: UIWindow?
     
-    // [START didfinishlaunching]
     func application(application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Initialize sign-in
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
-        
         GIDSignIn.sharedInstance().delegate = self
-        print(self)
-        
         return true
     }
-    // [END didfinishlaunching]
     
     // [START openurl]
     func application(application: UIApplication,
@@ -51,6 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let familyName = user.profile.familyName
             let email = user.profile.email
             // [START_EXCLUDE]
+            // user object exists here and in this scope
+            // pass user here to getcurrentuserdata
+            // how to pass?
+            getCurrentUserData(userId)
             NSNotificationCenter.defaultCenter().postNotificationName(
                 "ToggleAuthUINotification",
                 object: nil,

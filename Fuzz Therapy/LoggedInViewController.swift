@@ -27,19 +27,11 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
         object: nil)
     statusText.text = "Loading"
     toggleAuthUI()
+    // can initialize connecting to the API here, if user logged in
 
   }
-  // [END viewdidload]
-
-  // [START signout_tapped]
-  @IBAction func didTapSignOut(sender: AnyObject) {
-    GIDSignIn.sharedInstance().signOut()
-    statusText.text = "Signed out."
-    toggleAuthUI()
-    getUserData()
-  }
-  // [END signout_tapped]
     
+  // [END viewdidload]
     // [START toggle_auth]
     func toggleAuthUI() {
         if (GIDSignIn.sharedInstance().hasAuthInKeychain()){
@@ -47,7 +39,9 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
             signInButton.hidden = true
             signOutButton.hidden = false
             disconnectButton.hidden = false
+
         } else {
+            // Not signed in
             signInButton.hidden = false
             signOutButton.hidden = true
             disconnectButton.hidden = true
@@ -55,6 +49,13 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
         }
     }
     // [END toggle_auth]
+  // [START signout_tapped]
+  @IBAction func didTapSignOut(sender: AnyObject) {
+    GIDSignIn.sharedInstance().signOut()
+    statusText.text = "Signed out."
+    toggleAuthUI()
+  }
+  // [END signout_tapped]
 
   // [START disconnect_tapped]
   @IBAction func didTapDisconnect(sender: AnyObject) {
