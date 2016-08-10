@@ -12,12 +12,13 @@
 		017308E61D594D780079B366 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E51D594D780079B366 /* SystemConfiguration.framework */; };
 		017308E81D594D820079B366 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E71D594D820079B366 /* StoreKit.framework */; };
 		017308EA1D594D960079B366 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E91D594D960079B366 /* AddressBook.framework */; };
-		017308FB1D5A55380079B366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017308FA1D5A55380079B366 /* ViewController.swift */; };
+		017308FB1D5A55380079B366 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017308FA1D5A55380079B366 /* LoggedInViewController.swift */; };
 		017308FD1D5A55C80079B366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017308FC1D5A55C80079B366 /* Main.storyboard */; };
 		017309061D5A61870079B366 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017309051D5A61870079B366 /* SafariServices.framework */; };
 		017309081D5A61980079B366 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017309071D5A61980079B366 /* MessageUI.framework */; };
 		0173090A1D5A61A10079B366 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017309091D5A61A10079B366 /* CoreMotion.framework */; };
 		017309101D5A67330079B366 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0173090F1D5A67330079B366 /* GoogleService-Info.plist */; };
+		017309121D5B99390079B366 /* CurrentUserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309111D5B99390079B366 /* CurrentUserClass.swift */; };
 		01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */; };
 		01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4571D57D2CA00C972C3 /* Assets.xcassets */; };
 		01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */; };
@@ -44,13 +45,14 @@
 		017308E51D594D780079B366 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		017308E71D594D820079B366 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		017308E91D594D960079B366 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		017308FA1D5A55380079B366 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		017308FA1D5A55380079B366 /* LoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		017308FC1D5A55C80079B366 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		017308FE1D5A576E0079B366 /* Fuzz Therapy-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Fuzz Therapy-Bridging-Header.h"; path = "Supporting Files/Fuzz Therapy-Bridging-Header.h"; sourceTree = "<group>"; };
 		017309051D5A61870079B366 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		017309071D5A61980079B366 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		017309091D5A61A10079B366 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		0173090F1D5A67330079B366 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		017309111D5B99390079B366 /* CurrentUserClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserClass.swift; sourceTree = "<group>"; };
 		01ADD44D1D57D2CA00C972C3 /* Fuzz Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuzz Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01ADD4571D57D2CA00C972C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 		01ADD4611D57D2CA00C972C3 /* Fuzz TherapyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fuzz TherapyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADD4651D57D2CA00C972C3 /* Fuzz_TherapyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuzz_TherapyTests.swift; sourceTree = "<group>"; };
 		01ADD4671D57D2CA00C972C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01C4689A1D5843D8004FB4E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		01C4689A1D5843D8004FB4E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		01C4689B1D5843D8004FB4E4 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = SOURCE_ROOT; };
 		5C0725DAE2AC67EB2AC541A3 /* Pods-Fuzz TherapyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fuzz TherapyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fuzz TherapyTests/Pods-Fuzz TherapyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64C0F97922918A5B9E2A7AAC /* Pods_Fuzz_TherapyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fuzz_TherapyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +127,8 @@
 				01C4689B1D5843D8004FB4E4 /* Podfile.lock */,
 				01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */,
 				017308FC1D5A55C80079B366 /* Main.storyboard */,
-				017308FA1D5A55380079B366 /* ViewController.swift */,
+				017308FA1D5A55380079B366 /* LoggedInViewController.swift */,
+				017309111D5B99390079B366 /* CurrentUserClass.swift */,
 				01ADD4571D57D2CA00C972C3 /* Assets.xcassets */,
 				01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */,
 				01ADD45C1D57D2CA00C972C3 /* Info.plist */,
@@ -375,8 +378,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				017308FB1D5A55380079B366 /* ViewController.swift in Sources */,
+				017308FB1D5A55380079B366 /* LoggedInViewController.swift in Sources */,
 				01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */,
+				017309121D5B99390079B366 /* CurrentUserClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,7 +512,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				INFOPLIST_FILE = "Fuzz Therapy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jvance-fuzz-therapy.Fuzz-Therapy";
@@ -526,7 +530,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				INFOPLIST_FILE = "Fuzz Therapy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jvance-fuzz-therapy.Fuzz-Therapy";

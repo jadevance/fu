@@ -1,9 +1,9 @@
 import UIKit
 
 // Match the ObjC symbol name inside Main.storyboard.
-@objc(ViewController)
+@objc(LoggedInViewController)
 // [START viewcontroller_interfaces]
-class ViewController: UIViewController, GIDSignInUIDelegate {
+class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
 // [END viewcontroller_interfaces]
 
   // [START viewcontroller_vars]
@@ -25,7 +25,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     // TODO(developer) Configure the sign-in button look/feel
     // [START_EXCLUDE]
     NSNotificationCenter.defaultCenter().addObserver(self,
-        selector: #selector(ViewController.receiveToggleAuthUINotification(_:)),
+        selector: #selector(LoggedInViewController.receiveToggleAuthUINotification(_:)),
         name: "ToggleAuthUINotification",
         object: nil)
 
