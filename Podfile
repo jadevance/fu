@@ -6,6 +6,7 @@ target 'Fuzz Therapy' do
   use_frameworks!
   pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
   pod 'Google/SignIn'
+  pod 'Alamofire', '~> 3.4'
   # Pods for Fuzz Therapy
 
   target 'Fuzz TherapyTests' do

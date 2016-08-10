@@ -29,7 +29,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         name: "ToggleAuthUINotification",
         object: nil)
 
-    statusText.text = "Initialized Swift app..."
+    statusText.text = "Loading"
     toggleAuthUI()
     // [END_EXCLUDE]
   }
@@ -65,7 +65,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
       signInButton.hidden = false
       signOutButton.hidden = true
       disconnectButton.hidden = true
-      statusText.text = "Google Sign in\niOS Demo"
+      statusText.text = "Google Sign in\n"
     }
   }
   // [END toggle_auth]

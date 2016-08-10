@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Fuzz Therapy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>290F3AAB122C6FB9AE32354ED3D7B9F9</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61698FB8AFD82746FEFEA4B17C4D8354</key>
+		<key>C3B379F4D3DA21A25D85E4421FE3B271</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE851C028D1DCDC609679AF65F3D3C28</key>
 		<dict>
 			<key>primary</key>
 			<true/>

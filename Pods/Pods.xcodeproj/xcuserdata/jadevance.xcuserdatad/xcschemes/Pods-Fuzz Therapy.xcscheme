@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "61698FB8AFD82746FEFEA4B17C4D8354"
+               BlueprintIdentifier = "C3B379F4D3DA21A25D85E4421FE3B271"
                BuildableName = "Pods_Fuzz_Therapy.framework"
                BlueprintName = "Pods-Fuzz Therapy"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "61698FB8AFD82746FEFEA4B17C4D8354"
+            BlueprintIdentifier = "C3B379F4D3DA21A25D85E4421FE3B271"
             BuildableName = "Pods_Fuzz_Therapy.framework"
             BlueprintName = "Pods-Fuzz Therapy"
             ReferencedContainer = "container:Pods.xcodeproj">
