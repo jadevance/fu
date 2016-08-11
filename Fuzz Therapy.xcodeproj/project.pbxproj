@@ -20,6 +20,7 @@
 		017309101D5A67330079B366 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0173090F1D5A67330079B366 /* GoogleService-Info.plist */; };
 		017309121D5B99390079B366 /* CurrentUserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309111D5B99390079B366 /* CurrentUserClass.swift */; };
 		017309141D5BA9E10079B366 /* GetCurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309131D5BA9E10079B366 /* GetCurrentUserData.swift */; };
+		017309161D5D2D900079B366 /* PostCurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309151D5D2D900079B366 /* PostCurrentUserData.swift */; };
 		01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */; };
 		01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4571D57D2CA00C972C3 /* Assets.xcassets */; };
 		01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */; };
@@ -55,6 +56,7 @@
 		0173090F1D5A67330079B366 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		017309111D5B99390079B366 /* CurrentUserClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserClass.swift; sourceTree = "<group>"; };
 		017309131D5BA9E10079B366 /* GetCurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCurrentUserData.swift; sourceTree = "<group>"; };
+		017309151D5D2D900079B366 /* PostCurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCurrentUserData.swift; sourceTree = "<group>"; };
 		01ADD44D1D57D2CA00C972C3 /* Fuzz Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuzz Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01ADD4571D57D2CA00C972C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				017308FA1D5A55380079B366 /* LoggedInViewController.swift */,
 				017309111D5B99390079B366 /* CurrentUserClass.swift */,
 				017309131D5BA9E10079B366 /* GetCurrentUserData.swift */,
+				017309151D5D2D900079B366 /* PostCurrentUserData.swift */,
 				01ADD4571D57D2CA00C972C3 /* Assets.xcassets */,
 				01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */,
 				01ADD45C1D57D2CA00C972C3 /* Info.plist */,
@@ -382,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				017308FB1D5A55380079B366 /* LoggedInViewController.swift in Sources */,
+				017309161D5D2D900079B366 /* PostCurrentUserData.swift in Sources */,
 				01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */,
 				017309121D5B99390079B366 /* CurrentUserClass.swift in Sources */,
 				017309141D5BA9E10079B366 /* GetCurrentUserData.swift in Sources */,
