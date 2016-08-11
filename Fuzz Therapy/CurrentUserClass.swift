@@ -6,6 +6,8 @@
 //  Copyright © 2016 Jade Vance. All rights reserved.
 //
 
+// Maybe use this as a wrapper / container for SQLite data storage of User info
+
 import Foundation
 
 class CurrentUser {

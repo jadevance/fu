@@ -45,9 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let familyName = user.profile.familyName
             let email = user.profile.email
             // [START_EXCLUDE]
-            // user object exists here and in this scope
-            // pass user here to getcurrentuserdata
-            // how to pass?
+
             getCurrentUserData(userId)
             NSNotificationCenter.defaultCenter().postNotificationName(
                 "ToggleAuthUINotification",

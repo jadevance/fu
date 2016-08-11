@@ -11,14 +11,14 @@ import Alamofire
 import SwiftyJSON
 import Google
 
-// this is for getting data from the API, not the oauth login
+// this is for getting and posting data with the API, not the oauth login
 
 func getCurrentUserData(userId: String) {
-//    Alamofire.request(.GET, "https://www.fuzztherapy.com/api/").response { (req, res, data, error) -> Void in
-//        print(res)
-//        let outputString = NSString(data: data!, encoding:NSUTF8StringEncoding)
-//        print(outputString)
-//    }
+    Alamofire.request(.GET, "https://www.fuzztherapy.com/api/").response { (req, res, data, error) -> Void in
+        print(res)
+        let outputString = NSString(data: data!, encoding:NSUTF8StringEncoding)
+        print(outputString)
+    }
     
     let parameters = ["user": userId]
     
@@ -29,4 +29,20 @@ func getCurrentUserData(userId: String) {
             print(userData)
             
     }
+//    let parameters = ["uid": "12345",
+//                      "name": "Jade",
+//                      "location": "Seattle",
+//                      "availability": "every day",
+//                      "dog_name": "Harley",
+//                      "dog_breed": "cattle dog husky mix",
+//                      "dog_age": "10 years old",
+//                      "dog_picture": "http://i.imgur.com/k1yVI.jpg"]
+//    
+//    Alamofire.request(.POST, "https://www.fuzztherapy.com/api/create", parameters: parameters)
+//        .responseJSON { response in
+//            
+//            let userData = JSON(response.result.value!)
+//            print(userData)
+//            
+//    }
 }
