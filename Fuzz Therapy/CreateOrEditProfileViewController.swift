@@ -16,4 +16,14 @@ import UIKit
 
 class CreateOrEditViewController: UIViewController {
     
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var locationField: UITextField!
+    @IBOutlet weak var availabilitySelection: UISegmentedControl!
+    
+    @IBOutlet weak var dogNameField: UITextField!
+    @IBOutlet weak var dogBreedField: UITextField!
+    @IBOutlet weak var dogAgeField: UITextField!
+    
+    @IBOutlet weak var addPhotoButton: UIButton!
+    @IBOutlet weak var saveProfileButton: UIButton!
 }
