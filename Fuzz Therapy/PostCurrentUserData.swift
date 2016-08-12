@@ -13,7 +13,7 @@ import Google
 
 func postCurrentUserData(userId: String) {
 
-let parameters = ["uid": "9375628",
+let parameters = ["uid": "28748758",
                   "name": "Jade",
                   "location": "Seattle",
                   "availability": "every day",
