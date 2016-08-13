@@ -22,6 +22,7 @@
 		017309161D5D2D900079B366 /* PostCurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309151D5D2D900079B366 /* PostCurrentUserData.swift */; };
 		017309181D5D37090079B366 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 017309171D5D37090079B366 /* fontawesome-webfont.ttf */; };
 		0173091A1D5D3E710079B366 /* CreateOrEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */; };
+		017309201D5F9F0E0079B366 /* PuppyPalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173091F1D5F9F0E0079B366 /* PuppyPalsViewController.swift */; };
 		01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */; };
 		01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4571D57D2CA00C972C3 /* Assets.xcassets */; };
 		01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */; };
@@ -59,6 +60,7 @@
 		017309151D5D2D900079B366 /* PostCurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCurrentUserData.swift; sourceTree = "<group>"; };
 		017309171D5D37090079B366 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateOrEditProfileViewController.swift; sourceTree = "<group>"; };
+		0173091F1D5F9F0E0079B366 /* PuppyPalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuppyPalsViewController.swift; sourceTree = "<group>"; };
 		01ADD44D1D57D2CA00C972C3 /* Fuzz Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuzz Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01ADD4571D57D2CA00C972C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				017309131D5BA9E10079B366 /* GetCurrentUserData.swift */,
 				017309151D5D2D900079B366 /* PostCurrentUserData.swift */,
 				01ADD4571D57D2CA00C972C3 /* Assets.xcassets */,
+				0173091F1D5F9F0E0079B366 /* PuppyPalsViewController.swift */,
 				01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */,
 				01ADD45C1D57D2CA00C972C3 /* Info.plist */,
 			);
@@ -391,6 +394,7 @@
 				017308FB1D5A55380079B366 /* LoggedInViewController.swift in Sources */,
 				0173091A1D5D3E710079B366 /* CreateOrEditProfileViewController.swift in Sources */,
 				017309161D5D2D900079B366 /* PostCurrentUserData.swift in Sources */,
+				017309201D5F9F0E0079B366 /* PuppyPalsViewController.swift in Sources */,
 				01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */,
 				017309141D5BA9E10079B366 /* GetCurrentUserData.swift in Sources */,
 			);
