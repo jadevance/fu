@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             // [START_EXCLUDE]
 
             getCurrentUserData(userId)
-            postCurrentUserData(userId)
+//            postCurrentUserData(userId)
             
             NSNotificationCenter.defaultCenter().postNotificationName(
                 "ToggleAuthUINotification",

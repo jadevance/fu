@@ -11,6 +11,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var statusText: UILabel!
 
+    @IBOutlet weak var createProfileButton: UIButton!
 
   // [START viewdidload]
   override func viewDidLoad() {
@@ -87,5 +88,8 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
       }
     }
   }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        <#code#>
+//    }
 
 }
