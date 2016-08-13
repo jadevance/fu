@@ -250,7 +250,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBG-vv-72B">
                                 <rect key="frame" x="128" y="298" width="250" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="Wxx-hT-TjJ"/>
                                 </connections>
@@ -325,6 +325,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="addPhotoButton" destination="9iM-sh-JcH" id="z6o-cn-TXp"/>
+                        <outlet property="availabilityField" destination="Ymd-rW-Di1" id="ImF-9U-3OZ"/>
+                        <outlet property="dogAgeField" destination="EBG-vv-72B" id="iRc-no-1v2"/>
+                        <outlet property="dogBreedField" destination="IrF-o5-XTF" id="dKv-Kt-Gbn"/>
+                        <outlet property="dogNameField" destination="w2I-8P-QKq" id="KF3-3F-9y9"/>
                         <outlet property="locationField" destination="lO3-9c-gh9" id="IeT-BO-LLK"/>
                         <outlet property="nameField" destination="1ih-g1-sOP" id="JkZ-qO-FDH"/>
                         <outlet property="saveProfileButton" destination="hZj-2P-v3h" id="LDQ-Ac-a4q"/>

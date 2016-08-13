@@ -20,8 +20,7 @@ class CreateOrEditViewController: UIViewController {
     
         @IBOutlet weak var nameField: UITextField!
         @IBOutlet weak var locationField: UITextField!
-        @IBOutlet weak var availabilitySelection: UISegmentedControl!
-    
+        @IBOutlet weak var availabilityField: UITextField!
         @IBOutlet weak var dogNameField: UITextField!
         @IBOutlet weak var dogBreedField: UITextField!
         @IBOutlet weak var dogAgeField: UITextField!
@@ -44,6 +43,7 @@ class CreateOrEditViewController: UIViewController {
     @IBAction func onTapGestureRecognized(sender: AnyObject) {
         nameField.resignFirstResponder()
         locationField.resignFirstResponder()
+        availabilityField.resignFirstResponder()
         dogNameField.resignFirstResponder()
         dogBreedField.resignFirstResponder()
         dogAgeField.resignFirstResponder()
