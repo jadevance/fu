@@ -10,15 +10,14 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var statusText: UILabel!
-
     @IBOutlet weak var createProfileButton: UIButton!
 
+    @IBOutlet weak var editProfileButton: MyCustomButton!
   // [START viewdidload]
   override func viewDidLoad() {
     super.viewDidLoad()
 
     GIDSignIn.sharedInstance().uiDelegate = self
-    // Uncomment to automatically sign in the user.
     GIDSignIn.sharedInstance().signInSilently()
 
 
@@ -40,9 +39,17 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
             signInButton.hidden = true
             signOutButton.hidden = false
             disconnectButton.hidden = false
+            // if has profile with Fuzz Therapy
+            // editProfileButton.hidden = true
+            // createProfileButton.hidden = false
+            // else edit is false and create is true
+            editProfileButton.hidden = false
+            createProfileButton.hidden = false 
 
         } else {
             // Not signed in
+            createProfileButton.hidden = true
+            editProfileButton.hidden = true
             signInButton.hidden = false
             signOutButton.hidden = true
             disconnectButton.hidden = true
