@@ -29,6 +29,8 @@ UINavigationControllerDelegate {
     @IBOutlet weak var saveProfile: UIButton!
     @IBOutlet weak var addPhoto: UIButton!
     @IBOutlet weak var photoLibrary: UIButton!
+    
+
 
     override func viewDidLoad() {
     
@@ -51,17 +53,6 @@ UINavigationControllerDelegate {
     }
     
     
-    @IBAction func onTakePhotoPressed(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-            imagePicker.allowsEditing = false
-            self.presentViewController(imagePicker, animated: true, completion: nil)
-        }
-    }
-    
-
     @IBAction func onPhotoLibraryPressed(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             let imagePicker = UIImagePickerController()

@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             NSNotificationCenter.defaultCenter().postNotificationName(
                 "ToggleAuthUINotification",
                 object: nil,
-                userInfo: ["statusText": "Signed in user:\n\(fullName)"])
+                userInfo: ["statusText": "Welcome \n\(fullName)!"])
             // [END_EXCLUDE]
         } else {
             print("\(error.localizedDescription)")
