@@ -9,12 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OMGHTTPURLRQ.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Fuzz Therapy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-Fuzz TherapyTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PromiseKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>190ACD3A51BC90B85EADB13E9CDD207B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>30FF11C4459C90FAFE9FB601CF254867</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C3B379F4D3DA21A25D85E4421FE3B271</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE851C028D1DCDC609679AF65F3D3C28</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>E4EA229A2771DE9EBAC082934CD044FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5C0A78BE3E51179C41660ACF0B25F09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F61234CE287D2D4A39FD670B268CF04D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
