@@ -16,5 +16,7 @@ class MyCustomButton: UIButton {
         self.layer.borderColor = UIColor.whiteColor().CGColor
         self.layer.borderWidth = 0.8
         self.tintColor = UIColor.whiteColor()
+        self.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
     }
 }
+
