@@ -51,7 +51,6 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
             // else edit is false and create is true
             editProfileButton.hidden = false
             createProfileButton.hidden = false
-            userName.text = "testing"
 
         } else {
             // Not signed in
