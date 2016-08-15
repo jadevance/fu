@@ -28,7 +28,6 @@
 		01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */; };
 		01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4571D57D2CA00C972C3 /* Assets.xcassets */; };
 		01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */; };
-		01ADD4661D57D2CA00C972C3 /* Fuzz_TherapyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4651D57D2CA00C972C3 /* Fuzz_TherapyTests.swift */; };
 		01C4689C1D5843D8004FB4E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 01C4689A1D5843D8004FB4E4 /* Podfile */; };
 		01C4689D1D5843D8004FB4E4 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 01C4689B1D5843D8004FB4E4 /* Podfile.lock */; };
 		9EAD50AB34D779E0A23B0AE2 /* Pods_Fuzz_Therapy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD4EBBF3CB9E5118425E455 /* Pods_Fuzz_Therapy.framework */; };
@@ -71,8 +70,6 @@
 		01ADD45A1D57D2CA00C972C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01ADD45C1D57D2CA00C972C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01ADD4611D57D2CA00C972C3 /* Fuzz TherapyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fuzz TherapyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01ADD4651D57D2CA00C972C3 /* Fuzz_TherapyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuzz_TherapyTests.swift; sourceTree = "<group>"; };
-		01ADD4671D57D2CA00C972C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01C4689A1D5843D8004FB4E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		01C4689B1D5843D8004FB4E4 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = SOURCE_ROOT; };
 		5C0725DAE2AC67EB2AC541A3 /* Pods-Fuzz TherapyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fuzz TherapyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fuzz TherapyTests/Pods-Fuzz TherapyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				01ADD44F1D57D2CA00C972C3 /* Fuzz Therapy */,
-				01ADD4641D57D2CA00C972C3 /* Fuzz TherapyTests */,
 				01ADD44E1D57D2CA00C972C3 /* Products */,
 				8EF25A5B56B3F2D025F9B7B8 /* Pods */,
 				7AFF24913A19BC74FA299B9D /* Frameworks */,
@@ -152,15 +148,6 @@
 				01ADD45C1D57D2CA00C972C3 /* Info.plist */,
 			);
 			path = "Fuzz Therapy";
-			sourceTree = "<group>";
-		};
-		01ADD4641D57D2CA00C972C3 /* Fuzz TherapyTests */ = {
-			isa = PBXGroup;
-			children = (
-				01ADD4651D57D2CA00C972C3 /* Fuzz_TherapyTests.swift */,
-				01ADD4671D57D2CA00C972C3 /* Info.plist */,
-			);
-			path = "Fuzz TherapyTests";
 			sourceTree = "<group>";
 		};
 		7AFF24913A19BC74FA299B9D /* Frameworks */ = {
@@ -412,7 +399,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01ADD4661D57D2CA00C972C3 /* Fuzz_TherapyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

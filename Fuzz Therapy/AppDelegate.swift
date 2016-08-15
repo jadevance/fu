@@ -36,18 +36,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
                 withError error: NSError!) {
         if (error == nil) {
-
+            
             let userId = user.userID                  // For client-side use only!
-//            let idToken = user.authentication.idToken // Safe to send to the server
-//            let idTokenExpiration = user.authentication.idTokenExpirationDate // Safe to send to the server
+            //            let idToken = user.authentication.idToken // Safe to send to the server
+            //            let idTokenExpiration = user.authentication.idTokenExpirationDate // Safe to send to the server
             let fullName = user.profile.name
-//            let givenName = user.profile.givenName
-//            let familyName = user.profile.familyName
-//            let email = user.profile.email
+            //            let givenName = user.profile.givenName
+            //            let familyName = user.profile.familyName
+            //            let email = user.profile.email
             // [START_EXCLUDE]
-
-//            getCurrentUserData(userId)
-//            postCurrentUserData(userId)
+            
+            //            getCurrentUserData(userId)
+            //            postCurrentUserData(userId)
             
             NSNotificationCenter.defaultCenter().postNotificationName(
                 "ToggleAuthUINotification",

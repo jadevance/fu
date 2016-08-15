@@ -11,11 +11,11 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var statusText: UILabel!
     @IBOutlet weak var createProfileButton: UIButton!
-
     @IBOutlet weak var userName: UILabel!
-    
     @IBOutlet weak var editProfileButton: MyCustomButton!
-  // [START viewdidload]
+    
+    
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -27,16 +27,16 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
         name: "ToggleAuthUINotification",
         object: nil)
     statusText.text = "Loading"
+    
     toggleAuthUI()
     
-    // can initialize connecting to the API here, if user logged in
+// can initialize connecting to the API here, if user logged in
     getCurrentUserData { myUser in
         self.userName.text = myUser.name
     }
 
   }
     
-// [END viewdidload]
     
 // [START toggle_auth]
     func toggleAuthUI() {

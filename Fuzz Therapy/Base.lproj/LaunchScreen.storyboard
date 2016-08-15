@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -29,20 +28,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jadedog" translatesAutoresizingMaskIntoConstraints="NO" id="uWN-Xa-NUv">
-                                <rect key="frame" x="53" y="351" width="329" height="385"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="385" id="blP-vg-2hs"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="uWN-Xa-NUv" secondAttribute="bottom" id="QhM-ux-VGi"/>
-                            <constraint firstItem="7Ob-zp-2eE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="107" id="Uw6-yn-ylH"/>
-                            <constraint firstItem="7Ob-zp-2eE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c8U-Ph-Uut"/>
-                            <constraint firstItem="uWN-Xa-NUv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="33" id="rMZ-1Z-MpF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uWN-Xa-NUv" secondAttribute="trailing" constant="12" id="yz6-Wh-9fd"/>
+                            <constraint firstItem="7Ob-zp-2eE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-223" id="OGm-Zs-Qn0"/>
+                            <constraint firstItem="7Ob-zp-2eE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YI0-0M-i3c"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -52,7 +42,4 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="jadedog" width="500" height="500"/>
-    </resources>
 </document>
