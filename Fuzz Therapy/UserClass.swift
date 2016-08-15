@@ -20,19 +20,19 @@ class User {
     var availability:String
     var dogName:String
     var dogBreed:String
-    var dogAge:String
-    var dogPic:String
+    var dogAge:Int
+    var dogPicture:String
     
-    init(userName:String, googleID:String, userLocation:String, userAvailiability:String, dogName:String, dogBreed:String, dogAge:String, dogPicture:String) {
+    init(name:String, uid:String, location:String, availability:String, dogName:String, dogBreed:String, dogAge:Int, dogPicture:String) {
         
-        self.name = userName
-        self.uid = googleID
-        self.location = userLocation
-        self.availability = userAvailiability
+        self.name = name
+        self.uid = uid
+        self.location = location
+        self.availability = availability
         self.dogName = dogName
         self.dogBreed = dogBreed
         self.dogAge = dogAge
-        self.dogPic = dogPicture
+        self.dogPicture = dogPicture
         
     }
 }

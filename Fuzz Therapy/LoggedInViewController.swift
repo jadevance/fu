@@ -12,6 +12,8 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var statusText: UILabel!
     @IBOutlet weak var createProfileButton: UIButton!
 
+    @IBOutlet weak var userName: UILabel!
+    
     @IBOutlet weak var editProfileButton: MyCustomButton!
   // [START viewdidload]
   override func viewDidLoad() {
@@ -20,19 +22,23 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     GIDSignIn.sharedInstance().uiDelegate = self
     GIDSignIn.sharedInstance().signInSilently()
 
-
     NSNotificationCenter.defaultCenter().addObserver(self,
         selector: #selector(LoggedInViewController.receiveToggleAuthUINotification(_:)),
         name: "ToggleAuthUINotification",
         object: nil)
     statusText.text = "Loading"
     toggleAuthUI()
+    
     // can initialize connecting to the API here, if user logged in
+    getCurrentUserData { myUser in
+        self.userName.text = myUser.name
+    }
 
   }
     
-  // [END viewdidload]
-    // [START toggle_auth]
+// [END viewdidload]
+    
+// [START toggle_auth]
     func toggleAuthUI() {
         if (GIDSignIn.sharedInstance().hasAuthInKeychain()){
             // Signed in
@@ -44,7 +50,8 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
             // createProfileButton.hidden = false
             // else edit is false and create is true
             editProfileButton.hidden = false
-            createProfileButton.hidden = false 
+            createProfileButton.hidden = false
+            userName.text = "testing"
 
         } else {
             // Not signed in

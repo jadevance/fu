@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 //            let email = user.profile.email
             // [START_EXCLUDE]
 
-            getCurrentUserData(userId)
+//            getCurrentUserData(userId)
 //            postCurrentUserData(userId)
             
             NSNotificationCenter.defaultCenter().postNotificationName(

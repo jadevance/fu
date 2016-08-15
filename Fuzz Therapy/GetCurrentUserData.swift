@@ -13,7 +13,7 @@ import Google
 
 // this is for getting and posting data with the API, not the oauth login
 
-func getCurrentUserData(userId: String) {
+func getCurrentUserData(completionHandler:(User)->()) {
 //    Alamofire.request(.GET, "https://www.fuzztherapy.com/api/").response { (req, res, data, error) -> Void in
 //        print(res)
 //        let outputString = NSString(data: data!, encoding:NSUTF8StringEncoding)
@@ -28,68 +28,20 @@ func getCurrentUserData(userId: String) {
             let userData = JSON(response.result.value!)
             print(userData)
             
-            let userName = userData[0]["name"]
-            let googleId = userData[0]["uid"]
-            let userLocation = userData[0]["location"]
-            let userAvailability = userData[0]["availability"]
-            let dogName = userData[0]["dog_name"]
-            let dogBreed = userData[0]["dog_breed"]
-            let dogPicture = userData[0]["dog_picture"]
+            let name = userData[0]["name"].string!
+            let uid = userData[0]["uid"].string!
+            let location = userData[0]["location"].string!
+            let availability = userData[0]["availability"].string!
+            let dogName = userData[0]["dog_name"].string!
+            let dogBreed = userData[0]["dog_breed"].string!
+            let dogAge = userData[0]["dog_age"].int!
+            let dogPicture = userData[0]["dog_picture"].string!
             
-            let myUser = User(id:id, FBid:userFBid, name:userName, picUrl: userPic, msgStat: msgStat)
+            let myUser = User(name:name, uid:uid, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge, dogPicture:dogPicture)
+            
             CurrentUser.sharedInstance.user = myUser
             
             completionHandler(myUser)
             
     }
 }
-
-
-
-//                        //API call to migo_rails users#create
-//                        
-//                        let parameters = [
-//                            "user":[
-//                                "name":"\(userName)",
-//                                "fb_id":"\(userFBid)",
-//                                "pic_url":"\(userPic)",
-//                                "message_status":msgStat
-//                            ]
-//                        ]
-//                        
-//                        Alamofire.request(.POST, "https://www.migo-app.com/users", parameters: parameters)
-//                            .responseJSON { response in
-//                                
-//                                let userData = JSON(response.result.value!)
-//                                let id = userData["id"].int!
-//                                
-//                                let myUser = User(id:id, FBid:userFBid, name:userName, picUrl: userPic, msgStat: msgStat)
-//                                CurrentUser.sharedInstance.user = myUser
-//                                
-//                                completionHandler(myUser)
-//                                
-//                        }
-//                }
-//                
-//            } else {
-//                
-//                let userData = JSON(response.result.value![0])
-//                let userName = userData["name"].string!
-//                
-//                print(userData)
-//                
-//                let id = userData["id"].int!
-//                let userFBid = "\(FBSDKAccessToken.currentAccessToken().userID)"
-//                let userPic = userData["profile_pic"].string!
-//                let msgStat = userData["messages_status"].string!
-//                
-//                let myUser = User(id:id, FBid:userFBid, name:userName, picUrl: userPic, msgStat: msgStat)
-//                
-//                CurrentUser.sharedInstance.user = myUser
-//                
-//                completionHandler(myUser)
-//            }
-//            
-//    }
-//    
-//}
