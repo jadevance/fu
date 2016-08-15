@@ -13,25 +13,9 @@ import Google
 
 // this is for getting and posting data with the API, not the oauth login
 
-//func checkForProfile(userId: String)  {
-//    let parameters = ["uid" : userId]
-//        Alamofire.request(.POST, "https://www.fuzztherapy.com/api/", parameters: parameters).responseJSON { response in
-//            let userData = JSON(response.result.value!)
-//            print(userData)
-//    }
-//    
-//}
-
-import Foundation
-import Alamofire
-import SwiftyJSON
-import Google
-
-// this is for getting and posting data with the API, not the oauth login
-
 func getCurrentUserData(completionHandler:(User)->()) {
     
-    let parameters = ["user": "103322828381592722715"]
+    let parameters = ["uid": "103322828381592722715"]
     
     Alamofire.request(.POST, "https://www.fuzztherapy.com/api/", parameters: parameters)
         .responseJSON { response in
@@ -57,14 +41,18 @@ func getCurrentUserData(completionHandler:(User)->()) {
     }
 }
 
-//func checkForProfile(uid:String){
-//    
-//    
-//}
+func checkForProfile(userId:String){
+    let userId = ["uid" : userId]
+    
+    Alamofire.request(.POST, "https://www.fuzztherapy.com/api", parameters: userId)
+        .responseJSON { response in
+            let userData = JSON(response.result.value!)
+            print(userData)
+    }
+}
+
+//if not in the database, create a new profile
+//if JSON(response.result.value!)[0] == "user: does not exist"
+//createProfile / postCurrentUserData
 
 
-//    Alamofire.request(.POST, "https://www.fuzztherapy.com/api").response { (req, res, data, error) -> Void in
-//        print(res)
-//        let outputString = NSString(data: data!, encoding:NSUTF8StringEncoding)
-//        print(outputString)
-//    }

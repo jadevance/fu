@@ -8,7 +8,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func application(application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Initialize sign-in
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
@@ -16,9 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return true
     }
     
-    // [START openurl]
     func application(application: UIApplication,
-                     openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+                                  openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return GIDSignIn.sharedInstance().handleURL(url,
                                                     sourceApplication: sourceApplication,
                                                     annotation: annotation)
@@ -37,18 +35,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 withError error: NSError!) {
         if (error == nil) {
             
-            let userId = user.userID                  // For client-side use only!
-            //            let idToken = user.authentication.idToken // Safe to send to the server
-            //            let idTokenExpiration = user.authentication.idTokenExpirationDate // Safe to send to the server
+            let userId = user.userID
+            //            let idToken = user.authentication.idToken
             let fullName = user.profile.name
             //            let givenName = user.profile.givenName
             //            let familyName = user.profile.familyName
             //            let email = user.profile.email
             // [START_EXCLUDE]
+
+
+            let myUser = gUser(userId:user.userID, idToken:user.authentication.idToken, fullName:user.profile.name, givenName:user.profile.givenName, familyName:user.profile.familyName, email:user.profile.email)
             
-            //            getCurrentUserData(userId)
-            //            postCurrentUserData(userId)
-            
+            GoogleUser.sharedInstance.googleUser = myUser
+  
+           checkForProfile(userId)
+
             NSNotificationCenter.defaultCenter().postNotificationName(
                 "ToggleAuthUINotification",
                 object: nil,

@@ -28,24 +28,3 @@ Alamofire.request(.POST, "https://www.fuzztherapy.com/api/create", parameters: p
     }
 }
 
-//func getCurrentUserData(completionHandler:(User)->()) {
-//
-//    Alamofire.request(.POST, "apiEndPoint")
-//        .responseJSON { response in
-//        if let value: AnyObject = response.result.value {
-//
-//            let userData = JSON(value)
-//            let userName = userData["name"].string!
-//            let userId = userData["id"].int!
-//            let userLocation = userData["location"].string!
-//            let userDogName = userData["dog_name"].string!
-//
-//            let currentUser = User(id:userId, name:userName, location:userLocation, dogName:userDogName)
-//
-//            print("user: \(currentUser.name)")
-//
-//            completionHandler(currentUser)
-//
-//        }
-//    }
-//}

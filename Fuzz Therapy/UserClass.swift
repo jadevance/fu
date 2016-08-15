@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Google
 
 class CurrentUser {
     static var sharedInstance = CurrentUser()

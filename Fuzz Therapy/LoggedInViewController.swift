@@ -1,10 +1,8 @@
 import UIKit
+import Google
 
-// Match the ObjC symbol name inside Main.storyboard.
 @objc(LoggedInViewController)
-// [START viewcontroller_interfaces]
 class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
-// [END viewcontroller_interfaces]
 
     @IBOutlet weak var signInButton: GIDSignInButton!
     @IBOutlet weak var signOutButton: UIButton!
@@ -34,7 +32,6 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     getCurrentUserData { myUser in
         self.userName.text = myUser.name
     }
-
   }
     
     
@@ -45,9 +42,11 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
             signInButton.hidden = true
             signOutButton.hidden = false
             disconnectButton.hidden = false
-            // if has profile with Fuzz Therapy
+
+
             // editProfileButton.hidden = true
             // createProfileButton.hidden = false
+            
             // else edit is false and create is true
             editProfileButton.hidden = false
             createProfileButton.hidden = false
