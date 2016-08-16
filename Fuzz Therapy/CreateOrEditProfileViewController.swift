@@ -95,7 +95,7 @@ UINavigationControllerDelegate {
         let dogPicture = imageData!
         
         
-        let parameters = [ "user": [
+        let parameters = [
                 "uid": "\(gUserId)",
                 "name": "\(name)",
                 "location": "\(location)",
@@ -103,7 +103,7 @@ UINavigationControllerDelegate {
                 "dog_name": "\(dogName)",
                 "dog_breed": "\(dogBreed)",
                 "dog_age": "\(dogAge)",
-                "dog_picture": "\(dogPicture)"]
+                "dog_picture": "\(dogPicture)"
             ]
         
         Alamofire.request(.POST, "https://www.fuzztherapy.com/api/create/", parameters: parameters)
