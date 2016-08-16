@@ -304,7 +304,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onSaveButtonPressed:" destination="Jf7-aM-tZT" eventType="touchDown" id="EVY-xi-xgI"/>
-                                    <segue destination="OLx-eY-RoL" kind="show" id="smF-tZ-0HY"/>
+                                    <segue destination="OLx-eY-RoL" kind="show" identifier="Search" id="smF-tZ-0HY"/>
                                 </connections>
                             </button>
                         </subviews>

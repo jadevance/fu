@@ -73,10 +73,14 @@ UINavigationControllerDelegate {
 
     @IBAction func onSaveButtonPressed(sender: AnyObject) {
         
-        // compresses and encodes image data 
+        alertResponse()
+        
+        // compresses and encodes image data into NSData
         
         let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
         let compressedJPGImage = UIImage(data: imageData!)
+
+
 
         
         // make an api call to create new account / save details
@@ -88,7 +92,7 @@ UINavigationControllerDelegate {
         let dogName = dogNameField.text!
         let dogBreed = dogBreedField.text!
         let dogAge = dogAgeField.text!
-        let dogPicture = compressedJPGImage!
+        let dogPicture = imageData!
         
         
         let parameters = [ "user": [
@@ -103,17 +107,39 @@ UINavigationControllerDelegate {
             ]
         
         Alamofire.request(.POST, "https://www.fuzztherapy.com/api/create/", parameters: parameters)
-            .responseJSON { response in
-                
-                //if successful
-                let alertController = UIAlertController(title: "Yay!", message: "Your profile has been saved.", preferredStyle: .Alert)
-                
-                let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-                alertController.addAction(defaultAction)
-                
-                self.presentViewController(alertController, animated: true, completion: nil)
-                print(parameters)
+            .responseJSON { response in }
+        
+        
+        Alamofire.upload(.POST, "https://www.fuzztherapy.com/api/photo/", data: imageData!)
+            .progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
+                print(totalBytesWritten)
+            }
+            .responseString { response in
+                print("Success: \(response.result.isSuccess)")
+                print("Response String: \(response.result.value)")
         }
+        
+//        let fileURL = NSBundle.mainBundle().URLForResource("Default", withExtension: "png")
+//        Alamofire.upload(.POST, "https://httpbin.org/post", file: fileURL!)
+
+//                
+//                self.presentViewController(alertController, animated: true, completion: nil)
+//                
+//                self.performSegueWithIdentifier("Search", sender: self)
+        }
+        //if successful
+//        let alertController = UIAlertController(title: "Yay!", message: "Your profile has been saved.", preferredStyle: .Alert)
+//        
+//        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+//        alertController.addAction(defaultAction)
+//    }
+
+
+    func alertResponse() {
+        let alertController = UIAlertController(title: "Yay!", message: "Your  profile has been saved.", preferredStyle: .Alert)
+    
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
     }
 }
 // else if unsuccessful

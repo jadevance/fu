@@ -15,6 +15,7 @@ import Google
 
 func getCurrentUserData(completionHandler:(User)->()) {
     
+//    let gUserId = GoogleUser.sharedInstance.googleUser!.userId
     let parameters = ["uid": "103322828381592722715"]
     
     Alamofire.request(.POST, "https://www.fuzztherapy.com/api/", parameters: parameters)
