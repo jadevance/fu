@@ -117,36 +117,26 @@ UINavigationControllerDelegate {
             .responseString { response in
                 print("Success: \(response.result.isSuccess)")
                 print("Response String: \(response.result.value)")
-        }
+            }
         
-//        let fileURL = NSBundle.mainBundle().URLForResource("Default", withExtension: "png")
-//        Alamofire.upload(.POST, "https://httpbin.org/post", file: fileURL!)
-
-//                
-//                self.presentViewController(alertController, animated: true, completion: nil)
-//                
-//                self.performSegueWithIdentifier("Search", sender: self)
         }
-        //if successful
-//        let alertController = UIAlertController(title: "Yay!", message: "Your profile has been saved.", preferredStyle: .Alert)
-//        
-//        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-//        alertController.addAction(defaultAction)
-//    }
-
 
     func alertResponse() {
+        //if successful
         let alertController = UIAlertController(title: "Yay!", message: "Your  profile has been saved.", preferredStyle: .Alert)
     
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)
+        
+        // else unsuccessful
+        
+        //            let alertController = UIAlertController(title: "Oh no!!", message: "Your profile has NOT been saved.", preferredStyle: .Alert)
+        //
+        //            let defaultAction = UIAlertAction(title: "Try again?", style: .Default, handler: nil)
+        //            alertController.addAction(defaultAction)
+        //
+        //            presentViewController(alertController, animated: true, completion: nil)
     }
 }
-// else if unsuccessful
-//            let alertController = UIAlertController(title: "Oh no!!", message: "Your profile has NOT been saved.", preferredStyle: .Alert)
-//        
-//            let defaultAction = UIAlertAction(title: "Try again?", style: .Default, handler: nil)
-//            alertController.addAction(defaultAction)
-//        
-//            presentViewController(alertController, animated: true, completion: nil)
+
 
