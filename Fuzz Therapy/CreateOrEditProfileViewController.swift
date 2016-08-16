@@ -103,23 +103,33 @@ UINavigationControllerDelegate {
                 "dog_name": "\(dogName)",
                 "dog_breed": "\(dogBreed)",
                 "dog_age": "\(dogAge)",
-                "dog_picture": "\(dogPicture)"
+                "dog_picture": "dogPicturePlaceholder"
             ]
         
         Alamofire.request(.POST, "https://www.fuzztherapy.com/api/create/", parameters: parameters)
             .responseJSON { response in }
         
         
-        Alamofire.upload(.POST, "https://www.fuzztherapy.com/api/photo/", data: imageData!)
-            .progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
-                print(totalBytesWritten)
-            }
-            .responseString { response in
-                print("Success: \(response.result.isSuccess)")
-                print("Response String: \(response.result.value)")
-            }
+        Alamofire.upload(.POST, "https://www.fuzztherapy.com/api/photo/", multipartFormData: { multipartFormData in
+            multipartFormData.appendBodyPart(data: imageData!, name: "dog_picture", mimeType: "image/jpeg")
+        },
+            encodingCompletion: { result in
+                switch result {
+                case .Success(let upload, _, _):
+                    upload.progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
+                        print(totalBytesWritten)
+                    }
+                    upload.responseString { response in
+                        print("Success: \(response.result.isSuccess)")
+                        print("Response String: \(response.result.value)")
+                    }
+                case .Failure: break
         
-        }
+                }
+            }
+        )
+  
+    }
 
     func alertResponse() {
         //if successful

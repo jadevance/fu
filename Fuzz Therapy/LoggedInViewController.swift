@@ -27,12 +27,15 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     statusText.text = "Loading"
     
     toggleAuthUI()
-    
-// can initialize connecting to the API here, if user logged in
-    getCurrentUserData { myUser in
-        self.userName.text = myUser.name
+    if GoogleUser.sharedInstance.googleUser?.userId != nil {
+
+        // can initialize connecting to the API here, if user logged in
+        getCurrentUserData { myUser in
+                self.userName.text = myUser.name
+                print("hello")
+            }
+        }
     }
-  }
     
     
 // [START toggle_auth]
