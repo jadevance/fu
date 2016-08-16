@@ -43,11 +43,14 @@ func getCurrentUserData(completionHandler:(User)->()) {
 
 func checkForProfile(userId:String){
     let userId = ["uid" : userId]
-    
     Alamofire.request(.POST, "https://www.fuzztherapy.com/api", parameters: userId)
         .responseJSON { response in
+        
+        if JSON(response.result.value!)[0] == "user: does not exist" {
+            
             let userData = JSON(response.result.value!)
             print(userData)
+        }
     }
 }
 

@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 
 import UIKit
@@ -33,6 +35,7 @@ UINavigationControllerDelegate {
 
 
     override func viewDidLoad() {
+
     
     }
     
@@ -69,25 +72,55 @@ UINavigationControllerDelegate {
     }
 
     @IBAction func onSaveButtonPressed(sender: AnyObject) {
+        
+        // compresses and encodes image data 
+        
         let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
-        var compressedJPGImage = UIImage(data: imageData!)
-//        UIImageWriteToSavedPhotosAlbum(compressedJPGImage, nil, nil, nil)
-        // package data
-        // fire off callback to API
-        // if successful do this:
-            let alertController = UIAlertController(title: "Yay!", message: "Your profile has been saved.", preferredStyle: .Alert)
+        let compressedJPGImage = UIImage(data: imageData!)
+
         
-            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-            alertController.addAction(defaultAction)
+        // make an api call to create new account / save details
         
-            presentViewController(alertController, animated: true, completion: nil)
-        // else if unsuccessful
+        let gUserId = GoogleUser.sharedInstance.googleUser!.userId
+        let name = nameField.text!
+        let location = locationField.text!
+        let availability = availabilityField.text!
+        let dogName = dogNameField.text!
+        let dogBreed = dogBreedField.text!
+        let dogAge = dogAgeField.text!
+        let dogPicture = compressedJPGImage!
+        
+        
+        let parameters = [ "user": [
+                "uid": "\(gUserId)",
+                "name": "\(name)",
+                "location": "\(location)",
+                "availability": "\(availability)",
+                "dog_name": "\(dogName)",
+                "dog_breed": "\(dogBreed)",
+                "dog_age": "\(dogAge)",
+                "dog_picture": "\(dogPicture)"]
+            ]
+        
+        Alamofire.request(.POST, "https://www.fuzztherapy.com/api/create/", parameters: parameters)
+            .responseJSON { response in
+                
+                //if successful
+                let alertController = UIAlertController(title: "Yay!", message: "Your profile has been saved.", preferredStyle: .Alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+                print(parameters)
+        }
+    }
+}
+// else if unsuccessful
 //            let alertController = UIAlertController(title: "Oh no!!", message: "Your profile has NOT been saved.", preferredStyle: .Alert)
 //        
 //            let defaultAction = UIAlertAction(title: "Try again?", style: .Default, handler: nil)
 //            alertController.addAction(defaultAction)
 //        
 //            presentViewController(alertController, animated: true, completion: nil)
-        
-    }
-}
+

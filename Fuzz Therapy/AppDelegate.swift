@@ -34,21 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
                 withError error: NSError!) {
         if (error == nil) {
-            
-            let userId = user.userID
-            //            let idToken = user.authentication.idToken
+
             let fullName = user.profile.name
-            //            let givenName = user.profile.givenName
-            //            let familyName = user.profile.familyName
-            //            let email = user.profile.email
-            // [START_EXCLUDE]
-
-
+            
+            // persist google data here to a custom class 
             let myUser = gUser(userId:user.userID, idToken:user.authentication.idToken, fullName:user.profile.name, givenName:user.profile.givenName, familyName:user.profile.familyName, email:user.profile.email)
             
             GoogleUser.sharedInstance.googleUser = myUser
-  
-           checkForProfile(userId)
+
 
             NSNotificationCenter.defaultCenter().postNotificationName(
                 "ToggleAuthUINotification",

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OMGHTTPURLRQ.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>05094CC4A047119F7ADC14EE74C4881C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A03FF126EF573CBCCBF84EECC8569F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A263F767F7122AF30DFB4109D1B8319</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>190ACD3A51BC90B85EADB13E9CDD207B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30FF11C4459C90FAFE9FB601CF254867</key>
+		<key>30D91C542B2E5D7EFA25E9431BA49911</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -53,16 +73,6 @@
 			<true/>
 		</dict>
 		<key>E4EA229A2771DE9EBAC082934CD044FA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E5C0A78BE3E51179C41660ACF0B25F09</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F61234CE287D2D4A39FD670B268CF04D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

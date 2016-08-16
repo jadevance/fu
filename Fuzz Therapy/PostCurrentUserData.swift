@@ -13,7 +13,10 @@ import Google
 
 func postCurrentUserData(userId: String) {
 
-let parameters = ["uid": "28748758",
+let gUserId = GoogleUser.sharedInstance.googleUser?.userId
+    
+
+let parameters = ["uid": "\(gUserId)",
                   "name": "Jade",
                   "location": "Seattle",
                   "availability": "every day",

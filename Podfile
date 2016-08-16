@@ -8,6 +8,7 @@ target 'Fuzz Therapy' do
   pod 'Google/SignIn'
   pod 'Alamofire', '~> 3.4'
   pod "PromiseKit", "~> 3.4"
+  pod 'AlamofireImage', '~> 2.0'
   # Pods for Fuzz Therapy
 
   target 'Fuzz TherapyTests' do
