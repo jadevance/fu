@@ -15,7 +15,9 @@ import Google
 
 func getCurrentUserData(completionHandler:(User)->()) {
     
+//    currently nil, need to fix GoogleUser class
 //    let gUserId = GoogleUser.sharedInstance.googleUser!.userId
+    
     let parameters = ["uid": "103322828381592722715"]
     
     Alamofire.request(.POST, "https://www.fuzztherapy.com/api/", parameters: parameters)
@@ -41,6 +43,8 @@ func getCurrentUserData(completionHandler:(User)->()) {
             
     }
 }
+
+
 func checkForProfile(userId:String){
     let userId = ["uid" : userId]
     Alamofire.request(.POST, "https://www.fuzztherapy.com/api", parameters: userId)

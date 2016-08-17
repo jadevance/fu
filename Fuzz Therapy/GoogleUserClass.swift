@@ -5,8 +5,8 @@
 //  Created by Jade Vance on 8/15/16.
 //  Copyright © 2016 Jade Vance. All rights reserved.
 //
+
 import Foundation
-//import Google
 
 class GoogleUser {
     static var sharedInstance = GoogleUser()
@@ -30,11 +30,3 @@ class gUser {
         self.email = email
     }
 }
-
-//            let userId = user.userID
-//            let idToken = user.authentication.idToken
-//            let fullName = user.profile.name
-//            let givenName = user.profile.givenName
-//            let familyName = user.profile.familyName
-//            let email = user.profile.email
-// [START_EXCLUDE]
