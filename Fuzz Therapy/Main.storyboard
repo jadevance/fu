@@ -52,6 +52,9 @@
                                 <state key="normal" title="Edit Profile">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Jf7-aM-tZT" kind="presentation" identifier="EditProfile" modalTransitionStyle="flipHorizontal" id="stL-o9-U7w"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doof" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdG-H3-msE">
                                 <rect key="frame" x="154" y="147" width="106" height="40"/>
@@ -448,4 +451,7 @@
     <resources>
         <image name="Isabel_puppy" width="480" height="640"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="stL-o9-U7w"/>
+    </inferredMetricsTieBreakers>
 </document>

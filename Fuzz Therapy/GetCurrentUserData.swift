@@ -15,51 +15,29 @@ import Google
 
 func getCurrentUserData(completionHandler:(User)->()) {
     
-//    currently nil, need to fix GoogleUser class
 //    let gUserId = GoogleUser.sharedInstance.googleUser!.userId
-    
     let parameters = ["uid": "103322828381592722715"]
     
     Alamofire.request(.POST, "https://www.fuzztherapy.com/api/", parameters: parameters)
         .responseJSON { response in
+            if JSON(response.result.value!)[0] != "user: does not exist" {
+                let userData = JSON(response.result.value!)
+                print(userData)
             
-            let userData = JSON(response.result.value!)
-            print(userData)
+                let name = userData[0]["name"].string!
+                let uid = userData[0]["uid"].string!
+                let location = userData[0]["location"].string!
+                let availability = userData[0]["availability"].string!
+                let dogName = userData[0]["dog_name"].string!
+                let dogBreed = userData[0]["dog_breed"].string!
+                let dogAge = userData[0]["dog_age"].int!
+                let dogPicture = "testing"
+//                userData[0]["dog_picture"].string!
             
-            let name = userData[0]["name"].string!
-            let uid = userData[0]["uid"].string!
-            let location = userData[0]["location"].string!
-            let availability = userData[0]["availability"].string!
-            let dogName = userData[0]["dog_name"].string!
-            let dogBreed = userData[0]["dog_breed"].string!
-            let dogAge = userData[0]["dog_age"].int!
-            let dogPicture = userData[0]["dog_picture"].string!
+                let myUser = User(name:name, uid:uid, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge, dogPicture:dogPicture)
             
-            let myUser = User(name:name, uid:uid, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge, dogPicture:dogPicture)
-            
-            CurrentUser.sharedInstance.user = myUser
-            
-            completionHandler(myUser)
-            
-    }
-}
-
-
-func checkForProfile(userId:String){
-    let userId = ["uid" : userId]
-    Alamofire.request(.POST, "https://www.fuzztherapy.com/api", parameters: userId)
-        .responseJSON { response in
-        
-        if JSON(response.result.value!)[0] == "user: does not exist" {
-            
-            let userData = JSON(response.result.value!)
-            print(userData)
+                CurrentUser.sharedInstance.user = myUser
+                completionHandler(myUser)
         }
     }
 }
-
-//if not in the database, create a new profile
-//if JSON(response.result.value!)[0] == "user: does not exist"
-//createProfile / postCurrentUserData
-
-

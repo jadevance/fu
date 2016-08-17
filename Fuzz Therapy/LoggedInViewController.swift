@@ -32,6 +32,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     
     getCurrentUserData { myUser in
             // Signed in, has a Fuzz Therapy Account
+        
             self.userName.text = myUser.name
             self.editProfileButton.hidden = false
             self.createProfileButton.hidden = true
