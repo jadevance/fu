@@ -7,9 +7,9 @@ target 'Fuzz Therapy' do
   pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
   pod 'Google/SignIn'
   pod 'Alamofire', '~> 3.4'
-  pod "PromiseKit", "~> 3.4"
   pod 'AlamofireImage', '~> 2.0'
-  # Pods for Fuzz Therapy
+  pod 'MDCSwipeToChoose'
+
 
   target 'Fuzz TherapyTests' do
     inherit! :search_paths

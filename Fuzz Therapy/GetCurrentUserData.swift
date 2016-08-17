@@ -41,7 +41,6 @@ func getCurrentUserData(completionHandler:(User)->()) {
             
     }
 }
-
 func checkForProfile(userId:String){
     let userId = ["uid" : userId]
     Alamofire.request(.POST, "https://www.fuzztherapy.com/api", parameters: userId)

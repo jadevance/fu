@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                                                     sourceApplication: sourceApplication,
                                                     annotation: annotation)
     }
-    // [END openurl]
     
     @available(iOS 9.0, *)
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
@@ -38,7 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let fullName = user.profile.name
             
             // persist google data here to a custom class 
-            let myUser = gUser(userId:user.userID, idToken:user.authentication.idToken, fullName:user.profile.name, givenName:user.profile.givenName, familyName:user.profile.familyName, email:user.profile.email)
+            let myUser = gUser(userId:user.userID, idToken:user.authentication.idToken,
+                               fullName:user.profile.name, givenName:user.profile.givenName,
+                               familyName:user.profile.familyName, email:user.profile.email)
             
             GoogleUser.sharedInstance.googleUser = myUser
 

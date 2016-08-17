@@ -10,9 +10,9 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var statusText: UILabel!
     @IBOutlet weak var createProfileButton: UIButton!
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var editProfileButton: MyCustomButton!
+    @IBOutlet weak var editProfileButton: UIButton!
     
-    
+    var viewRefresh = false
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,32 +27,27 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     statusText.text = "Loading"
     
     toggleAuthUI()
-    if GoogleUser.sharedInstance.googleUser?.userId != nil {
 
-        // can initialize connecting to the API here, if user logged in
-        getCurrentUserData { myUser in
-                self.userName.text = myUser.name
-                print("hello")
-            }
+    // can initialize connecting to the API here, if user logged in
+    
+    getCurrentUserData { myUser in
+            // Signed in, has a Fuzz Therapy Account
+            self.userName.text = myUser.name
+            self.editProfileButton.hidden = false
+            self.createProfileButton.hidden = true
         }
     }
-    
-    
-// [START toggle_auth]
+
     func toggleAuthUI() {
         if (GIDSignIn.sharedInstance().hasAuthInKeychain()){
-            // Signed in
+            
+            // Signed in, no Fuzz Therapy account
             signInButton.hidden = true
             signOutButton.hidden = false
             disconnectButton.hidden = false
+            self.editProfileButton.hidden = true
+            self.createProfileButton.hidden = false
 
-
-            // editProfileButton.hidden = true
-            // createProfileButton.hidden = false
-            
-            // else edit is false and create is true
-            editProfileButton.hidden = false
-            createProfileButton.hidden = false
 
         } else {
             // Not signed in
@@ -64,23 +59,13 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
             statusText.text = "Sign in with Google\n"
         }
     }
-    // [END toggle_auth]
-  // [START signout_tapped]
+
   @IBAction func didTapSignOut(sender: AnyObject) {
     GIDSignIn.sharedInstance().signOut()
     statusText.text = "Signed out."
     toggleAuthUI()
   }
-  // [END signout_tapped]
 
-  // [START disconnect_tapped]
-  @IBAction func didTapDisconnect(sender: AnyObject) {
-    GIDSignIn.sharedInstance().disconnect()
-    // [START_EXCLUDE silent]
-    statusText.text = "Disconnecting."
-    // [END_EXCLUDE]
-  }
-  // [END disconnect_tapped]
 
 
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -103,8 +88,6 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
       }
     }
   }
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        <#code#>
-//    }
-
 }
+
+

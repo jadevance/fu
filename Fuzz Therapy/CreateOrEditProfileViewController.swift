@@ -31,11 +31,8 @@ UINavigationControllerDelegate {
     @IBOutlet weak var saveProfile: UIButton!
     @IBOutlet weak var addPhoto: UIButton!
     @IBOutlet weak var photoLibrary: UIButton!
-    
-
 
     override func viewDidLoad() {
-
     
     }
     
@@ -73,16 +70,10 @@ UINavigationControllerDelegate {
 
     @IBAction func onSaveButtonPressed(sender: AnyObject) {
         
-        alertResponse()
-        
         // compresses and encodes image data into NSData
         
         let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
-        let compressedJPGImage = UIImage(data: imageData!)
 
-
-
-        
         // make an api call to create new account / save details
         
         let gUserId = GoogleUser.sharedInstance.googleUser!.userId
@@ -92,7 +83,6 @@ UINavigationControllerDelegate {
         let dogName = dogNameField.text!
         let dogBreed = dogBreedField.text!
         let dogAge = dogAgeField.text!
-        let dogPicture = imageData!
         
         
         let parameters = [
@@ -105,11 +95,11 @@ UINavigationControllerDelegate {
                 "dog_age": "\(dogAge)",
                 "dog_picture": "dogPicturePlaceholder"
             ]
-        
+        // send the text data
         Alamofire.request(.POST, "https://www.fuzztherapy.com/api/create/", parameters: parameters)
             .responseJSON { response in }
         
-        
+        // send the image data
         Alamofire.upload(.POST, "https://www.fuzztherapy.com/api/photo/", multipartFormData: { multipartFormData in
             multipartFormData.appendBodyPart(data: imageData!, name: "dog_picture", mimeType: "image/jpeg")
         },
@@ -122,30 +112,16 @@ UINavigationControllerDelegate {
                     upload.responseString { response in
                         print("Success: \(response.result.isSuccess)")
                         print("Response String: \(response.result.value)")
+                        //if successful
+                        let alertController = UIAlertController(title: "Yay!", message: "Your  profile has been saved.", preferredStyle: .Alert)
+                        
+                        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                        alertController.addAction(defaultAction)
                     }
                 case .Failure: break
-        
                 }
             }
         )
-  
-    }
-
-    func alertResponse() {
-        //if successful
-        let alertController = UIAlertController(title: "Yay!", message: "Your  profile has been saved.", preferredStyle: .Alert)
-    
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        // else unsuccessful
-        
-        //            let alertController = UIAlertController(title: "Oh no!!", message: "Your profile has NOT been saved.", preferredStyle: .Alert)
-        //
-        //            let defaultAction = UIAlertAction(title: "Try again?", style: .Default, handler: nil)
-        //            alertController.addAction(defaultAction)
-        //
-        //            presentViewController(alertController, animated: true, completion: nil)
     }
 }
 

@@ -44,7 +44,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Jf7-aM-tZT" kind="show" identifier="CreateProfile" id="hzz-Js-lcA"/>
+                                    <segue destination="Jf7-aM-tZT" kind="presentation" identifier="CreateProfile" modalTransitionStyle="flipHorizontal" id="hzz-Js-lcA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqe-MW-VWk" customClass="MyCustomButton" customModule="Fuzz_Therapy" customModuleProvider="target">
@@ -386,10 +386,10 @@
             </objects>
             <point key="canvasLocation" x="-512" y="535"/>
         </scene>
-        <!--Puppy Pals View Controller-->
+        <!--Search Results View Controller-->
         <scene sceneID="51A-Lk-v7I">
             <objects>
-                <viewController id="OLx-eY-RoL" customClass="PuppyPalsViewController" sceneMemberID="viewController">
+                <viewController id="OLx-eY-RoL" customClass="SearchResultsViewController" customModule="Fuzz_Therapy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Ta-aC-vYS"/>
                         <viewControllerLayoutGuide type="bottom" id="E3t-lq-UWv"/>
@@ -411,7 +411,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Puppy Pals" id="z5a-P6-hd2"/>
+                                    <navigationItem title="Search Results" id="z5a-P6-hd2"/>
                                 </items>
                             </navigationBar>
                         </subviews>
