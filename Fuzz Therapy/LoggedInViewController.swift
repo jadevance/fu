@@ -30,13 +30,13 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
 
     // can initialize connecting to the API here, if user logged in
     
-    getCurrentUserData { myUser in
-            // Signed in, has a Fuzz Therapy Account
-        
-            self.userName.text = myUser.name
-            self.editProfileButton.hidden = false
-            self.createProfileButton.hidden = true
-        }
+//    getCurrentUserData { myUser in
+//            // Signed in, has a Fuzz Therapy Account
+//        
+//            self.userName.text = myUser.name
+//            self.editProfileButton.hidden = false
+//            self.createProfileButton.hidden = true
+//        }
     }
 
     func toggleAuthUI() {

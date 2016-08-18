@@ -93,15 +93,18 @@ UINavigationControllerDelegate {
                 "dog_name": "\(dogName)",
                 "dog_breed": "\(dogBreed)",
                 "dog_age": "\(dogAge)",
-                "dog_picture": "dogPicturePlaceholder"
             ]
         // send the text data
         Alamofire.request(.POST, "https://www.fuzztherapy.com/api/create/", parameters: parameters)
-            .responseJSON { response in }
+            .responseJSON { response in
+        
+            
+        }
         
         // send the image data
         Alamofire.upload(.POST, "https://www.fuzztherapy.com/api/photo/", multipartFormData: { multipartFormData in
-            multipartFormData.appendBodyPart(data: imageData!, name: "dog_picture", mimeType: "image/jpeg")
+            multipartFormData.appendBodyPart(data: "\(gUserId)".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, name :"uid")
+            multipartFormData.appendBodyPart(data: imageData!, name: "dog_picture", fileName:"DOG.jpg", mimeType: "image/jpeg")
         },
             encodingCompletion: { result in
                 switch result {
