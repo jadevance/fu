@@ -26,6 +26,7 @@
 		017309221D6037E10079B366 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309211D6037E10079B366 /* CustomButton.swift */; };
 		017309241D6126750079B366 /* UserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309231D6126750079B366 /* UserClass.swift */; };
 		017309261D6250ED0079B366 /* GoogleUserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309251D6250ED0079B366 /* GoogleUserClass.swift */; };
+		017309281D661EC70079B366 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309271D661EC70079B366 /* CollectionViewCell.swift */; };
 		01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */; };
 		01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4571D57D2CA00C972C3 /* Assets.xcassets */; };
 		01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */; };
@@ -66,6 +67,7 @@
 		017309211D6037E10079B366 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		017309231D6126750079B366 /* UserClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
 		017309251D6250ED0079B366 /* GoogleUserClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleUserClass.swift; sourceTree = "<group>"; };
+		017309271D661EC70079B366 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		01ADD44D1D57D2CA00C972C3 /* Fuzz Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuzz Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01ADD4571D57D2CA00C972C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				017309231D6126750079B366 /* UserClass.swift */,
 				017309211D6037E10079B366 /* CustomButton.swift */,
 				017308FC1D5A55C80079B366 /* Main.storyboard */,
+				017309271D661EC70079B366 /* CollectionViewCell.swift */,
 				017309171D5D37090079B366 /* fontawesome-webfont.ttf */,
 				017308FA1D5A55380079B366 /* LoggedInViewController.swift */,
 				017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */,
@@ -387,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				017309281D661EC70079B366 /* CollectionViewCell.swift in Sources */,
 				017308FB1D5A55380079B366 /* LoggedInViewController.swift in Sources */,
 				0173091A1D5D3E710079B366 /* CreateOrEditProfileViewController.swift in Sources */,
 				017309161D5D2D900079B366 /* PostCurrentUserData.swift in Sources */,

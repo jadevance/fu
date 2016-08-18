@@ -9,6 +9,7 @@ target 'Fuzz Therapy' do
   pod 'Alamofire', '~> 3.4'
   pod 'AlamofireImage', '~> 2.0'
   pod 'MDCSwipeToChoose'
+  pod 'Haneke', '~> 1.0'
 
 
   target 'Fuzz TherapyTests' do
