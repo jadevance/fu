@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,36 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuzz Therapy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LC-rI-LGe">
+                                <rect key="frame" x="54" y="36" width="307" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="n0P-lS-65f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jadedog" translatesAutoresizingMaskIntoConstraints="NO" id="9V8-ai-vJL">
                                 <rect key="frame" x="0.0" y="236" width="414" height="500"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Ob-zp-2eE">
-                                <rect key="frame" x="124" y="131" width="166" height="28"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuzz Therapy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gco-Mx-Tm9">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="28"/>
-                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="30"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9V8-ai-vJL" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="2Xq-Kg-cUp"/>
+                            <constraint firstItem="0LC-rI-LGe" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="34" id="D2U-ZC-BqX"/>
                             <constraint firstItem="9V8-ai-vJL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="GRg-xc-OOi"/>
-                            <constraint firstItem="9V8-ai-vJL" firstAttribute="top" secondItem="7Ob-zp-2eE" secondAttribute="bottom" constant="77" id="Nro-Yh-ILQ"/>
-                            <constraint firstItem="7Ob-zp-2eE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-223" id="OGm-Zs-Qn0"/>
-                            <constraint firstItem="9V8-ai-vJL" firstAttribute="centerX" secondItem="7Ob-zp-2eE" secondAttribute="centerX" id="XJr-uN-CMj"/>
-                            <constraint firstItem="7Ob-zp-2eE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YI0-0M-i3c"/>
+                            <constraint firstItem="0LC-rI-LGe" firstAttribute="centerX" secondItem="9V8-ai-vJL" secondAttribute="centerX" id="VJQ-ac-juD"/>
+                            <constraint firstItem="0LC-rI-LGe" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="16" id="dgZ-in-OtO"/>
+                            <constraint firstAttribute="trailing" secondItem="9V8-ai-vJL" secondAttribute="trailing" id="p4w-YT-T7f"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="49" y="452"/>
         </scene>
     </scenes>
     <resources>

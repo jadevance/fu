@@ -14,29 +14,18 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     
     var viewRefresh = false
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    GIDSignIn.sharedInstance().uiDelegate = self
-    GIDSignIn.sharedInstance().signInSilently()
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signInSilently()
 
-    NSNotificationCenter.defaultCenter().addObserver(self,
-        selector: #selector(LoggedInViewController.receiveToggleAuthUINotification(_:)),
-        name: "ToggleAuthUINotification",
-        object: nil)
-    statusText.text = "Loading"
-    
-    toggleAuthUI()
-
-    // can initialize connecting to the API here, if user logged in
-    
- 
-//            // Signed in, has a Fuzz Therapy Account
-//        
-//            self.userName.text = myUser.name
-//            self.editProfileButton.hidden = false
-//            self.createProfileButton.hidden = true
-//        }
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(LoggedInViewController.receiveToggleAuthUINotification(_:)),
+                                                         name: "ToggleAuthUINotification",
+                                                         object: nil)
+        statusText.text = "Loading"
+        toggleAuthUI()
     }
 
     func toggleAuthUI() {
@@ -45,7 +34,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
             // Signed in, no Fuzz Therapy account
             signInButton.hidden = true
             signOutButton.hidden = false
-            disconnectButton.hidden = false
+            disconnectButton.hidden = true
             self.editProfileButton.hidden = true
             self.createProfileButton.hidden = false
 

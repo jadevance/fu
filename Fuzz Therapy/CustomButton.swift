@@ -14,9 +14,8 @@ class MyCustomButton: UIButton {
         super.init(coder: aDecoder)!
         self.layer.cornerRadius = 5.0;
         self.layer.borderColor = UIColor.whiteColor().CGColor
-        self.layer.borderWidth = 0.8
+        self.layer.borderWidth = 1.0
         self.tintColor = UIColor.whiteColor()
         self.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
     }
 }
-
