@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Google
 
 class CurrentUser {
     static var sharedInstance = CurrentUser()
@@ -22,9 +21,8 @@ class User {
     var dogName:String
     var dogBreed:String
     var dogAge:Int
-    var dogPicture:String
     
-    init(name:String, uid:String, location:String, availability:String, dogName:String, dogBreed:String, dogAge:Int, dogPicture:String) {
+    init(name:String, uid:String, location:String, availability:String, dogName:String, dogBreed:String, dogAge:Int) {
         
         self.name = name
         self.uid = uid
@@ -33,15 +31,6 @@ class User {
         self.dogName = dogName
         self.dogBreed = dogBreed
         self.dogAge = dogAge
-        self.dogPicture = dogPicture
         
     }
 }
-
-//let userName = userData[0]["name"]
-//let googleId = userData[0]["uid"]
-//let userLocation = userData[0]["location"]
-//let userAvailability = userData[0]["availability"]
-//let dogName = userData[0]["dog_name"]
-//let dogBreed = userData[0]["dog_breed"]
-//let dogPicture = userData[0]["dog_picture"]

@@ -25,9 +25,7 @@ UINavigationControllerDelegate {
     @IBOutlet weak var dogNameField: UITextField!
     @IBOutlet weak var dogBreedField: UITextField!
     @IBOutlet weak var dogAgeField: UITextField!
-
     @IBOutlet weak var imagePicked: UIImageView!
-    
     @IBOutlet weak var saveProfile: UIButton!
     @IBOutlet weak var addPhoto: UIButton!
     @IBOutlet weak var photoLibrary: UIButton!
@@ -67,6 +65,7 @@ UINavigationControllerDelegate {
         imagePicked.image = image
         self.dismissViewControllerAnimated(true, completion: nil);
     }
+    
 
     @IBAction func onSaveButtonPressed(sender: AnyObject) {
         
@@ -74,7 +73,7 @@ UINavigationControllerDelegate {
         
         let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
 
-        // make an api call to create new account / save details
+        // make an api call to create new account / save details locally in a singleton
         
         let gUserId = GoogleUser.sharedInstance.googleUser!.userId
         let name = nameField.text!
@@ -82,7 +81,7 @@ UINavigationControllerDelegate {
         let availability = availabilityField.text!
         let dogName = dogNameField.text!
         let dogBreed = dogBreedField.text!
-        let dogAge = dogAgeField.text!
+        let dogAge:Int? = Int(dogAgeField.text!)
         
         
         let parameters = [
@@ -94,11 +93,15 @@ UINavigationControllerDelegate {
                 "dog_breed": "\(dogBreed)",
                 "dog_age": "\(dogAge)",
             ]
+        
+        let myUser = User(name:name, uid:gUserId, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge!)
+        
+        CurrentUser.sharedInstance.user = myUser
+        
         // send the text data
         Alamofire.request(.POST, "https://www.fuzztherapy.com/api/create/", parameters: parameters)
             .responseJSON { response in
         
-            
         }
         
         // send the image data
@@ -115,16 +118,33 @@ UINavigationControllerDelegate {
                     upload.responseString { response in
                         print("Success: \(response.result.isSuccess)")
                         print("Response String: \(response.result.value)")
-                        //if successful
-                        let alertController = UIAlertController(title: "Yay!", message: "Your  profile has been saved.", preferredStyle: .Alert)
                         
-                        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-                        alertController.addAction(defaultAction)
+                        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+                            let DestinationVC: DogResultsTableViewController = segue.destinationViewController as! DogResultsTableViewController
+                        }
+                        self.doTheSearch()
                     }
                 case .Failure: break
                 }
             }
         )
+    }
+    
+    func doTheSearch() {
+        // hard coded for now, will pass it from the singleton once the view is up
+        let parameters = ["location" : "Seattle"]
+        
+        Alamofire.request(.POST, "https://www.fuzztherapy.com/api/search", parameters: parameters)
+            .responseJSON { response in
+                print(response.request)  // original URL request
+                print(response.response) // URL response
+                print(response.data)     // server data
+                print(response.result)   // result of response serialization
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
     }
 }
 

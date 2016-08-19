@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-// this is for getting and posting data with the API, not the oauth login
+// this is for getting data with the API, not the oauth login
 
 func getCurrentUserData(completionHandler:(User)->()) {
     
@@ -21,15 +21,7 @@ func getCurrentUserData(completionHandler:(User)->()) {
         .responseJSON { response in
             if JSON(response.result.value!)[0] != "user: does not exist" {
                 let userData = JSON(response.result.value!)
-                
-//                let name = "Jade"
-//                let uid = "12345678"
-//                let location = "Seattle"
-//                let availability = "Always"
-//                let dogName = "Harley"
-//                let dogBreed = "Best Dog"
-//                let dogAge = "10"
-//                let dogPicture = "Test"
+                print(userData)
                 
                 let name = userData[0]["name"].string!
                 let uid = userData[0]["uid"].string!
@@ -38,9 +30,8 @@ func getCurrentUserData(completionHandler:(User)->()) {
                 let dogName = userData[0]["dog_name"].string!
                 let dogBreed = userData[0]["dog_breed"].string!
                 let dogAge = userData[0]["dog_age"].int!
-                let dogPicture = userData[0]["dog_picture"].string!
             
-                let myUser = User(name:name, uid:uid, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge, dogPicture:dogPicture)
+                let myUser = User(name:name, uid:uid, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge)
             
                 CurrentUser.sharedInstance.user = myUser
                 completionHandler(myUser)

@@ -7,6 +7,45 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Dog Results Table View Controller-->
+        <scene sceneID="Iga-k9-UVw">
+            <objects>
+                <tableViewController id="sAC-pV-QZ9" customClass="DogResultsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vBu-ko-8Z7" customClass="DogResultsTable">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dKc-W5-Z95" customClass="DogResultsTableViewCell" customModule="Fuzz_Therapy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dKc-W5-Z95" id="n9h-2c-hvw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Harley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xr-kh-4uU">
+                                            <rect key="frame" x="167" y="8" width="50" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="5Xr-kh-4uU" id="8li-Lb-w3R"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sAC-pV-QZ9" id="X7K-zL-ZSl"/>
+                            <outlet property="delegate" destination="sAC-pV-QZ9" id="CQ8-Lm-8Ze"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXS-M8-F8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="535"/>
+        </scene>
         <!--Logged In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -307,7 +346,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onSaveButtonPressed:" destination="Jf7-aM-tZT" eventType="touchDown" id="EVY-xi-xgI"/>
-                                    <segue destination="OLx-eY-RoL" kind="show" identifier="Search" id="smF-tZ-0HY"/>
+                                    <segue destination="sAC-pV-QZ9" kind="show" identifier="ShowResults" id="DBn-94-1bI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -387,65 +426,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-512" y="535"/>
-        </scene>
-        <!--Search Results View Controller-->
-        <scene sceneID="51A-Lk-v7I">
-            <objects>
-                <viewController id="OLx-eY-RoL" customClass="SearchResultsViewController" customModule="Fuzz_Therapy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7Ta-aC-vYS"/>
-                        <viewControllerLayoutGuide type="bottom" id="E3t-lq-UWv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="A4J-f0-kHY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ChY-PB-ksh">
-                                <rect key="frame" x="0.0" y="42" width="414" height="694"/>
-                                <connections>
-                                    <segue destination="sok-GT-rjM" kind="embed" id="OJ4-w4-j1F"/>
-                                </connections>
-                            </containerView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30C-jN-t9v">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="barTintColor" red="0.27058823529999998" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Search Results" id="z5a-P6-hd2"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wLT-c4-qO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="35" y="535"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="xAE-5Y-kvF">
-            <objects>
-                <viewController id="sok-GT-rjM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="myw-Vi-oBj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cOq-gk-F1D">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ura-Cz-ayS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="552" y="535"/>
+            <point key="canvasLocation" x="-390" y="535"/>
         </scene>
     </scenes>
     <resources>

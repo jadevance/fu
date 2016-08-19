@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  File.swift
 //  Fuzz Therapy
 //
 //  Created by Jade Vance on 8/18/16.
@@ -7,7 +7,3 @@
 //
 
 import Foundation
-
-class CollectionViewCell: UICollectionViewCell {
-
-}

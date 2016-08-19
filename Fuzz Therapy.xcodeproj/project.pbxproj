@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015F9B131D6667260009FB13 /* DogResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F9B121D6667260009FB13 /* DogResultsTableViewController.swift */; };
 		017308E31D594C030079B366 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 017308E11D594C030079B366 /* GoogleSignIn.bundle */; };
 		017308E41D594C030079B366 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E21D594C030079B366 /* GoogleSignIn.framework */; };
 		017308E61D594D780079B366 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E51D594D780079B366 /* SystemConfiguration.framework */; };
@@ -26,7 +27,7 @@
 		017309221D6037E10079B366 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309211D6037E10079B366 /* CustomButton.swift */; };
 		017309241D6126750079B366 /* UserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309231D6126750079B366 /* UserClass.swift */; };
 		017309261D6250ED0079B366 /* GoogleUserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309251D6250ED0079B366 /* GoogleUserClass.swift */; };
-		017309281D661EC70079B366 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309271D661EC70079B366 /* CollectionViewCell.swift */; };
+		0173093B1D6660A50079B366 /* DogResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173093A1D6660A50079B366 /* DogResultsTableViewCell.swift */; };
 		01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */; };
 		01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4571D57D2CA00C972C3 /* Assets.xcassets */; };
 		01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		015F9B121D6667260009FB13 /* DogResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogResultsTableViewController.swift; sourceTree = "<group>"; };
 		017308E11D594C030079B366 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = ../../Downloads/google_signin_sdk_2_1_0/GoogleSignIn.bundle; sourceTree = "<group>"; };
 		017308E21D594C030079B366 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = ../../Downloads/google_signin_sdk_2_1_0/GoogleSignIn.framework; sourceTree = "<group>"; };
 		017308E51D594D780079B366 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -67,7 +69,7 @@
 		017309211D6037E10079B366 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		017309231D6126750079B366 /* UserClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
 		017309251D6250ED0079B366 /* GoogleUserClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleUserClass.swift; sourceTree = "<group>"; };
-		017309271D661EC70079B366 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		0173093A1D6660A50079B366 /* DogResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogResultsTableViewCell.swift; sourceTree = "<group>"; };
 		01ADD44D1D57D2CA00C972C3 /* Fuzz Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuzz Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01ADD4571D57D2CA00C972C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,12 +143,13 @@
 				017309231D6126750079B366 /* UserClass.swift */,
 				017309211D6037E10079B366 /* CustomButton.swift */,
 				017308FC1D5A55C80079B366 /* Main.storyboard */,
-				017309271D661EC70079B366 /* CollectionViewCell.swift */,
+				0173093A1D6660A50079B366 /* DogResultsTableViewCell.swift */,
 				017309171D5D37090079B366 /* fontawesome-webfont.ttf */,
 				017308FA1D5A55380079B366 /* LoggedInViewController.swift */,
 				017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */,
 				017309131D5BA9E10079B366 /* GetCurrentUserData.swift */,
 				017309251D6250ED0079B366 /* GoogleUserClass.swift */,
+				015F9B121D6667260009FB13 /* DogResultsTableViewController.swift */,
 				017309151D5D2D900079B366 /* PostCurrentUserData.swift */,
 				01ADD4571D57D2CA00C972C3 /* Assets.xcassets */,
 				0173091F1D5F9F0E0079B366 /* SearchResultsViewController.swift */,
@@ -390,15 +393,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				017309281D661EC70079B366 /* CollectionViewCell.swift in Sources */,
 				017308FB1D5A55380079B366 /* LoggedInViewController.swift in Sources */,
 				0173091A1D5D3E710079B366 /* CreateOrEditProfileViewController.swift in Sources */,
 				017309161D5D2D900079B366 /* PostCurrentUserData.swift in Sources */,
 				017309261D6250ED0079B366 /* GoogleUserClass.swift in Sources */,
 				017309201D5F9F0E0079B366 /* SearchResultsViewController.swift in Sources */,
+				015F9B131D6667260009FB13 /* DogResultsTableViewController.swift in Sources */,
 				017309221D6037E10079B366 /* CustomButton.swift in Sources */,
 				01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */,
 				017309141D5BA9E10079B366 /* GetCurrentUserData.swift in Sources */,
+				0173093B1D6660A50079B366 /* DogResultsTableViewCell.swift in Sources */,
 				017309241D6126750079B366 /* UserClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
