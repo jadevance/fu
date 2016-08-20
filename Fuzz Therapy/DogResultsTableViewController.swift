@@ -10,8 +10,13 @@ import UIKit
 
 class DogResultsTableViewController: UITableViewController {
 
+    var searchResultsArray = [String]()
+        //    var searchResults = (Array<Array<String>>).self
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()    
+        super.viewDidLoad()
+        print(searchResultsArray)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,25 +29,34 @@ class DogResultsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        //so that the table data will refresh when the page is visited again
+        self.tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 10
     }
 
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("DogResultsTableViewCell", forIndexPath: indexPath) as! DogResultsTableViewCell
+        // configure cell
+        //
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
     }
 
     /*

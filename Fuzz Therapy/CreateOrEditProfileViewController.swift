@@ -119,64 +119,22 @@ UINavigationControllerDelegate {
                         print("Success: \(response.result.isSuccess)")
                         print("Response String: \(response.result.value)")
                         
+                        // package the search results into an array
+                        var searchResults = []
+                        getSearchResults() { searchResults in
+                        }
+    
                         func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
                             let DestinationVC: DogResultsTableViewController = segue.destinationViewController as! DogResultsTableViewController
+                            DestinationVC.searchResultsArray = searchResults as! [String]
+            
                         }
-//                        self.doTheSearch()
-                        getSearchResults() { myArray in
-                            print(myArray)
-                        }
-                        
                     }
                 case .Failure: break
                 }
             }
         )
     }
-    
-//    func doTheSearch() {
-//        
-//        let enteredLocation = self.locationField.text
-//        let parameters = ["location" : "\(enteredLocation!)"]
-//        
-//        Alamofire.request(.POST, "https://www.fuzztherapy.com/api/search", parameters: parameters).responseJSON { response in
-//            print(response.request)  // original URL request
-//            print(response.response) // URL response
-//            print(response.data)     // server data
-//            print(response.result)   // result of response serialization
-//            
-//            if let JSON = response.result.value {
-//                print("JSON: \(JSON)")
-//            }
-//        }
-//    }
 }
 
-
-func getSearchResults(completionHandler:(Array<Array<String>>)->()) {
-    
-    var resultsArray = Array<Array<String>>()
-    let enteredLocation = CurrentUser.sharedInstance.user?.location
-    let parameters = ["location" : "\(enteredLocation!)"]
-    
-    Alamofire.request(.POST, "https://www.fuzztherapy.com/api/search", parameters: parameters)
-        .responseJSON { response in
-            
-            let resultsData = JSON(response.result.value!)
-            
-            for i in 0...9 {
-                
-                let name = resultsData[i]["name"].string!
-                let dogName = resultsData[i]["dog_name"].string!
-                let location = resultsData[i]["location"].string!
-                let availability = resultsData[i]["availability"].string!
-                let dogPicture = resultsData[i]["dog_picture_url"].string!
-                
-                resultsArray.append([name, dogName, location, availability, dogPicture])
-                
-            }
-        print(resultsArray)
-        completionHandler(resultsArray)
-    }
-}
 
