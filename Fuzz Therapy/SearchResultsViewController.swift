@@ -5,32 +5,32 @@
 //  Created by Jade Vance on 8/13/16.
 //  Copyright © 2016 Jade Vance. All rights reserved.
 //
-import UIKit
 import Foundation
 import Alamofire
 import SwiftyJSON
-import Haneke
 
-class SearchResultsViewController: UITableViewController {
+
+func getSearchResults(searchTerm:String, completionHandler:(Array<Array<String>>)->()) {
     
-    override func viewDidLoad() {
-        
-        let parameters = ["location" : "Seattle"]
-        
-        Alamofire.request(.POST, "https://www.fuzztherapy.com/api/search", parameters: parameters)
-            .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
+    var resultsArray = Array<Array<String>>()
+    
+    Alamofire.request(.GET, "https://api.spotify.com/v1/search?query=\(searchTerm)&limit=10&type=album")
+        .responseJSON { response in
+            
+            let albumData = JSON(response.result.value!["albums"]!!["items"]!!)
+            
+            for i in 0...9 {
                 
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
-        }
+                let name = albumData[i]["name"].string!
+                let spotifyUrl = albumData[i]["external_urls"]["spotify"].string!
+                let imageUrl = albumData[i]["images"][0]["url"].string!
+                
+                resultsArray.append([name, spotifyUrl, imageUrl])
+                
+            }
+            
+            completionHandler(resultsArray)
+            
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

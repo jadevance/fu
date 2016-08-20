@@ -33,6 +33,8 @@
 		01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */; };
 		01C4689C1D5843D8004FB4E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 01C4689A1D5843D8004FB4E4 /* Podfile */; };
 		01C4689D1D5843D8004FB4E4 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 01C4689B1D5843D8004FB4E4 /* Podfile.lock */; };
+		01C9A87E1D68537F002F0839 /* Supporting Files in Resources */ = {isa = PBXBuildFile; fileRef = 01C9A87D1D68537F002F0839 /* Supporting Files */; };
+		01C9A8841D68F684002F0839 /* ResultsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9A8831D68F683002F0839 /* ResultsClass.swift */; };
 		9EAD50AB34D779E0A23B0AE2 /* Pods_Fuzz_Therapy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD4EBBF3CB9E5118425E455 /* Pods_Fuzz_Therapy.framework */; };
 		C3AD7E0FB537D731009F7573 /* Pods_Fuzz_TherapyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C0F97922918A5B9E2A7AAC /* Pods_Fuzz_TherapyTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,7 +58,6 @@
 		017308E91D594D960079B366 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		017308FA1D5A55380079B366 /* LoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		017308FC1D5A55C80079B366 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		017308FE1D5A576E0079B366 /* Fuzz Therapy-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Fuzz Therapy-Bridging-Header.h"; path = "Supporting Files/Fuzz Therapy-Bridging-Header.h"; sourceTree = "<group>"; };
 		017309051D5A61870079B366 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		017309071D5A61980079B366 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		017309091D5A61A10079B366 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -78,6 +79,9 @@
 		01ADD4611D57D2CA00C972C3 /* Fuzz TherapyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fuzz TherapyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C4689A1D5843D8004FB4E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		01C4689B1D5843D8004FB4E4 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = SOURCE_ROOT; };
+		01C9A87C1D6852F4002F0839 /* Fuzz Therapy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Fuzz Therapy-Bridging-Header.h"; path = "Supporting Files/Fuzz Therapy-Bridging-Header.h"; sourceTree = "<group>"; };
+		01C9A87D1D68537F002F0839 /* Supporting Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Supporting Files"; sourceTree = "<group>"; };
+		01C9A8831D68F683002F0839 /* ResultsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsClass.swift; sourceTree = "<group>"; };
 		5C0725DAE2AC67EB2AC541A3 /* Pods-Fuzz TherapyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fuzz TherapyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fuzz TherapyTests/Pods-Fuzz TherapyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64C0F97922918A5B9E2A7AAC /* Pods_Fuzz_TherapyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fuzz_TherapyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71502F4D950FE5773A7B7DBD /* Pods-Fuzz Therapy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fuzz Therapy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fuzz Therapy/Pods-Fuzz Therapy.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,8 +122,6 @@
 			children = (
 				01ADD44F1D57D2CA00C972C3 /* Fuzz Therapy */,
 				01ADD44E1D57D2CA00C972C3 /* Products */,
-				8EF25A5B56B3F2D025F9B7B8 /* Pods */,
-				7AFF24913A19BC74FA299B9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,28 +137,64 @@
 		01ADD44F1D57D2CA00C972C3 /* Fuzz Therapy */ = {
 			isa = PBXGroup;
 			children = (
-				0173090F1D5A67330079B366 /* GoogleService-Info.plist */,
-				017308FE1D5A576E0079B366 /* Fuzz Therapy-Bridging-Header.h */,
-				01C4689A1D5843D8004FB4E4 /* Podfile */,
-				01C4689B1D5843D8004FB4E4 /* Podfile.lock */,
-				01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */,
-				017309231D6126750079B366 /* UserClass.swift */,
-				017309211D6037E10079B366 /* CustomButton.swift */,
-				017308FC1D5A55C80079B366 /* Main.storyboard */,
-				0173093A1D6660A50079B366 /* DogResultsTableViewCell.swift */,
-				017309171D5D37090079B366 /* fontawesome-webfont.ttf */,
-				017308FA1D5A55380079B366 /* LoggedInViewController.swift */,
-				017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */,
+				01C9A87F1D6853A0002F0839 /* Controllers */,
+				01C9A87A1D68527E002F0839 /* Models */,
+				01C9A87B1D6852B6002F0839 /* Supporting Files */,
+				01C9A8801D68541B002F0839 /* Views */,
+				01C9A87D1D68537F002F0839 /* Supporting Files */,
 				017309131D5BA9E10079B366 /* GetCurrentUserData.swift */,
-				017309251D6250ED0079B366 /* GoogleUserClass.swift */,
-				015F9B121D6667260009FB13 /* DogResultsTableViewController.swift */,
+				01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */,
+				0173093A1D6660A50079B366 /* DogResultsTableViewCell.swift */,
 				017309151D5D2D900079B366 /* PostCurrentUserData.swift */,
-				01ADD4571D57D2CA00C972C3 /* Assets.xcassets */,
 				0173091F1D5F9F0E0079B366 /* SearchResultsViewController.swift */,
-				01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */,
-				01ADD45C1D57D2CA00C972C3 /* Info.plist */,
 			);
 			path = "Fuzz Therapy";
+			sourceTree = "<group>";
+		};
+		01C9A87A1D68527E002F0839 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				017309231D6126750079B366 /* UserClass.swift */,
+				017309251D6250ED0079B366 /* GoogleUserClass.swift */,
+				01C9A8831D68F683002F0839 /* ResultsClass.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		01C9A87B1D6852B6002F0839 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7AFF24913A19BC74FA299B9D /* Frameworks */,
+				8EF25A5B56B3F2D025F9B7B8 /* Pods */,
+				01ADD4571D57D2CA00C972C3 /* Assets.xcassets */,
+				01C4689A1D5843D8004FB4E4 /* Podfile */,
+				01C4689B1D5843D8004FB4E4 /* Podfile.lock */,
+				017309211D6037E10079B366 /* CustomButton.swift */,
+				017309171D5D37090079B366 /* fontawesome-webfont.ttf */,
+				01C9A87C1D6852F4002F0839 /* Fuzz Therapy-Bridging-Header.h */,
+				0173090F1D5A67330079B366 /* GoogleService-Info.plist */,
+				01ADD45C1D57D2CA00C972C3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01C9A87F1D6853A0002F0839 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */,
+				017308FA1D5A55380079B366 /* LoggedInViewController.swift */,
+				015F9B121D6667260009FB13 /* DogResultsTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		01C9A8801D68541B002F0839 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */,
+				017308FC1D5A55C80079B366 /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		7AFF24913A19BC74FA299B9D /* Frameworks */ = {
@@ -174,6 +212,7 @@
 				64C0F97922918A5B9E2A7AAC /* Pods_Fuzz_TherapyTests.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8EF25A5B56B3F2D025F9B7B8 /* Pods */ = {
@@ -185,6 +224,7 @@
 				7E1E28C65058D8322D65CFE8 /* Pods-Fuzz TherapyTests.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C9A87E1D68537F002F0839 /* Supporting Files in Resources */,
 				017308FD1D5A55C80079B366 /* Main.storyboard in Resources */,
 				01ADD45B1D57D2CA00C972C3 /* LaunchScreen.storyboard in Resources */,
 				01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */,
@@ -398,6 +439,7 @@
 				017309161D5D2D900079B366 /* PostCurrentUserData.swift in Sources */,
 				017309261D6250ED0079B366 /* GoogleUserClass.swift in Sources */,
 				017309201D5F9F0E0079B366 /* SearchResultsViewController.swift in Sources */,
+				01C9A8841D68F684002F0839 /* ResultsClass.swift in Sources */,
 				015F9B131D6667260009FB13 /* DogResultsTableViewController.swift in Sources */,
 				017309221D6037E10079B366 /* CustomButton.swift in Sources */,
 				01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */,
