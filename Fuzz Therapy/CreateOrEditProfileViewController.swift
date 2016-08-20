@@ -99,13 +99,13 @@ UINavigationControllerDelegate {
         CurrentUser.sharedInstance.user = myUser
         
         // send the text data
-        Alamofire.request(.POST, "https://www.fuzztherapy.com/api/create/", parameters: parameters)
+        Alamofire.request(.POST, "http://localhost:3000/api/create/", parameters: parameters)
             .responseJSON { response in
         
         }
         
         // send the image data
-        Alamofire.upload(.POST, "https://www.fuzztherapy.com/api/photo/", multipartFormData: { multipartFormData in
+        Alamofire.upload(.POST, "http://localhost:3000/api/photo/", multipartFormData: { multipartFormData in
             multipartFormData.appendBodyPart(data: "\(gUserId)".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, name :"uid")
             multipartFormData.appendBodyPart(data: imageData!, name: "dog_picture", fileName:"DOG.jpg", mimeType: "image/jpeg")
         },
@@ -131,19 +131,19 @@ UINavigationControllerDelegate {
     }
     
     func doTheSearch() {
-        // hard coded for now, will pass it from the singleton once the view is up
-        let parameters = ["location" : "Seattle"]
         
-        Alamofire.request(.POST, "https://www.fuzztherapy.com/api/search", parameters: parameters)
-            .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
+        let enteredLocation = self.locationField.text
+        let parameters = ["location" : "\(enteredLocation!)"]
+        
+        Alamofire.request(.POST, "https://www.fuzztherapy.com/api/search", parameters: parameters).responseJSON { response in
+            print(response.request)  // original URL request
+            print(response.response) // URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
         }
     }
 }

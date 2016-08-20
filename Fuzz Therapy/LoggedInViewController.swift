@@ -9,8 +9,9 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var statusText: UILabel!
     @IBOutlet weak var createProfileButton: UIButton!
-    @IBOutlet weak var userName: UILabel!
+//    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var editProfileButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     
     var viewRefresh = false
 
@@ -37,6 +38,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
             disconnectButton.hidden = true
             self.editProfileButton.hidden = true
             self.createProfileButton.hidden = false
+            self.searchButton.hidden = true 
 
 
         } else {
