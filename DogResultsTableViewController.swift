@@ -7,31 +7,27 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DogResultsTableViewController: UITableViewController {
+  
+    let realm = try! Realm()
+    var results: Results<SearchResults>!
+    
+    func loadResults() {
+        results = try! Realm().objects(SearchResults)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        // gets the dog usersm(doguser.all)
-        //        realm_dogUsers = realm.objects(DogResults)
-        //        // dogUser.New
-        //        let dogUser = DogResults()
-        //        // adding data to it
-        //        dogUser.name = "Jade"
-        //
-        //        // dogUser.save
-        //        try! realm.write {
-        //            realm.add(dogUser)
-        //        }
-        //        print(realm_dogUsers)
+        loadResults()
         
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        //so that the table data will refresh when the page is visited again
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,23 +39,43 @@ class DogResultsTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return results.count
     }
-
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        
+        // Table view cells are reused and should be dequeued using a cell identifier.
+        let cellIdentifier = "DogResultsTableViewCell"
+        
+        // Fetches the appropriate habit for the data source layout.
+        let result = results[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DogResultsTableViewCell
+        
+        cell.dogName.text = result.dogName
+        cell.dogLocation.text = result.location
+        cell.availability.text = result.availability
+        cell.name.text = result.name
+//        cell.dogImage.image = UIImage(contentsOfFile: result.dogPicture!)
+        
+        if let url = NSURL(string: result.dogPicture!) {
+            if let data = NSData(contentsOfURL: url) {
+                cell.dogImage.image = UIImage(data: data)
+            }        
+        }
+        
         return cell
     }
-    */
+
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
