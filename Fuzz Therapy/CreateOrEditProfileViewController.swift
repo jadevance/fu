@@ -78,7 +78,7 @@ UINavigationControllerDelegate {
 
         // make an api call to create new account / save details locally in a singleton
         
-        let gUserId = GoogleUser.sharedInstance.googleUser!.userId
+        let gUserId = GoogleUser.sharedInstance.user!.userId
         let name = nameField.text!
         let location = locationField.text!
         let availability = availabilityField.text!

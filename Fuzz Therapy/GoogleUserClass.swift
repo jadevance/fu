@@ -10,7 +10,7 @@ import Foundation
 
 class GoogleUser {
     static var sharedInstance = GoogleUser()
-    var googleUser:gUser?
+    var user:gUser?
 }
 
 class gUser {

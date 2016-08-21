@@ -26,19 +26,14 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
                                                          object: nil)
         statusText.text = "Loading"
         toggleAuthUI()
+        
         // logic to handle if get current user data is not nil
         // signed in, has a fuzz therapy account
-//        getCurrentUserData() { myUser in
-//            self.signInButton.hidden = true
-//            self.signOutButton.hidden = false
-//            self.disconnectButton.hidden = true
-//            self.editProfileButton.hidden = false
-//            self.createProfileButton.hidden = true
-//            self.searchButton.hidden = false
-//        }
     }
 
     func toggleAuthUI() {
+        getCurrentUserData(){ myUser in }
+        
         if (GIDSignIn.sharedInstance().hasAuthInKeychain()){
             
             // Signed in, no Fuzz Therapy account
