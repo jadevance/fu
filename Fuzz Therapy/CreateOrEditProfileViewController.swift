@@ -31,24 +31,10 @@ UINavigationControllerDelegate {
     @IBOutlet weak var addPhoto: UIButton!
     @IBOutlet weak var photoLibrary: UIButton!
     
-//    // opening the database connection®
-//    let realm = try! Realm()
-//    // instantiating variable up so it can be an instance of realm db
-//    var realm_dogUsers: Results<DogResults>!
+
 
     override func viewDidLoad() {
-//        // gets the dog usersm(doguser.all)
-//        realm_dogUsers = realm.objects(DogResults)
-//        // dogUser.New
-//        let dogUser = DogResults()
-//        // adding data to it
-//        dogUser.name = "Jade"
-//        
-//        // dogUser.save 
-//        try! realm.write {
-//            realm.add(dogUser)
-//        }
-//        print(realm_dogUsers)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -117,8 +103,7 @@ UINavigationControllerDelegate {
         
         
         getSearchResults() { searchResults in
-//            print(searchResults)
-            // realm call here
+
         }
         
         // send the text data

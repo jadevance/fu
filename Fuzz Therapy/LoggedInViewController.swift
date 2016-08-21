@@ -26,6 +26,16 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
                                                          object: nil)
         statusText.text = "Loading"
         toggleAuthUI()
+        // logic to handle if get current user data is not nil
+        // signed in, has a fuzz therapy account
+//        getCurrentUserData() { myUser in
+//            self.signInButton.hidden = true
+//            self.signOutButton.hidden = false
+//            self.disconnectButton.hidden = true
+//            self.editProfileButton.hidden = false
+//            self.createProfileButton.hidden = true
+//            self.searchButton.hidden = false
+//        }
     }
 
     func toggleAuthUI() {
@@ -38,7 +48,6 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
             self.editProfileButton.hidden = true
             self.createProfileButton.hidden = false
             self.searchButton.hidden = true 
-
 
         } else {
             // Not signed in
@@ -68,6 +77,9 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
         name: "ToggleAuthUINotification",
         object: nil)
   }
+    
+
+// part of the Google oauth bridging from Objective C
 
   @objc func receiveToggleAuthUINotification(notification: NSNotification) {
     if (notification.name == "ToggleAuthUINotification") {

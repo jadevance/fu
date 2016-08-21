@@ -58,11 +58,8 @@ class DogResultsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DogResultsTableViewCell
         
         cell.dogName.text = result.dogName
-        cell.dogLocation.text = result.location
         cell.availability.text = result.availability
         cell.name.text = result.name
-//        cell.dogImage.image = UIImage(contentsOfFile: result.dogPicture!)
-        
         if let url = NSURL(string: result.dogPicture!) {
             if let data = NSData(contentsOfURL: url) {
                 cell.dogImage.image = UIImage(data: data)

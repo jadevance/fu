@@ -14,10 +14,12 @@ import SwiftyJSON
 
 func getCurrentUserData(completionHandler:(User)->()) {
     
-//    let gUserId = GoogleUser.sharedInstance.googleUser!.userId
-    let parameters = ["uid": "103322828381592722715"]
+    if !(GoogleUser.sharedInstance.googleUser!.userId).isEmpty {
     
-    Alamofire.request(.POST, "https://www.fuzztherapy.com/api/", parameters: parameters)
+        let uid = GoogleUser.sharedInstance.googleUser!.userId
+        let parameters = ["uid": "\(uid)"]
+        print(uid)
+        Alamofire.request(.POST, "http://localhost:3000/api/", parameters: parameters)
         .responseJSON { response in
             if JSON(response.result.value!)[0] != "user: does not exist" {
                 let userData = JSON(response.result.value!)
@@ -34,6 +36,7 @@ func getCurrentUserData(completionHandler:(User)->()) {
             
                 CurrentUser.sharedInstance.user = myUser
                 completionHandler(myUser)
+            }
         }
     }
 }
