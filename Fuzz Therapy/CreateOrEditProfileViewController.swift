@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 
 import UIKit
@@ -29,9 +30,25 @@ UINavigationControllerDelegate {
     @IBOutlet weak var saveProfile: UIButton!
     @IBOutlet weak var addPhoto: UIButton!
     @IBOutlet weak var photoLibrary: UIButton!
+    
+//    // opening the database connection®
+//    let realm = try! Realm()
+//    // instantiating variable up so it can be an instance of realm db
+//    var realm_dogUsers: Results<DogResults>!
 
     override func viewDidLoad() {
-    
+//        // gets the dog usersm(doguser.all)
+//        realm_dogUsers = realm.objects(DogResults)
+//        // dogUser.New
+//        let dogUser = DogResults()
+//        // adding data to it
+//        dogUser.name = "Jade"
+//        
+//        // dogUser.save 
+//        try! realm.write {
+//            realm.add(dogUser)
+//        }
+//        print(realm_dogUsers)
     }
     
     override func didReceiveMemoryWarning() {
@@ -98,39 +115,37 @@ UINavigationControllerDelegate {
         
         CurrentUser.sharedInstance.user = myUser
         
+        
+        getSearchResults() { searchResults in
+//            print(searchResults)
+            // realm call here
+        }
+        
         // send the text data
         Alamofire.request(.POST, "http://localhost:3000/api/create/", parameters: parameters)
-            .responseJSON { response in
-        
-        }
+            .responseJSON { response in }
         
         // send the image data
         Alamofire.upload(.POST, "http://localhost:3000/api/photo/", multipartFormData: { multipartFormData in
             multipartFormData.appendBodyPart(data: "\(gUserId)".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, name :"uid")
             multipartFormData.appendBodyPart(data: imageData!, name: "dog_picture", fileName:"DOG.jpg", mimeType: "image/jpeg")
-        },
-            encodingCompletion: { result in
-                switch result {
-                case .Success(let upload, _, _):
-                    upload.progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
-                        print(totalBytesWritten)
-                    }
-                    upload.responseString { response in
-                        print("Success: \(response.result.isSuccess)")
-                        print("Response String: \(response.result.value)")
-                        
-                        // package the search results into an array
-                        var searchResults = []
-                        getSearchResults() { searchResults in
+            },
+                encodingCompletion: { result in
+                    switch result {
+                    case .Success(let upload, _, _):
+                            upload.progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
                         }
-    
-                        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-                            let DestinationVC: DogResultsTableViewController = segue.destinationViewController as! DogResultsTableViewController
-                            DestinationVC.searchResultsArray = searchResults as! [String]
-            
+                            upload.responseString { response in
+                                
+                                // package the search results into an array
+//                                var searchResults = []
+//                                getSearchResults() { searchResults in }
+                                
+                            func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+                                let DestinationVC: DogResultsTableViewController = segue.destinationViewController as! DogResultsTableViewController
+                            }
                         }
-                    }
-                case .Failure: break
+                    case .Failure: break
                 }
             }
         )

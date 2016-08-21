@@ -9,7 +9,6 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var statusText: UILabel!
     @IBOutlet weak var createProfileButton: UIButton!
-//    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     

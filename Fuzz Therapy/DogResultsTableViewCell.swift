@@ -2,24 +2,17 @@
 //  DogResultsTableViewCell.swift
 //  Fuzz Therapy
 //
-//  Created by Jade Vance on 8/18/16.
+//  Created by Jade Vance on 8/20/16.
 //  Copyright © 2016 Jade Vance. All rights reserved.
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
 class DogResultsTableViewCell: UITableViewCell {
-
-
-    
-    @IBOutlet weak var dogName: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

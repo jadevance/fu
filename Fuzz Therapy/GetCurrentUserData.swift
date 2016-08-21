@@ -21,7 +21,6 @@ func getCurrentUserData(completionHandler:(User)->()) {
         .responseJSON { response in
             if JSON(response.result.value!)[0] != "user: does not exist" {
                 let userData = JSON(response.result.value!)
-                print(userData)
                 
                 let name = userData[0]["name"].string!
                 let uid = userData[0]["uid"].string!

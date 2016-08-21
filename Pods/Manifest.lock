@@ -32,6 +32,11 @@ PODS:
     - GoogleSymbolUtilities (~> 1.0)
   - Haneke (1.0.2)
   - MDCSwipeToChoose (0.2.3)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
+  - RealmSwift (1.0.2):
+    - Realm (= 1.0.2)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -40,6 +45,7 @@ DEPENDENCIES:
   - Google/SignIn
   - Haneke (~> 1.0)
   - MDCSwipeToChoose
+  - RealmSwift
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
@@ -66,8 +72,10 @@ SPEC CHECKSUMS:
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
+  RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 54eaa465013ee753f37c07bc633bd2a5cc5ac77c
+PODFILE CHECKSUM: a69c5e9a57749ea2df38720bea7e88b27293b95a
 
 COCOAPODS: 1.0.1
