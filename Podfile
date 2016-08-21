@@ -8,8 +8,6 @@ target 'Fuzz Therapy' do
   pod 'Google/SignIn'
   pod 'Alamofire', '~> 3.4'
   pod 'AlamofireImage', '~> 2.0'
-  pod 'MDCSwipeToChoose'
-  pod 'Haneke', '~> 1.0'
   pod 'RealmSwift'
 
 
