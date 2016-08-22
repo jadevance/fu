@@ -16,6 +16,13 @@ class DogResultsTableViewCell: UITableViewCell {
     @IBOutlet weak var availability: UILabel!
     @IBOutlet weak var name: UILabel!
     
+    @IBAction func favoriteButtonPressed(sender: AnyObject) {
+        // add this cell to a list of favorites
+        // could make a new real DB to store them??
+        // show them in a table view ? 
+        // Ask my Swift Posse about this tomorrow. 
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -39,7 +39,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1VL-aQ-d8V" kind="show" identifier="SearchFromHome" id="hx4-Hc-utr"/>
+                                    <segue destination="7zR-cU-1sY" kind="show" identifier="SearchFromHome" id="hx4-Hc-utr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWa-ii-5oh" customClass="MyCustomButton" customModule="Fuzz_Therapy" customModuleProvider="target">
@@ -293,7 +293,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onSaveButtonPressed:" destination="Jf7-aM-tZT" eventType="touchDown" id="EVY-xi-xgI"/>
-                                    <segue destination="1VL-aQ-d8V" kind="show" identifier="ShowResults" id="jRV-M5-iwT"/>
+                                    <segue destination="7zR-cU-1sY" kind="show" identifier="ShowResults" id="jRV-M5-iwT"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ih-g1-sOP">
@@ -391,7 +391,7 @@
             </objects>
             <point key="canvasLocation" x="-450" y="345"/>
         </scene>
-        <!--Dog Results Table View Controller-->
+        <!--Search Results-->
         <scene sceneID="SIQ-GJ-YxY">
             <objects>
                 <tableViewController id="1VL-aQ-d8V" customClass="DogResultsTableViewController" customModule="Fuzz_Therapy" customModuleProvider="target" sceneMemberID="viewController">
@@ -401,7 +401,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogResultsTableViewCell" rowHeight="251" id="HwT-FC-RPA" customClass="DogResultsTableViewCell" customModule="Fuzz_Therapy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="251"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HwT-FC-RPA" id="407-TQ-uaQ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -457,7 +457,10 @@
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF3-M9-uDq">
                                             <rect key="frame" x="8" y="204" width="398" height="33"/>
-                                            <state key="normal" title="Send A Message"/>
+                                            <state key="normal" title="Add to Favorites"/>
+                                            <connections>
+                                                <action selector="favoriteButtonPressed:" destination="HwT-FC-RPA" eventType="touchDown" id="8AI-2A-aap"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -505,9 +508,30 @@
                             <outlet property="delegate" destination="1VL-aQ-d8V" id="4ju-aq-VZs"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Search Results" id="O71-89-Zti">
+                        <barButtonItem key="rightBarButtonItem" title="Favorites" id="fYV-mU-bYO"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ar7-Y4-oxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="537"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rnf-cY-jao">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bqF-y4-N21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7zR-cU-1sY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RRR-Ie-0H4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1VL-aQ-d8V" kind="relationship" relationship="rootViewController" id="WF5-5a-oU9"/>
+                    </connections>
+                </navigationController>
             </objects>
             <point key="canvasLocation" x="124" y="537"/>
         </scene>
@@ -518,7 +542,7 @@
         <image name="jadedog_circular" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="stL-o9-U7w"/>
         <segue reference="hx4-Hc-utr"/>
+        <segue reference="stL-o9-U7w"/>
     </inferredMetricsTieBreakers>
 </document>

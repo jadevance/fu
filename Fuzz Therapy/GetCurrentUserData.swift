@@ -35,6 +35,20 @@ func getCurrentUserData(completionHandler:(User)->()) {
             
             CurrentUser.sharedInstance.user = myUser
             completionHandler(myUser)
+            
+        } else {
+            let name = "placeholder"
+            let uid = "placeholder"
+            let location = "placeholder"
+            let availability = "placeholder"
+            let dogName = "placeholder"
+            let dogBreed = "placeholder"
+            let dogAge = 0
+            
+            let myUser = User(name:name, uid:uid, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge)
+            
+            CurrentUser.sharedInstance.user = myUser
+            completionHandler(myUser)
         }
     }
 }

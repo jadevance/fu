@@ -44,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 "ToggleAuthUINotification",
                 object: nil,
                 userInfo: ["statusText": "Welcome \n\(fullName)!"])
-            // [END_EXCLUDE]
         } else {
             print("\(error.localizedDescription)")
             // [START_EXCLUDE silent]

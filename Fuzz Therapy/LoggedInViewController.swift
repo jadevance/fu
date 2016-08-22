@@ -32,28 +32,36 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     }
 
     func toggleAuthUI() {
-        getCurrentUserData(){ myUser in }
-        
-        if (GIDSignIn.sharedInstance().hasAuthInKeychain()){
+       
+        getCurrentUserData(){ myUser in
+            if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name != "placeholder"){
             
-            // Signed in, no Fuzz Therapy account
-            signInButton.hidden = true
-            signOutButton.hidden = false
-            disconnectButton.hidden = true
-            self.editProfileButton.hidden = true
-            self.createProfileButton.hidden = false
-            self.searchButton.hidden = true 
-
-        } else {
-            // Not signed in
-            createProfileButton.hidden = true
-            editProfileButton.hidden = true
-            signInButton.hidden = false
-            signOutButton.hidden = true
-            disconnectButton.hidden = true
-            statusText.text = "Sign in with Google\n"
+                // Signed in, no Fuzz Therapy account
+                self.signInButton.hidden = true
+                self.signOutButton.hidden = false
+                self.disconnectButton.hidden = true
+                self.editProfileButton.hidden = true
+                self.createProfileButton.hidden = false
+                self.searchButton.hidden = true
+            } else if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name == "placeholder") {
+                // Signed in, has a Fuzz Therapy account
+                self.signInButton.hidden = true
+                self.signOutButton.hidden = false
+                self.disconnectButton.hidden = true
+                self.editProfileButton.hidden = false
+                self.createProfileButton.hidden = true
+                self.searchButton.hidden = false 
+            } else {
+                // Not signed in
+                self.createProfileButton.hidden = true
+                self.editProfileButton.hidden = true
+                self.signInButton.hidden = false
+                self.signOutButton.hidden = true
+                self.disconnectButton.hidden = true
+                self.statusText.text = "Sign in with Google\n"
         }
     }
+}
 
   @IBAction func didTapSignOut(sender: AnyObject) {
     GIDSignIn.sharedInstance().signOut()
