@@ -11,8 +11,6 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var createProfileButton: UIButton!
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
-    
-    var viewRefresh = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +24,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
                                                          object: nil)
         statusText.text = "Loading"
         toggleAuthUI()
-        
-        // logic to handle if get current user data is not nil
-        // signed in, has a fuzz therapy account
+
     }
 
     func toggleAuthUI() {
@@ -55,6 +51,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
                 // Not signed in
                 self.createProfileButton.hidden = true
                 self.editProfileButton.hidden = true
+                self.searchButton.hidden = true
                 self.signInButton.hidden = false
                 self.signOutButton.hidden = true
                 self.disconnectButton.hidden = true
@@ -67,12 +64,6 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     GIDSignIn.sharedInstance().signOut()
     statusText.text = "Signed out."
     toggleAuthUI()
-  }
-
-
-
-  override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return UIStatusBarStyle.LightContent
   }
 
   deinit {
