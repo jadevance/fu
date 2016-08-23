@@ -34,15 +34,16 @@ UINavigationControllerDelegate {
 
 
     override func viewDidLoad() {
-        
-
+        checkValidEntry()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func onTextFieldDoneEditing(sender: UITextField){sender.resignFirstResponder()
+    @IBAction func onTextFieldDoneEditing(sender: UITextField) {
+        checkValidEntry()
+        sender.resignFirstResponder()
     }
     
     @IBAction func onTapGestureRecognized(sender: AnyObject) {
@@ -68,6 +69,23 @@ UINavigationControllerDelegate {
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         imagePicked.image = image
         self.dismissViewControllerAnimated(true, completion: nil);
+    }
+    
+    func checkValidEntry() {
+        // Disable the Save button if the text field is empty.
+        let text1 = nameField.text ?? ""
+        let text2 = locationField.text ?? ""
+        let text3 = availabilityField.text ?? ""
+        let text4 = dogNameField.text ?? ""
+        let text5 = dogBreedField.text ?? ""
+        let text6 = dogAgeField.text ?? ""
+        
+        saveProfile.enabled = !text1.isEmpty
+        saveProfile.enabled = !text2.isEmpty
+        saveProfile.enabled = !text3.isEmpty
+        saveProfile.enabled = !text4.isEmpty
+        saveProfile.enabled = !text5.isEmpty
+        saveProfile.enabled = !text6.isEmpty
     }
     
     @IBAction func onCancelButtonPressed(sender: AnyObject) {
@@ -128,10 +146,6 @@ UINavigationControllerDelegate {
                             upload.progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
                         }
                             upload.responseString { response in
-                                
-                                // package the search results into an array
-//                                var searchResults = []
-//                                getSearchResults() { searchResults in }
                                 
                             func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
                                 let DestinationVC: DogResultsTableViewController = segue.destinationViewController as! DogResultsTableViewController
