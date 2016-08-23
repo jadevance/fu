@@ -10,6 +10,7 @@
 		01725BE11D694FF200D26D28 /* DogResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01725BE01D694FF200D26D28 /* DogResultsTableViewController.swift */; };
 		01725BE31D69505300D26D28 /* DogResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01725BE21D69505300D26D28 /* DogResultsTableViewCell.swift */; };
 		01725BE51D6B93B300D26D28 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01725BE41D6B93B300D26D28 /* MessagesViewController.swift */; };
+		01725BE71D6CA50800D26D28 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01725BE61D6CA50800D26D28 /* APIController.swift */; };
 		017308E31D594C030079B366 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 017308E11D594C030079B366 /* GoogleSignIn.bundle */; };
 		017308E41D594C030079B366 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E21D594C030079B366 /* GoogleSignIn.framework */; };
 		017308E61D594D780079B366 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E51D594D780079B366 /* SystemConfiguration.framework */; };
@@ -55,6 +56,7 @@
 		01725BE01D694FF200D26D28 /* DogResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DogResultsTableViewController.swift; path = ../DogResultsTableViewController.swift; sourceTree = "<group>"; };
 		01725BE21D69505300D26D28 /* DogResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogResultsTableViewCell.swift; sourceTree = "<group>"; };
 		01725BE41D6B93B300D26D28 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		01725BE61D6CA50800D26D28 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		017308E11D594C030079B366 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = ../../Downloads/google_signin_sdk_2_1_0/GoogleSignIn.bundle; sourceTree = "<group>"; };
 		017308E21D594C030079B366 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = ../../Downloads/google_signin_sdk_2_1_0/GoogleSignIn.framework; sourceTree = "<group>"; };
 		017308E51D594D780079B366 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -68,7 +70,7 @@
 		0173090F1D5A67330079B366 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		017309131D5BA9E10079B366 /* GetCurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCurrentUserData.swift; path = "Fuzz Therapy/GetCurrentUserData.swift"; sourceTree = SOURCE_ROOT; };
 		017309171D5D37090079B366 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
-		017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateOrEditProfileViewController.swift; sourceTree = "<group>"; };
+		017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateOrEditProfileViewController.swift; path = "Fuzz Therapy/CreateOrEditProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
 		0173091F1D5F9F0E0079B366 /* GetSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetSearchResults.swift; path = "Fuzz Therapy/GetSearchResults.swift"; sourceTree = SOURCE_ROOT; };
 		017309211D6037E10079B366 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		017309231D6126750079B366 /* UserClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				01C9A87B1D6852B6002F0839 /* Supporting Files */,
 				01C9A87D1D68537F002F0839 /* Supporting Files */,
 				01ADD4501D57D2CA00C972C3 /* AppDelegate.swift */,
+				01725BE61D6CA50800D26D28 /* APIController.swift */,
 			);
 			path = "Fuzz Therapy";
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				017308FB1D5A55380079B366 /* LoggedInViewController.swift in Sources */,
 				0173091A1D5D3E710079B366 /* CreateOrEditProfileViewController.swift in Sources */,
 				017309261D6250ED0079B366 /* GoogleUserClass.swift in Sources */,
+				01725BE71D6CA50800D26D28 /* APIController.swift in Sources */,
 				017309201D5F9F0E0079B366 /* GetSearchResults.swift in Sources */,
 				01C9A8841D68F684002F0839 /* SearchResultsClass.swift in Sources */,
 				01725BE11D694FF200D26D28 /* DogResultsTableViewController.swift in Sources */,

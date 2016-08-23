@@ -34,7 +34,7 @@ UINavigationControllerDelegate {
 
 
     override func viewDidLoad() {
-        checkValidEntry()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,9 +89,14 @@ UINavigationControllerDelegate {
     }
     
     @IBAction func onCancelButtonPressed(sender: AnyObject) {
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            let DestinationVC: LoggedInViewController = segue.destinationViewController as! LoggedInViewController
-        }
+        let alert = UIAlertController(title: "Action Cancelled!", message: "Profile not saved", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            (_)in
+            self.performSegueWithIdentifier("unwindToMenu", sender: self)
+        })
+        
+        alert.addAction(OKAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
 
