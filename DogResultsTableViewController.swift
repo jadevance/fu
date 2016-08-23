@@ -21,6 +21,10 @@ class DogResultsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+// Clears out the Realm Seeds, for dev only
+//            try! realm.write {
+//              realm.deleteAll()
+//            }
         loadResults()
         
     }
