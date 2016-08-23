@@ -425,7 +425,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogResultsTableViewCell" rowHeight="251" id="HwT-FC-RPA" customClass="DogResultsTableViewCell" customModule="Fuzz_Therapy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="414" height="251"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HwT-FC-RPA" id="407-TQ-uaQ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -632,9 +632,9 @@
         <image name="jadedog_circular" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Op-wb-U5W"/>
-        <segue reference="60a-gc-BvE"/>
+        <segue reference="Qc0-KX-0UQ"/>
         <segue reference="Exu-Gb-zwb"/>
+        <segue reference="60a-gc-BvE"/>
         <segue reference="hzz-Js-lcA"/>
         <segue reference="93G-XK-fN8"/>
     </inferredMetricsTieBreakers>
