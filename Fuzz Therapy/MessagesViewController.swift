@@ -23,7 +23,10 @@ class MessagesViewController: UIViewController {
     
 
     @IBAction func onHomeButtonPressed(sender: AnyObject) {
-                self.performSegueWithIdentifier("unwindToMenu", sender: self)
+        self.performSegueWithIdentifier("unwindToMenu", sender: self)
+    }
+    @IBAction func onBackButtonPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("unwindToSearch", sender: self)
     }
 
     // MARK: - Navigation

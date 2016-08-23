@@ -20,6 +20,10 @@ class DogResultsTableViewCell: UITableViewCell {
 
     }
     
+    @IBAction func unwindToSearch(segue: UIStoryboardSegue) {
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
