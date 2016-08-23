@@ -534,7 +534,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Search Results" id="O71-89-Zti">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="ASX-IJ-u8z"/>
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="ASX-IJ-u8z">
+                            <connections>
+                                <action selector="onHomeButtonPressed:" destination="1VL-aQ-d8V" id="U2u-Gv-krd"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="unwindToMenu" id="Qc0-KX-0UQ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Messages" id="fYV-mU-bYO">
                             <connections>
                                 <segue destination="RTu-eE-xhq" kind="show" identifier="NavigationButton" id="60a-gc-BvE"/>
@@ -542,8 +547,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="74s-qy-0jN" kind="unwind" unwindAction="unwindToMenu:" id="eYq-Ac-acl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ar7-Y4-oxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="74s-qy-0jN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="750" y="537"/>
         </scene>
@@ -609,8 +618,9 @@
         <image name="jadedog_circular" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hzz-Js-lcA"/>
+        <segue reference="Qc0-KX-0UQ"/>
         <segue reference="93G-XK-fN8"/>
-        <segue reference="1it-u6-NIh"/>
+        <segue reference="hzz-Js-lcA"/>
+        <segue reference="60a-gc-BvE"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -77,6 +77,10 @@ class DogResultsTableViewController: UITableViewController {
         return true
     }
 
+    @IBAction func onHomeButtonPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("unwindToMenu", sender: self)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
