@@ -102,6 +102,15 @@ UINavigationControllerDelegate {
 
     @IBAction func onSaveButtonPressed(sender: AnyObject) {
         
+        let alert = UIAlertController(title: "Success!", message: "Profile Saved!!", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            (_)in
+            self.performSegueWithIdentifier("ShowResults", sender: self)
+        })
+        
+        alert.addAction(OKAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+        
         // compresses and encodes image data into NSData
         
         let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
@@ -151,10 +160,7 @@ UINavigationControllerDelegate {
                             upload.progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
                         }
                             upload.responseString { response in
-                                
-                            func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-                                let DestinationVC: DogResultsTableViewController = segue.destinationViewController as! DogResultsTableViewController
-                            }
+
                         }
                     case .Failure: break
                 }
