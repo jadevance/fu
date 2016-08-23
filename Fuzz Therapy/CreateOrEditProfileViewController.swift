@@ -27,9 +27,9 @@ UINavigationControllerDelegate {
     @IBOutlet weak var dogBreedField: UITextField!
     @IBOutlet weak var dogAgeField: UITextField!
     @IBOutlet weak var imagePicked: UIImageView!
-    @IBOutlet weak var saveProfile: UIButton!
     @IBOutlet weak var addPhoto: UIButton!
     @IBOutlet weak var photoLibrary: UIButton!
+    @IBOutlet weak var saveProfile: UIButton!
     
 
 
@@ -68,6 +68,12 @@ UINavigationControllerDelegate {
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         imagePicked.image = image
         self.dismissViewControllerAnimated(true, completion: nil);
+    }
+    
+    @IBAction func onCancelButtonPressed(sender: AnyObject) {
+        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            let DestinationVC: LoggedInViewController = segue.destinationViewController as! LoggedInViewController
+        }
     }
     
 

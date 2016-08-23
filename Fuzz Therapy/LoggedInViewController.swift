@@ -22,8 +22,8 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
                                                          selector: #selector(LoggedInViewController.receiveToggleAuthUINotification(_:)),
                                                          name: "ToggleAuthUINotification",
                                                          object: nil)
-        statusText.text = "Loading"
         toggleAuthUI()
+        statusText.text = "Signed In"
 
     }
 
@@ -62,7 +62,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
 
   @IBAction func didTapSignOut(sender: AnyObject) {
     GIDSignIn.sharedInstance().signOut()
-    statusText.text = "Signed out."
+//    statusText.text = "Signed out."
     toggleAuthUI()
   }
 

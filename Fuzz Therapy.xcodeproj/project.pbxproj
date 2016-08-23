@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01725BE11D694FF200D26D28 /* DogResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01725BE01D694FF200D26D28 /* DogResultsTableViewController.swift */; };
 		01725BE31D69505300D26D28 /* DogResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01725BE21D69505300D26D28 /* DogResultsTableViewCell.swift */; };
+		01725BE51D6B93B300D26D28 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01725BE41D6B93B300D26D28 /* MessagesViewController.swift */; };
 		017308E31D594C030079B366 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 017308E11D594C030079B366 /* GoogleSignIn.bundle */; };
 		017308E41D594C030079B366 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E21D594C030079B366 /* GoogleSignIn.framework */; };
 		017308E61D594D780079B366 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017308E51D594D780079B366 /* SystemConfiguration.framework */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		01725BE01D694FF200D26D28 /* DogResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DogResultsTableViewController.swift; path = ../DogResultsTableViewController.swift; sourceTree = "<group>"; };
 		01725BE21D69505300D26D28 /* DogResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogResultsTableViewCell.swift; sourceTree = "<group>"; };
+		01725BE41D6B93B300D26D28 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		017308E11D594C030079B366 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = ../../Downloads/google_signin_sdk_2_1_0/GoogleSignIn.bundle; sourceTree = "<group>"; };
 		017308E21D594C030079B366 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = ../../Downloads/google_signin_sdk_2_1_0/GoogleSignIn.framework; sourceTree = "<group>"; };
 		017308E51D594D780079B366 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -153,6 +155,7 @@
 				01C9A8831D68F683002F0839 /* SearchResultsClass.swift */,
 				017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */,
 				017308FA1D5A55380079B366 /* LoggedInViewController.swift */,
+				01725BE41D6B93B300D26D28 /* MessagesViewController.swift */,
 				01ADD4591D57D2CA00C972C3 /* LaunchScreen.storyboard */,
 				017308FC1D5A55C80079B366 /* Main.storyboard */,
 				01725BE21D69505300D26D28 /* DogResultsTableViewCell.swift */,
@@ -445,6 +448,7 @@
 				017309201D5F9F0E0079B366 /* GetSearchResults.swift in Sources */,
 				01C9A8841D68F684002F0839 /* SearchResultsClass.swift in Sources */,
 				01725BE11D694FF200D26D28 /* DogResultsTableViewController.swift in Sources */,
+				01725BE51D6B93B300D26D28 /* MessagesViewController.swift in Sources */,
 				017309221D6037E10079B366 /* CustomButton.swift in Sources */,
 				01ADD4511D57D2CA00C972C3 /* AppDelegate.swift in Sources */,
 				017309141D5BA9E10079B366 /* GetCurrentUserData.swift in Sources */,

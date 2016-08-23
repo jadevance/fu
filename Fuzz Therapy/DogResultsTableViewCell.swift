@@ -17,6 +17,7 @@ class DogResultsTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     
     @IBAction func messageButtonPressed(sender: AnyObject) {
+
     }
     
     override func awakeFromNib() {
