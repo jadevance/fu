@@ -632,10 +632,10 @@
         <image name="jadedog_circular" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qc0-KX-0UQ"/>
-        <segue reference="Exu-Gb-zwb"/>
-        <segue reference="60a-gc-BvE"/>
+        <segue reference="00X-yf-QOM"/>
         <segue reference="hzz-Js-lcA"/>
         <segue reference="93G-XK-fN8"/>
+        <segue reference="60a-gc-BvE"/>
+        <segue reference="Exu-Gb-zwb"/>
     </inferredMetricsTieBreakers>
 </document>

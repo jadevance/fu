@@ -30,8 +30,9 @@ func getCurrentUserData(completionHandler:(User)->()) {
             let dogName = userData[0]["dog_name"].string!
             let dogBreed = userData[0]["dog_breed"].string!
             let dogAge = userData[0]["dog_age"].int!
+            let email = userData[0]["email"].string!
         
-            let myUser = User(name:name, uid:uid, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge)
+            let myUser = User(name:name, uid:uid, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge, email:email)
             
             CurrentUser.sharedInstance.user = myUser
             completionHandler(myUser)
@@ -44,8 +45,9 @@ func getCurrentUserData(completionHandler:(User)->()) {
             let dogName = "placeholder"
             let dogBreed = "placeholder"
             let dogAge = 0
+            let email = "placeholder"
             
-            let myUser = User(name:name, uid:uid, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge)
+            let myUser = User(name:name, uid:uid, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge, email:email)
             
             CurrentUser.sharedInstance.user = myUser
             completionHandler(myUser)

@@ -21,8 +21,9 @@ class User {
     var dogName:String
     var dogBreed:String
     var dogAge:Int
+    var email:String
     
-    init(name:String, uid:String, location:String, availability:String, dogName:String, dogBreed:String, dogAge:Int) {
+    init(name:String, uid:String, location:String, availability:String, dogName:String, dogBreed:String, dogAge:Int, email:String) {
         
         self.name = name
         self.uid = uid
@@ -31,6 +32,7 @@ class User {
         self.dogName = dogName
         self.dogBreed = dogBreed
         self.dogAge = dogAge
+        self.email = email 
         
     }
 }

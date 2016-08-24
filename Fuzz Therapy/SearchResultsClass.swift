@@ -16,5 +16,5 @@ class SearchResults: Object {
     dynamic var location: String? = ""
     dynamic var availability: String? = ""
     dynamic var dogPicture: String? = ""
-    
+    dynamic var email: String? = ""
 }

@@ -31,8 +31,6 @@ UINavigationControllerDelegate {
     @IBOutlet weak var photoLibrary: UIButton!
     @IBOutlet weak var saveProfile: UIButton!
     
-
-
     override func viewDidLoad() {
 
     }
@@ -124,6 +122,7 @@ UINavigationControllerDelegate {
         let dogName = dogNameField.text!
         let dogBreed = dogBreedField.text!
         let dogAge:Int? = Int(dogAgeField.text!)
+        let email = GoogleUser.sharedInstance.user!.email
         
         
         let parameters = [
@@ -134,9 +133,10 @@ UINavigationControllerDelegate {
                 "dog_name": "\(dogName)",
                 "dog_breed": "\(dogBreed)",
                 "dog_age": "\(dogAge)",
+                "email": "\(email)"
             ]
         
-        let myUser = User(name:name, uid:gUserId, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge!)
+        let myUser = User(name:name, uid:gUserId, location:location, availability:availability, dogName:dogName, dogBreed:dogBreed, dogAge:dogAge!, email:email)
         
         CurrentUser.sharedInstance.user = myUser
         

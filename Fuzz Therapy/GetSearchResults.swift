@@ -38,8 +38,9 @@ func getSearchResults(completionHandler:(Array<Array<String>>)->()) {
             let location = resultsData[i]["location"].string!
             let availability = resultsData[i]["availability"].string!
             let dogPicture = resultsData[i]["dog_picture_url"].string!
+            let email = resultsData[i]["email"].string!
                 
-            resultsArray.append([name, dogName, location, availability, dogPicture])
+            resultsArray.append([name, dogName, location, availability, dogPicture, email])
             
             // dogUser.New
             let dogUser = SearchResults()
@@ -49,6 +50,7 @@ func getSearchResults(completionHandler:(Array<Array<String>>)->()) {
             dogUser.location = location
             dogUser.availability = availability
             dogUser.dogPicture = dogPicture
+            dogUser.email = email
             
             // dogUser.save
             try! realm.write {
