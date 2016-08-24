@@ -62,17 +62,15 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     @IBAction func didTapSignOut(sender: AnyObject) {
         GIDSignIn.sharedInstance().signOut()
         toggleAuthUI()
-    }
+}
 
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self,
-                                                            name: "ToggleAuthUINotification",
-                                                            object: nil)
-    }
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self,
+        name: "ToggleAuthUINotification",
+        object: nil)
+  }
     
-    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
-    
-    }
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
 
 // part of the Google oauth bridging from Objective C
 
