@@ -6,8 +6,9 @@
 //  Copyright © 2016 Jade Vance. All rights reserved.
 //
 import UIKit
+import MessageUI
 
-class DogResultsTableViewCell: UITableViewCell {
+class DogResultsTableViewCell: UITableViewCell, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var dogImage: UIImageView!
     
@@ -15,13 +16,12 @@ class DogResultsTableViewCell: UITableViewCell {
     @IBOutlet weak var availability: UILabel!
     @IBOutlet weak var name: UILabel!
     
-    @IBAction func messageButtonPressed(sender: AnyObject) {
-        
-    }
+    @IBOutlet weak var messageButton: UIButton!
     
-    @IBAction func unwindToSearch(segue: UIStoryboardSegue) {
-        
+    @IBAction func messageButtonPressed(sender: AnyObject) {
+    
     }
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

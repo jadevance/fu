@@ -10,9 +10,9 @@
 
 import Foundation
 import UIKit
-import MessageUI
 
-class MessagesViewController: UIViewController, MFMailComposeViewControllerDelegate {
+
+class MessagesViewController: UIViewController {
     
     @IBAction func onHomeButtonPressed(sender: AnyObject) {
         self.performSegueWithIdentifier("unwindToMenu", sender: self)
@@ -23,5 +23,5 @@ class MessagesViewController: UIViewController, MFMailComposeViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
 }
-
