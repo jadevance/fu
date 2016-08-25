@@ -196,7 +196,9 @@
                             <button contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iM-sh-JcH">
                                 <rect key="frame" x="148" y="366" width="118" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Take A Photo"/>
+                                <state key="normal" title="Take A Photo">
+                                    <color key="titleColor" red="0.1199471352" green="0.15827770399999999" blue="0.1667416558" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onAddPhotoPressed:" destination="Jf7-aM-tZT" eventType="touchUpInside" id="1hG-rk-ary"/>
                                     <action selector="onAddPhotoPressed:" destination="Jf7-aM-tZT" eventType="touchDown" id="ZeE-2u-kKB"/>
@@ -273,12 +275,14 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMn-od-GXs">
-                                <rect key="frame" x="143" y="410" width="129" height="30"/>
+                                <rect key="frame" x="131" y="410" width="153" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="NWO-y4-bVO"/>
+                                    <constraint firstAttribute="width" constant="153" id="NWO-y4-bVO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Photo Library"/>
+                                <state key="normal" title="Photo Library">
+                                    <color key="titleColor" red="0.1199471352" green="0.15827770399999999" blue="0.1667416558" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onPhotoLibraryPressed:" destination="Jf7-aM-tZT" eventType="touchUpInside" id="IeO-30-kKD"/>
                                 </connections>
@@ -291,7 +295,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save Profile">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1199471352" green="0.15827770399999999" blue="0.1667416558" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onSaveButtonPressed:" destination="Jf7-aM-tZT" eventType="touchDown" id="EVY-xi-xgI"/>
@@ -306,24 +310,26 @@
                                     <action selector="onTextFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="RQF-mI-hGX"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5j7-pa-EVh">
-                                <rect key="frame" x="20" y="679" width="81" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="Bxl-wE-8eN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="onCancelButtonPressed:" destination="Jf7-aM-tZT" eventType="touchUpInside" id="poi-hB-j9v"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="unwindToMenu" modalTransitionStyle="flipHorizontal" id="00X-yf-QOM"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Age*" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rN-ab-Nff">
                                 <rect key="frame" x="19" y="306" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5j7-pa-EVh">
+                                <rect key="frame" x="20" y="679" width="90" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Bxl-wE-8eN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.1199471352" green="0.15827770399999999" blue="0.1667416558" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCancelButtonPressed:" destination="Jf7-aM-tZT" eventType="touchUpInside" id="poi-hB-j9v"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="unwindToMenu" modalTransitionStyle="flipHorizontal" id="00X-yf-QOM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -394,6 +400,7 @@
                     <connections>
                         <outlet property="addPhoto" destination="9iM-sh-JcH" id="QQV-Ny-tlp"/>
                         <outlet property="availabilityField" destination="Ymd-rW-Di1" id="ImF-9U-3OZ"/>
+                        <outlet property="cancel" destination="5j7-pa-EVh" id="zyy-70-wPc"/>
                         <outlet property="dogAgeField" destination="EBG-vv-72B" id="iRc-no-1v2"/>
                         <outlet property="dogBreedField" destination="IrF-o5-XTF" id="dKv-Kt-Gbn"/>
                         <outlet property="dogNameField" destination="w2I-8P-QKq" id="KF3-3F-9y9"/>
@@ -576,8 +583,8 @@
         <image name="jadedog_circular" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qc0-KX-0UQ"/>
-        <segue reference="hx4-Hc-utr"/>
         <segue reference="hzz-Js-lcA"/>
+        <segue reference="00X-yf-QOM"/>
+        <segue reference="93G-XK-fN8"/>
     </inferredMetricsTieBreakers>
 </document>

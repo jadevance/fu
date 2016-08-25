@@ -30,8 +30,27 @@ UINavigationControllerDelegate {
     @IBOutlet weak var addPhoto: UIButton!
     @IBOutlet weak var photoLibrary: UIButton!
     @IBOutlet weak var saveProfile: UIButton!
-    
-    override func viewDidLoad() {}
+    @IBOutlet weak var cancel: UIButton!
+
+    override func viewDidLoad() {
+        // this is so gross but idk
+        self.addPhoto.layer.cornerRadius = 5.0;
+        self.addPhoto.layer.borderColor = UIColor.blackColor().CGColor
+        self.addPhoto.layer.borderWidth = 1.0
+        self.addPhoto.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
+        self.photoLibrary.layer.cornerRadius = 5.0;
+        self.photoLibrary.layer.borderColor = UIColor.blackColor().CGColor
+        self.photoLibrary.layer.borderWidth = 1.0
+        self.photoLibrary.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
+        self.saveProfile.layer.cornerRadius = 5.0;
+        self.saveProfile.layer.borderColor = UIColor.blackColor().CGColor
+        self.saveProfile.layer.borderWidth = 1.0
+        self.saveProfile.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
+        self.cancel.layer.cornerRadius = 5.0;
+        self.cancel.layer.borderColor = UIColor.blackColor().CGColor
+        self.cancel.layer.borderWidth = 1.0
+        self.cancel.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
