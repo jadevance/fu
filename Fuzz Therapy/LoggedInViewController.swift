@@ -19,9 +19,10 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().signInSilently()
 
         NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector: #selector(LoggedInViewController.receiveToggleAuthUINotification(_:)),
-                                                         name: "ToggleAuthUINotification",
-                                                         object: nil)
+        selector: #selector(LoggedInViewController.receiveToggleAuthUINotification(_:)),
+        name: "ToggleAuthUINotification",
+        object: nil)
+        
         toggleAuthUI()
         statusText.text = ""
     }
@@ -30,7 +31,6 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
        
         getCurrentUserData(){ myUser in
             if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name != "placeholder"){
-            
                 // Signed in, no Fuzz Therapy account
                 self.signInButton.hidden = true
                 self.signOutButton.hidden = false
@@ -74,16 +74,15 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
 
 // part of the Google oauth bridging from Objective C
 
-  @objc func receiveToggleAuthUINotification(notification: NSNotification) {
-    if (notification.name == "ToggleAuthUINotification") {
-      self.toggleAuthUI()
-      if notification.userInfo != nil {
-        let userInfo:Dictionary<String,String!> =
-            notification.userInfo as! Dictionary<String,String!>
-        self.statusText.text = userInfo["statusText"]
-      }
+    @objc func receiveToggleAuthUINotification(notification: NSNotification) {
+        if (notification.name == "ToggleAuthUINotification") {
+            self.toggleAuthUI()
+            if notification.userInfo != nil {
+                let userInfo:Dictionary<String,String!> = notification.userInfo as! Dictionary<String,String!>
+                self.statusText.text = userInfo["statusText"]
+                }
+            }
+        }
     }
-  }
-}
 
 

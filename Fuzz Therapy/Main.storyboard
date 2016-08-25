@@ -425,7 +425,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogResultsTableViewCell" rowHeight="251" id="HwT-FC-RPA" customClass="DogResultsTableViewCell" customModule="Fuzz_Therapy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="251"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HwT-FC-RPA" id="407-TQ-uaQ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -534,15 +534,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Search Results" id="O71-89-Zti">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="ASX-IJ-u8z">
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="ASX-IJ-u8z">
                             <connections>
                                 <action selector="onHomeButtonPressed:" destination="1VL-aQ-d8V" id="U2u-Gv-krd"/>
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="unwindToMenu" id="Qc0-KX-0UQ"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Messages" id="fYV-mU-bYO">
-                            <connections>
-                                <segue destination="RTu-eE-xhq" kind="show" identifier="NavigationButton" id="60a-gc-BvE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -555,47 +550,6 @@
                 <exit id="74s-qy-0jN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="750" y="537"/>
-        </scene>
-        <!--Messages-->
-        <scene sceneID="6Gx-7c-HMr">
-            <objects>
-                <viewController id="RTu-eE-xhq" customClass="MessagesViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lVv-Tr-aN4"/>
-                        <viewControllerLayoutGuide type="bottom" id="KLf-Sm-dMn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dWZ-l0-obj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="cj4-OU-YC3"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Messages" id="w2N-bW-XJs">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="05V-L7-3Nj">
-                            <connections>
-                                <action selector="onBackButtonPressed:" destination="RTu-eE-xhq" id="9Lg-O9-J12"/>
-                                <segue destination="1VL-aQ-d8V" kind="show" identifier="unwindToSearch" id="Exu-Gb-zwb"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Home" id="XPO-Iu-W6L">
-                            <connections>
-                                <action selector="onHomeButtonPressed:" destination="RTu-eE-xhq" id="gPT-e5-Bx5"/>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="unwindToHome" id="3Op-wb-U5W"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <segue destination="AAc-ho-a3t" kind="unwind" unwindAction="unwindToMenu:" id="Fga-3V-EYn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RxX-UC-BaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="AAc-ho-a3t" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1377" y="537"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rnf-cY-jao">
@@ -623,8 +577,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Qc0-KX-0UQ"/>
-        <segue reference="Exu-Gb-zwb"/>
-        <segue reference="hzz-Js-lcA"/>
         <segue reference="hx4-Hc-utr"/>
+        <segue reference="hzz-Js-lcA"/>
     </inferredMetricsTieBreakers>
 </document>

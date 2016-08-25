@@ -31,7 +31,6 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
     }
     
     override func viewWillAppear(animated: Bool) {
-        //so that the table data will refresh when the page is visited again
         self.tableView.reloadData()
     }
     
@@ -81,8 +80,8 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
     }
     
     func sendEmailButtonTapped(sender: UIButton!) {
+        // inidcates which realm instance was tapped, integer value from array
         let buttonTag = sender.tag
-        print(buttonTag)
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             self.presentViewController(mailComposeViewController, animated: true, completion: nil)

@@ -31,7 +31,7 @@ func getSearchResults(completionHandler:(Array<Array<String>>)->()) {
             
         let resultsData = JSON(response.result.value!)
             
-        for i in 0...9 {
+        for i in 0...15 {
             
             let name = resultsData[i]["name"].string!
             let dogName = resultsData[i]["dog_name"].string!
@@ -56,10 +56,7 @@ func getSearchResults(completionHandler:(Array<Array<String>>)->()) {
             try! realm.write {
                 realm.add(dogUser)
             }
-            
             completionHandler(resultsArray)
         }
-            print(resultsArray)
-            print(realm_dogUsers)
     }
 }

@@ -31,9 +31,7 @@ UINavigationControllerDelegate {
     @IBOutlet weak var photoLibrary: UIButton!
     @IBOutlet weak var saveProfile: UIButton!
     
-    override func viewDidLoad() {
-
-    }
+    override func viewDidLoad() {}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,7 +50,6 @@ UINavigationControllerDelegate {
         dogBreedField.resignFirstResponder()
         dogAgeField.resignFirstResponder()
     }
-    
     
     @IBAction func onPhotoLibraryPressed(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
@@ -97,7 +94,6 @@ UINavigationControllerDelegate {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-
     @IBAction func onSaveButtonPressed(sender: AnyObject) {
         
         let alert = UIAlertController(title: "Success!", message: "Profile Saved!!", preferredStyle: .Alert)
@@ -140,10 +136,7 @@ UINavigationControllerDelegate {
         
         CurrentUser.sharedInstance.user = myUser
         
-        
-        getSearchResults() { searchResults in
-
-        }
+        getSearchResults() { searchResults in }
         
         // send the text data
         Alamofire.request(.POST, "http://localhost:3000/api/create/", parameters: parameters)
@@ -160,7 +153,6 @@ UINavigationControllerDelegate {
                             upload.progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
                         }
                             upload.responseString { response in
-
                         }
                     case .Failure: break
                 }

@@ -11,27 +11,19 @@ import MessageUI
 class DogResultsTableViewCell: UITableViewCell, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var dogImage: UIImageView!
-    
     @IBOutlet weak var dogName: UILabel!
     @IBOutlet weak var availability: UILabel!
     @IBOutlet weak var name: UILabel!
-    
     @IBOutlet weak var messageButton: UIButton!
     
     @IBAction func messageButtonPressed(sender: AnyObject) {
-    
     }
-
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
-    
 }
