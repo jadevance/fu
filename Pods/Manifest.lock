@@ -1,7 +1,5 @@
 PODS:
   - Alamofire (3.4.1)
-  - AlamofireImage (2.4.1):
-    - Alamofire (~> 3.3)
   - FirebaseAnalytics (3.3.0):
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
@@ -39,7 +37,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
-  - AlamofireImage (~> 2.0)
   - Google/SignIn
   - RealmSwift
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
@@ -55,7 +52,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
   FirebaseAnalytics: 228be2991cb28efb96cdafc4d62f64680e615c69
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
   Google: 813c467362eabc11385f5a5cc9ad0cb651a58f4e
@@ -70,6 +66,6 @@ SPEC CHECKSUMS:
   RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 585266b50c0b0cac9b2e453e396366d72e7a5571
+PODFILE CHECKSUM: e1c6d305062611486ac45fe0768a27b1d89d8b26
 
 COCOAPODS: 1.0.1
