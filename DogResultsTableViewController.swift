@@ -57,7 +57,7 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "DogResultsTableViewCell"
         
-        // Fetches the appropriate habit for the data source layout.
+        // Fetches the appropriate result for the data source layout.
         let result = results[indexPath.row]
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DogResultsTableViewCell
@@ -65,6 +65,9 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
         cell.dogName.text = result.dogName
         cell.availability.text = result.availability
         cell.name.text = result.name
+
+        
+        // Converts the string back into image data
         if let url = NSURL(string: result.dogPicture!) {
             if let data = NSData(contentsOfURL: url) {
                 cell.dogImage.image = UIImage(data: data)
@@ -74,12 +77,12 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
         cell.messageButton.tag = indexPath.row
         cell.messageButton.addTarget(self, action: #selector(DogResultsTableViewController.sendEmailButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
-        
         return cell
     }
     
     func sendEmailButtonTapped(sender: UIButton!) {
         let buttonTag = sender.tag
+        print(buttonTag)
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             self.presentViewController(mailComposeViewController, animated: true, completion: nil)
@@ -90,11 +93,10 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-        
-        mailComposerVC.setToRecipients(["someone@somewhere.com"])
-        mailComposerVC.setSubject("Sending you an in-app e-mail...")
-        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients(["fuzztherapyapp@gmail.com"])
+        mailComposerVC.setSubject("Hello from Fuzz Therapy!")
+        mailComposerVC.setMessageBody("Hi, I would love to meet your dog! Are you available on...", isHTML: false)
         
         return mailComposerVC
     }
