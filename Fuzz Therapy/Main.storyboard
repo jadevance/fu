@@ -200,10 +200,7 @@
                                     <color key="titleColor" red="0.1199471352" green="0.15827770399999999" blue="0.1667416558" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onAddPhotoPressed:" destination="Jf7-aM-tZT" eventType="touchUpInside" id="1hG-rk-ary"/>
-                                    <action selector="onAddPhotoPressed:" destination="Jf7-aM-tZT" eventType="touchDown" id="ZeE-2u-kKB"/>
-                                    <action selector="openCameraButton:" destination="Jf7-aM-tZT" eventType="touchUpInside" id="u7i-vR-LKY"/>
-                                    <action selector="takePicture:" destination="Jf7-aM-tZT" eventType="touchUpInside" id="tyS-zW-Vwz"/>
+                                    <action selector="onCameraButtonPressed:" destination="Jf7-aM-tZT" eventType="touchUpInside" id="JyZ-co-kW2"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Isabel_puppy" translatesAutoresizingMaskIntoConstraints="NO" id="vjv-wi-GEv">
@@ -284,7 +281,7 @@
                                     <color key="titleColor" red="0.1199471352" green="0.15827770399999999" blue="0.1667416558" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onPhotoLibraryPressed:" destination="Jf7-aM-tZT" eventType="touchUpInside" id="IeO-30-kKD"/>
+                                    <action selector="onPhotoLibraryPressed:" destination="Jf7-aM-tZT" eventType="touchUpInside" id="95g-H8-8wa"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ih-g1-sOP">

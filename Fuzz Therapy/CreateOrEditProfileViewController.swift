@@ -10,8 +10,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import RealmSwift
-
-
 import UIKit
 
 // Match the ObjC symbol name inside Main.storyboard.
@@ -68,6 +66,16 @@ UINavigationControllerDelegate {
         dogNameField.resignFirstResponder()
         dogBreedField.resignFirstResponder()
         dogAgeField.resignFirstResponder()
+    }
+    
+    @IBAction func onCameraButtonPressed(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
     }
     
     @IBAction func onPhotoLibraryPressed(sender: AnyObject) {
