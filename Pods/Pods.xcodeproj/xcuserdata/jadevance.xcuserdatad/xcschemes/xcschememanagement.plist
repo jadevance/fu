@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Haneke.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Fuzz Therapy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>48A2E826137D0DDA826D9B26EF4697C9</key>
+		<key>1824DEE6EB8A60296035C53A6109485A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5081979325593E2DA10F3F12E889B457</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>70D4DCF6B1EAC4180688D17DB4E80987</key>
+		<key>721F5C363890DB3021CD23661305B2A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>802606FE45DB7F03F5EB2BD68FF6ACC1</key>
+		<key>94EB1CBD2941079C6C18F126B6E21642</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B3825D1B463DE26F81EA4D0C1D05B8C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E4EA229A2771DE9EBAC082934CD044FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F98BDFC66484A60D12089F28C8EAEA71</key>
 		<dict>
 			<key>primary</key>
 			<true/>

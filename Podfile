@@ -8,6 +8,7 @@ target 'Fuzz Therapy' do
   pod 'Google/SignIn'
   pod 'Alamofire', '~> 3.4'
   pod 'RealmSwift'
+  pod 'Haneke'
 
 
   target 'Fuzz TherapyTests' do

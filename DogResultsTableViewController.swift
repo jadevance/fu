@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import MessageUI
+import Haneke
 
 class DogResultsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     
@@ -21,11 +22,12 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        // Clears out the Realm Seeds, for dev only
-        //            try! realm.write {
-        //              realm.deleteAll()
-        //            }
+//         Clears out the Realm Seeds, for dev only
+//                    try! realm.write {
+//                      realm.deleteAll()
+//                    }
         loadResults()
         
     }
@@ -66,13 +68,13 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
         cell.name.text = result.name
 
         
-        // Converts the string back into image data
-        if let url = NSURL(string: result.dogPicture!) {
-            if let data = NSData(contentsOfURL: url) {
-                cell.dogImage.image = UIImage(data: data)
+        if let dogImage = cell.dogImage as? UIImageView {
+            if let url = NSURL(string: result.dogPicture!) {
+                dogImage.contentMode = UIViewContentMode.ScaleAspectFit
+                dogImage.hnk_setImageFromURL(url)
             }
         }
-        
+
         cell.messageButton.tag = indexPath.row
         cell.messageButton.addTarget(self, action: #selector(DogResultsTableViewController.sendEmailButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         

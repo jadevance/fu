@@ -23,7 +23,6 @@
 		0173090A1D5A61A10079B366 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017309091D5A61A10079B366 /* CoreMotion.framework */; };
 		017309101D5A67330079B366 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0173090F1D5A67330079B366 /* GoogleService-Info.plist */; };
 		017309141D5BA9E10079B366 /* GetCurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309131D5BA9E10079B366 /* GetCurrentUserData.swift */; };
-		017309181D5D37090079B366 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 017309171D5D37090079B366 /* fontawesome-webfont.ttf */; };
 		0173091A1D5D3E710079B366 /* CreateOrEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */; };
 		017309201D5F9F0E0079B366 /* GetSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173091F1D5F9F0E0079B366 /* GetSearchResults.swift */; };
 		017309221D6037E10079B366 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017309211D6037E10079B366 /* CustomButton.swift */; };
@@ -69,7 +68,6 @@
 		017309091D5A61A10079B366 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		0173090F1D5A67330079B366 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		017309131D5BA9E10079B366 /* GetCurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCurrentUserData.swift; path = "Fuzz Therapy/GetCurrentUserData.swift"; sourceTree = SOURCE_ROOT; };
-		017309171D5D37090079B366 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		017309191D5D3E710079B366 /* CreateOrEditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateOrEditProfileViewController.swift; path = "Fuzz Therapy/CreateOrEditProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
 		0173091F1D5F9F0E0079B366 /* GetSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetSearchResults.swift; path = "Fuzz Therapy/GetSearchResults.swift"; sourceTree = SOURCE_ROOT; };
 		017309211D6037E10079B366 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 				01C4689A1D5843D8004FB4E4 /* Podfile */,
 				01C4689B1D5843D8004FB4E4 /* Podfile.lock */,
 				017309211D6037E10079B366 /* CustomButton.swift */,
-				017309171D5D37090079B366 /* fontawesome-webfont.ttf */,
 				01C9A87C1D6852F4002F0839 /* Fuzz Therapy-Bridging-Header.h */,
 				0173090F1D5A67330079B366 /* GoogleService-Info.plist */,
 				01ADD45C1D57D2CA00C972C3 /* Info.plist */,
@@ -332,7 +329,6 @@
 				01ADD4581D57D2CA00C972C3 /* Assets.xcassets in Resources */,
 				01C4689D1D5843D8004FB4E4 /* Podfile.lock in Resources */,
 				01C4689C1D5843D8004FB4E4 /* Podfile in Resources */,
-				017309181D5D37090079B366 /* fontawesome-webfont.ttf in Resources */,
 				017308E31D594C030079B366 /* GoogleSignIn.bundle in Resources */,
 				017309101D5A67330079B366 /* GoogleService-Info.plist in Resources */,
 			);
