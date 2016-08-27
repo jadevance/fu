@@ -31,7 +31,7 @@ func getSearchResults(completionHandler:(Array<Array<String>>)->()) {
             
         let resultsData = JSON(response.result.value!)
             
-        for i in 0...15 {
+        for i in 0...14 {
             
             let name = resultsData[i]["name"].string!
             let dogName = resultsData[i]["dog_name"].string!

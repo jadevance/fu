@@ -29,8 +29,11 @@ UINavigationControllerDelegate {
     @IBOutlet weak var photoLibrary: UIButton!
     @IBOutlet weak var saveProfile: UIButton!
     @IBOutlet weak var cancel: UIButton!
+    
+    let imagePicker: UIImagePickerController! = UIImagePickerController()
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         // this is so gross but idk
         self.addPhoto.layer.cornerRadius = 5.0;
         self.addPhoto.layer.borderColor = UIColor.blackColor().CGColor
@@ -68,7 +71,7 @@ UINavigationControllerDelegate {
         dogAgeField.resignFirstResponder()
     }
     
-    @IBAction func onCameraButtonPressed(sender: AnyObject) {
+    @IBAction func onCameraButtonPressed(sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             var imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -90,7 +93,25 @@ UINavigationControllerDelegate {
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         imagePicked.image = image
-        self.dismissViewControllerAnimated(true, completion: nil);
+        self.dismissViewControllerAnimated(true, completion: {});
+    }
+    
+//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+//        print("Got an image")
+//        if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
+//            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
+//            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
+//        }
+//        imagePicker.dismissViewControllerAnimated(true, completion: {
+//            // Anything you want to happen when the user saves an image
+//        })
+//    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        print("User canceled image")
+        dismissViewControllerAnimated(true, completion: {
+            // Anything you want to happen when the user selects cancel
+        })
     }
     
     func checkValidEntry() {
@@ -135,6 +156,8 @@ UINavigationControllerDelegate {
         // compresses and encodes image data into NSData
         
         let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
+        var compressedJPGImage = UIImage(data: imageData!)
+        UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
 
         // make an api call to create new account / save details locally in a singleton
         
