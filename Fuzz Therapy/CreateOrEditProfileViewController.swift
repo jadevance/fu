@@ -46,6 +46,7 @@ UINavigationControllerDelegate {
         self.photoLibrary.layer.borderColor = UIColor.blackColor().CGColor
         self.photoLibrary.layer.borderWidth = 1.0
         self.photoLibrary.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
+        
         self.saveProfile.layer.cornerRadius = 5.0;
         self.saveProfile.tintColor = UIColor.lightGrayColor()
         self.saveProfile.layer.borderColor = UIColor.lightGrayColor().CGColor
@@ -71,7 +72,6 @@ UINavigationControllerDelegate {
         
         if (input1 && input2 && input3 && input4 && input5 && input6) == true {
             // true
-            print("this should be true")
             saveProfile.enabled = true
             self.saveProfile.layer.borderColor = UIColor.blueColor().CGColor
             self.saveProfile.tintColor = UIColor.blueColor()
@@ -87,12 +87,9 @@ UINavigationControllerDelegate {
     
     func checkTextInput(text: String) -> Bool {
         var result = false
-        
         if text != "" {
             result = true
-            print(result)
         }
-        print(result)
         return result
     }
     
@@ -114,7 +111,7 @@ UINavigationControllerDelegate {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-            imagePicker.allowsEditing = false
+            imagePicker.allowsEditing = true
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }
     }

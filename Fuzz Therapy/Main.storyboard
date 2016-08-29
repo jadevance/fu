@@ -245,6 +245,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="onTextFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="F46-Sg-pez"/>
                                     <action selector="onTextFieldEditingChanged:" destination="Jf7-aM-tZT" eventType="editingChanged" id="Nma-DY-deO"/>
                                 </connections>
                             </textField>
@@ -274,6 +275,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="onTextFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="yZG-TZ-T0O"/>
                                     <action selector="onTextFieldEditingChanged:" destination="Jf7-aM-tZT" eventType="editingChanged" id="zOv-je-P0m"/>
                                 </connections>
                             </textField>
@@ -282,6 +284,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="onTextFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="ctZ-rB-lCb"/>
                                     <action selector="onTextFieldEditingChanged:" destination="Jf7-aM-tZT" eventType="editingChanged" id="QPN-W3-cFX"/>
                                 </connections>
                             </textField>
@@ -346,6 +349,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad"/>
                                 <connections>
+                                    <action selector="onTextFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="rBS-pa-YQB"/>
                                     <action selector="onTextFieldEditingChanged:" destination="Jf7-aM-tZT" eventType="editingChanged" id="6I1-ep-7kg"/>
                                 </connections>
                             </textField>

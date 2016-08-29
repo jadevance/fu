@@ -25,12 +25,17 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
         
         toggleAuthUI()
         statusText.text = ""
+        signInButton.hidden = true
+        signOutButton.hidden = true
+        editProfileButton.hidden = true
+        createProfileButton.hidden = true
+        searchButton.hidden = true 
     }
 
     func toggleAuthUI() {
        
         getCurrentUserData(){ myUser in
-            if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name != "placeholder"){
+            if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name == "placeholder"){
                 // Signed in, no Fuzz Therapy account
                 self.signInButton.hidden = true
                 self.signOutButton.hidden = false
@@ -38,7 +43,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
                 self.editProfileButton.hidden = true
                 self.createProfileButton.hidden = false
                 self.searchButton.hidden = true
-            } else if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name == "placeholder") {
+            } else if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name != "placeholder") {
                 // Signed in, has a Fuzz Therapy account
                 self.signInButton.hidden = true
                 self.signOutButton.hidden = false
@@ -55,9 +60,9 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
                 self.signOutButton.hidden = true
                 self.disconnectButton.hidden = true
                 self.statusText.text = "Sign in with Google"
+            }
         }
     }
-}
 
     @IBAction func didTapSignOut(sender: AnyObject) {
         GIDSignIn.sharedInstance().signOut()
