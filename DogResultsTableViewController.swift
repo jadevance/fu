@@ -74,7 +74,7 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
                 dogImage.hnk_setImageFromURL(url)
             }
         }
-
+        
         cell.messageButton.tag = indexPath.row
         cell.messageButton.addTarget(self, action: #selector(DogResultsTableViewController.sendEmailButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         

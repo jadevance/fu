@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "261DE6FD0712C7742ED065A58653C0B39DA39500",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "261DE6FD0712C7742ED065A58653C0B39DA39500" : 0,
+    "42B8B6166721AE55A9AFCAC5F4DF5276CF0E0973" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "96FE0D2E-BE1F-4934-B52E-962CD0E850D8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "261DE6FD0712C7742ED065A58653C0B39DA39500" : "Fuzz%20Therapy\/",
+    "42B8B6166721AE55A9AFCAC5F4DF5276CF0E0973" : "Fuzz%20Therapy\/SwiftValidator\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Fuzz Therapy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Fuzz Therapy.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jadevance\/fuzz-therapy-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "261DE6FD0712C7742ED065A58653C0B39DA39500"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jpotts18\/SwiftValidator.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "42B8B6166721AE55A9AFCAC5F4DF5276CF0E0973"
+    }
+  ]
+}

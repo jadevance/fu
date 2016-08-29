@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014052761D73F50600ACA9F5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014052751D73F50600ACA9F5 /* Alamofire.framework */; };
 		01725BE11D694FF200D26D28 /* DogResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01725BE01D694FF200D26D28 /* DogResultsTableViewController.swift */; };
 		01725BE31D69505300D26D28 /* DogResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01725BE21D69505300D26D28 /* DogResultsTableViewCell.swift */; };
 		01725BE51D6B93B300D26D28 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01725BE41D6B93B300D26D28 /* MessagesViewController.swift */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014052721D73F4AB00ACA9F5 /* SRFormValidator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SRFormValidator.framework; path = "Pods/../build/Debug-iphoneos/SRFormValidator/SRFormValidator.framework"; sourceTree = "<group>"; };
+		014052751D73F50600ACA9F5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		01725BE01D694FF200D26D28 /* DogResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DogResultsTableViewController.swift; path = ../DogResultsTableViewController.swift; sourceTree = "<group>"; };
 		01725BE21D69505300D26D28 /* DogResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogResultsTableViewCell.swift; sourceTree = "<group>"; };
 		01725BE41D6B93B300D26D28 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		01C9A87C1D6852F4002F0839 /* Fuzz Therapy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Fuzz Therapy-Bridging-Header.h"; path = "Supporting Files/Fuzz Therapy-Bridging-Header.h"; sourceTree = "<group>"; };
 		01C9A87D1D68537F002F0839 /* Supporting Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Supporting Files"; sourceTree = "<group>"; };
 		01C9A8831D68F683002F0839 /* SearchResultsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsClass.swift; sourceTree = "<group>"; };
+		01CDC6131D73D257009840F6 /* SwiftValidator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftValidator.framework; path = "../../Library/Developer/Xcode/DerivedData/Fuzz_Therapy-cavxggruqudnaaheenzmtlcidizr/Build/Products/Debug-iphoneos/SwiftValidator/SwiftValidator.framework"; sourceTree = "<group>"; };
 		0F7417957814DE3E4F9D3C6D /* Pods-Fuzz TherapyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fuzz TherapyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fuzz TherapyTests/Pods-Fuzz TherapyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		149729609110B88F55754CC0 /* Pods-Fuzz TherapyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fuzz TherapyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fuzz TherapyTests/Pods-Fuzz TherapyTests.release.xcconfig"; sourceTree = "<group>"; };
 		1C5F6B7C98266AAFE133D8A4 /* Pods_Fuzz_TherapyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fuzz_TherapyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014052761D73F50600ACA9F5 /* Alamofire.framework in Frameworks */,
 				017309081D5A61980079B366 /* MessageUI.framework in Frameworks */,
 				0173090A1D5A61A10079B366 /* CoreMotion.framework in Frameworks */,
 				017309061D5A61870079B366 /* SafariServices.framework in Frameworks */,
@@ -199,6 +204,9 @@
 		56A89413742E03BF69428A77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				014052751D73F50600ACA9F5 /* Alamofire.framework */,
+				014052721D73F4AB00ACA9F5 /* SRFormValidator.framework */,
+				01CDC6131D73D257009840F6 /* SwiftValidator.framework */,
 				4988C91141DD74104B4BE7E3 /* Pods_Fuzz_Therapy.framework */,
 				1C5F6B7C98266AAFE133D8A4 /* Pods_Fuzz_TherapyTests.framework */,
 			);
@@ -585,6 +593,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SRFormValidator",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+				);
 				INFOPLIST_FILE = "Fuzz Therapy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jvance-fuzz-therapy.Fuzz-Therapy";
@@ -604,11 +617,17 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SRFormValidator",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+				);
 				INFOPLIST_FILE = "Fuzz Therapy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jvance-fuzz-therapy.Fuzz-Therapy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Fuzz Therapy/Fuzz Therapy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

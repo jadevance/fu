@@ -10,7 +10,6 @@ target 'Fuzz Therapy' do
   pod 'RealmSwift'
   pod 'Haneke'
 
-
   target 'Fuzz TherapyTests' do
     inherit! :search_paths
     # Pods for testing
