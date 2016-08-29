@@ -16,7 +16,7 @@ import UIKit
 @objc(CreateOrEditViewController)
 
 class CreateOrEditViewController: UIViewController, UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var locationField: UITextField!
@@ -31,9 +31,10 @@ UINavigationControllerDelegate {
     @IBOutlet weak var cancel: UIButton!
     
     let imagePicker: UIImagePickerController! = UIImagePickerController()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // this is so gross but idk
         self.addPhoto.layer.cornerRadius = 5.0;
         self.addPhoto.layer.borderColor = UIColor.blackColor().CGColor
@@ -58,7 +59,6 @@ UINavigationControllerDelegate {
     }
     
     @IBAction func onTextFieldDoneEditing(sender: UITextField) {
-        checkValidEntry()
         sender.resignFirstResponder()
     }
     
@@ -73,7 +73,7 @@ UINavigationControllerDelegate {
     
     @IBAction func onCameraButtonPressed(sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            var imagePicker = UIImagePickerController()
+            let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
             imagePicker.allowsEditing = false
@@ -96,39 +96,8 @@ UINavigationControllerDelegate {
         self.dismissViewControllerAnimated(true, completion: {});
     }
     
-//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-//        print("Got an image")
-//        if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
-//            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
-//            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
-//        }
-//        imagePicker.dismissViewControllerAnimated(true, completion: {
-//            // Anything you want to happen when the user saves an image
-//        })
-//    }
-    
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        print("User canceled image")
-        dismissViewControllerAnimated(true, completion: {
-            // Anything you want to happen when the user selects cancel
-        })
-    }
-    
-    func checkValidEntry() {
-        // Disable the Save button if the text field is empty.
-        let text1 = nameField.text ?? ""
-        let text2 = locationField.text ?? ""
-        let text3 = availabilityField.text ?? ""
-        let text4 = dogNameField.text ?? ""
-        let text5 = dogBreedField.text ?? ""
-        let text6 = dogAgeField.text ?? ""
-        
-        saveProfile.enabled = !text1.isEmpty
-        saveProfile.enabled = !text2.isEmpty
-        saveProfile.enabled = !text3.isEmpty
-        saveProfile.enabled = !text4.isEmpty
-        saveProfile.enabled = !text5.isEmpty
-        saveProfile.enabled = !text6.isEmpty
+        dismissViewControllerAnimated(true, completion: {})
     }
     
     @IBAction func onCancelButtonPressed(sender: AnyObject) {
@@ -156,7 +125,7 @@ UINavigationControllerDelegate {
         // compresses and encodes image data into NSData
         
         let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
-        var compressedJPGImage = UIImage(data: imageData!)
+        let compressedJPGImage = UIImage(data: imageData!)
         UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
 
         // make an api call to create new account / save details locally in a singleton

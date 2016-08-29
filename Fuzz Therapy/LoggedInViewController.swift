@@ -54,7 +54,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
                 self.signInButton.hidden = false
                 self.signOutButton.hidden = true
                 self.disconnectButton.hidden = true
-                self.statusText.text = "Sign in with Google\n"
+                self.statusText.text = "Sign in with Google"
         }
     }
 }

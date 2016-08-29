@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             NSNotificationCenter.defaultCenter().postNotificationName(
                 "ToggleAuthUINotification",
                 object: nil,
-                userInfo: ["statusText": "Welcome \n\(fullName)!"])
+                userInfo: ["statusText": "Welcome \(fullName)!"])
         } else {
             print("\(error.localizedDescription)")
             // [START_EXCLUDE silent]
