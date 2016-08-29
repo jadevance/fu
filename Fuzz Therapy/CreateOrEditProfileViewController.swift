@@ -16,7 +16,7 @@ import UIKit
 @objc(CreateOrEditViewController)
 
 class CreateOrEditViewController: UIViewController, UIImagePickerControllerDelegate,
-UINavigationControllerDelegate, UITextFieldDelegate {
+UINavigationControllerDelegate {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var locationField: UITextField!
@@ -34,20 +34,24 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveProfile.enabled = false
         
         // this is so gross but idk
         self.addPhoto.layer.cornerRadius = 5.0;
         self.addPhoto.layer.borderColor = UIColor.blackColor().CGColor
         self.addPhoto.layer.borderWidth = 1.0
         self.addPhoto.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
+        
         self.photoLibrary.layer.cornerRadius = 5.0;
         self.photoLibrary.layer.borderColor = UIColor.blackColor().CGColor
         self.photoLibrary.layer.borderWidth = 1.0
         self.photoLibrary.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
         self.saveProfile.layer.cornerRadius = 5.0;
-        self.saveProfile.layer.borderColor = UIColor.blackColor().CGColor
+        self.saveProfile.tintColor = UIColor.lightGrayColor()
+        self.saveProfile.layer.borderColor = UIColor.lightGrayColor().CGColor
         self.saveProfile.layer.borderWidth = 1.0
         self.saveProfile.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
+        
         self.cancel.layer.cornerRadius = 5.0;
         self.cancel.layer.borderColor = UIColor.blackColor().CGColor
         self.cancel.layer.borderWidth = 1.0
@@ -56,6 +60,40 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    @IBAction func onTextFieldEditingChanged(sender: AnyObject) {
+        let input1 = checkTextInput(nameField.text!)
+        let input2 = checkTextInput(locationField.text!)
+        let input3 = checkTextInput(availabilityField.text!)
+        let input4 = checkTextInput(dogNameField.text!)
+        let input5 = checkTextInput(dogBreedField.text!)
+        let input6 = checkTextInput(dogAgeField.text!)
+        
+        if (input1 && input2 && input3 && input4 && input5 && input6) == true {
+            // true
+            print("this should be true")
+            saveProfile.enabled = true
+            self.saveProfile.layer.borderColor = UIColor.blueColor().CGColor
+            self.saveProfile.tintColor = UIColor.blueColor()
+            self.saveProfile.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        } else  {
+            // false
+            saveProfile.enabled = false
+            self.saveProfile.tintColor = UIColor.lightGrayColor()
+            self.saveProfile.layer.borderColor = UIColor.lightGrayColor().CGColor
+            self.saveProfile.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+        }
+    }
+    
+    func checkTextInput(text: String) -> Bool {
+        var result = false
+        
+        if text != "" {
+            result = true
+            print(result)
+        }
+        print(result)
+        return result
     }
     
     @IBAction func onTextFieldDoneEditing(sender: UITextField) {

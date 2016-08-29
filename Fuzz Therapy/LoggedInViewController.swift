@@ -62,13 +62,13 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     @IBAction func didTapSignOut(sender: AnyObject) {
         GIDSignIn.sharedInstance().signOut()
         toggleAuthUI()
-}
+    }
 
-  deinit {
-    NSNotificationCenter.defaultCenter().removeObserver(self,
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self,
         name: "ToggleAuthUINotification",
         object: nil)
-  }
+    }
     
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
 

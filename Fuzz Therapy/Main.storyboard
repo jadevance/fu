@@ -212,6 +212,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <connections>
                                     <action selector="onTextFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="JpP-pk-RRr"/>
+                                    <action selector="onTextFieldEditingChanged:" destination="Jf7-aM-tZT" eventType="editingChanged" id="79G-Ar-LUi"/>
                                 </connections>
                             </textField>
                             <button contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iM-sh-JcH">
@@ -244,7 +245,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="textFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="xy5-dF-GgY"/>
+                                    <action selector="onTextFieldEditingChanged:" destination="Jf7-aM-tZT" eventType="editingChanged" id="Nma-DY-deO"/>
                                 </connections>
                             </textField>
                             <navigationBar userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Io-u3-lpo">
@@ -273,7 +274,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="textFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="H3c-55-RNM"/>
+                                    <action selector="onTextFieldEditingChanged:" destination="Jf7-aM-tZT" eventType="editingChanged" id="zOv-je-P0m"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Masterful Mutt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IrF-o5-XTF">
@@ -281,7 +282,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="textFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="xSc-S6-cyD"/>
+                                    <action selector="onTextFieldEditingChanged:" destination="Jf7-aM-tZT" eventType="editingChanged" id="QPN-W3-cFX"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMn-od-GXs">
@@ -303,6 +304,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <connections>
                                     <action selector="onTextFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="RQF-mI-hGX"/>
+                                    <action selector="onTextFieldEditingChanged:" destination="Jf7-aM-tZT" eventType="editingChanged" id="8Pa-Ui-qYP"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5j7-pa-EVh">
@@ -332,7 +334,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save Profile">
-                                    <color key="titleColor" red="0.1199471352" green="0.15827770399999999" blue="0.1667416558" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="onSaveButtonPressed:" destination="Jf7-aM-tZT" eventType="touchDown" id="EVY-xi-xgI"/>
@@ -344,7 +346,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad"/>
                                 <connections>
-                                    <action selector="textFieldDoneEditing:" destination="Jf7-aM-tZT" eventType="editingDidEndOnExit" id="Wxx-hT-TjJ"/>
+                                    <action selector="onTextFieldEditingChanged:" destination="Jf7-aM-tZT" eventType="editingChanged" id="6I1-ep-7kg"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -601,8 +603,8 @@
         <image name="jadedog_circular" width="125" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="00X-yf-QOM"/>
+        <segue reference="93G-XK-fN8"/>
         <segue reference="hzz-Js-lcA"/>
-        <segue reference="hx4-Hc-utr"/>
+        <segue reference="00X-yf-QOM"/>
     </inferredMetricsTieBreakers>
 </document>
