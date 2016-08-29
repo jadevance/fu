@@ -73,15 +73,17 @@ UINavigationControllerDelegate {
         if (input1 && input2 && input3 && input4 && input5 && input6) == true {
             // true
             saveProfile.enabled = true
-            self.saveProfile.layer.borderColor = UIColor.blueColor().CGColor
-            self.saveProfile.tintColor = UIColor.blueColor()
-            self.saveProfile.setTitleColor(UIColor.blueColor(), forState: .Normal)
+            self.saveProfile.layer.borderColor = UIColor(red: 0, green: 0.7373, blue: 0.0118, alpha: 1.0).CGColor
+            self.saveProfile.tintColor = UIColor(red: 0, green: 0.7373, blue: 0.0118, alpha: 1.0)
+            self.saveProfile.setTitleColor(UIColor(red: 0, green: 0.7373, blue: 0.0118, alpha: 1.0), forState: .Normal)
+            self.saveProfile.backgroundColor = UIColor(red: 0.7333, green: 0.9765, blue: 0.7373, alpha: 1.0)s
         } else  {
             // false
             saveProfile.enabled = false
             self.saveProfile.tintColor = UIColor.lightGrayColor()
             self.saveProfile.layer.borderColor = UIColor.lightGrayColor().CGColor
             self.saveProfile.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+            self.saveProfile.backgroundColor = UIColor(red: 0 , green: 0, blue: 0, alpha: 0)
         }
     }
     
