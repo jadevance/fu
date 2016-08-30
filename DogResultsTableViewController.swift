@@ -70,7 +70,7 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
         
         if let dogImage = cell.dogImage as? UIImageView {
             if let url = NSURL(string: result.dogPicture!) {
-                dogImage.contentMode = UIViewContentMode.ScaleAspectFit
+                dogImage.contentMode = UIViewContentMode.ScaleAspectFill
                 dogImage.hnk_setImageFromURL(url)
             }
         }
@@ -103,12 +103,17 @@ class DogResultsTableViewController: UITableViewController, MFMailComposeViewCon
     }
     
     func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-        sendMailErrorAlert.show()
+        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            (_)in
+        })
+        
+        sendMailErrorAlert.addAction(OKAction)
+        self.presentViewController(sendMailErrorAlert, animated: true, completion: nil)
     }
     
     // MARK: MFMailComposeViewControllerDelegate Method
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 

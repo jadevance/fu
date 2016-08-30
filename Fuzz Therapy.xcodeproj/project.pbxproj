@@ -38,7 +38,6 @@
 		01C9A8841D68F684002F0839 /* SearchResultsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9A8831D68F683002F0839 /* SearchResultsClass.swift */; };
 		58D325DC6C0797EA99B8C76B /* Pods_Fuzz_TherapyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5F6B7C98266AAFE133D8A4 /* Pods_Fuzz_TherapyTests.framework */; };
 		9EAD50AB34D779E0A23B0AE2 /* Pods_Fuzz_Therapy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD4EBBF3CB9E5118425E455 /* Pods_Fuzz_Therapy.framework */; };
-		A0DA8A643D6586A800076E2D /* Pods_Fuzz_Therapy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4988C91141DD74104B4BE7E3 /* Pods_Fuzz_Therapy.framework */; };
 		C3AD7E0FB537D731009F7573 /* Pods_Fuzz_TherapyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C0F97922918A5B9E2A7AAC /* Pods_Fuzz_TherapyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,7 +115,6 @@
 				017308E61D594D780079B366 /* SystemConfiguration.framework in Frameworks */,
 				9EAD50AB34D779E0A23B0AE2 /* Pods_Fuzz_Therapy.framework in Frameworks */,
 				017308E41D594C030079B366 /* GoogleSignIn.framework in Frameworks */,
-				A0DA8A643D6586A800076E2D /* Pods_Fuzz_Therapy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
