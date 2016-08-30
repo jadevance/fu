@@ -1,4 +1,4 @@
-# Fuzz Therapy ![](http://i.imgur.com/t0uI7tf.png =100x100)
+# Fuzz Therapy ![](https://github.com/jadevance/fuzz-therapy-iOS/blob/master/Fuzz%20Therapy/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png?raw=true)
 
 This repository contains the iOS Swift code for my capstone project, Fuzz Therapy. It is an exploration in learning Swift 2.2 and backed by a custom Rails [API](https://github.com/jadevance/fuzz-therapy).
 
