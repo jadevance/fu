@@ -76,8 +76,8 @@ UINavigationControllerDelegate {
             self.saveProfile.layer.borderColor = UIColor(red: 0, green: 0.7373, blue: 0.0118, alpha: 1.0).CGColor
             self.saveProfile.tintColor = UIColor(red: 0, green: 0.7373, blue: 0.0118, alpha: 1.0)
             self.saveProfile.setTitleColor(UIColor(red: 0, green: 0.7373, blue: 0.0118, alpha: 1.0), forState: .Normal)
-            self.saveProfile.backgroundColor = UIColor(red: 0.7333, green: 0.9765, blue: 0.7373, alpha: 1.0)s
-        } else  {
+            self.saveProfile.backgroundColor = UIColor(red: 0.7333, green: 0.9765, blue: 0.7373, alpha: 1.0)
+        } else {
             // false
             saveProfile.enabled = false
             self.saveProfile.tintColor = UIColor.lightGrayColor()
@@ -143,19 +143,16 @@ UINavigationControllerDelegate {
             (_)in
             self.performSegueWithIdentifier("unwindToMenu", sender: self)
         })
-        
         alert.addAction(OKAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
     @IBAction func onSaveButtonPressed(sender: AnyObject) {
-        
         let alert = UIAlertController(title: "Success!", message: "Profile Saved!!", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
             (_)in
             self.performSegueWithIdentifier("ShowResults", sender: self)
         })
-        
         alert.addAction(OKAction)
         self.presentViewController(alert, animated: true, completion: nil)
         

@@ -28,35 +28,40 @@ func getSearchResults(completionHandler:(Array<Array<String>>)->()) {
     
     Alamofire.request(.POST, "https://www.fuzztherapy.com/api/search", parameters: parameters)
         .responseJSON { response in
+        if JSON(response.result.value!)[0] != "No Matches" {
+            let resultsData = JSON(response.result.value!)
             
-        let resultsData = JSON(response.result.value!)
+            for i in 0...14 {
             
-        for i in 0...14 {
-            
-            let name = resultsData[i]["name"].string!
-            let dogName = resultsData[i]["dog_name"].string!
-            let location = resultsData[i]["location"].string!
-            let availability = resultsData[i]["availability"].string!
-            let dogPicture = resultsData[i]["dog_picture_url"].string!
-            let email = resultsData[i]["email"].string!
+                let name = resultsData[i]["name"].string!
+                let dogName = resultsData[i]["dog_name"].string!
+                let location = resultsData[i]["location"].string!
+                let availability = resultsData[i]["availability"].string!
+                let dogPicture = resultsData[i]["dog_picture_url"].string!
+                let email = resultsData[i]["email"].string!
                 
-            resultsArray.append([name, dogName, location, availability, dogPicture, email])
+                resultsArray.append([name, dogName, location, availability, dogPicture, email])
             
-            // dogUser.New
-            let dogUser = SearchResults()
+                // dogUser.New
+                let dogUser = SearchResults()
                 
-            dogUser.name = name
-            dogUser.dogName = dogName
-            dogUser.location = location
-            dogUser.availability = availability
-            dogUser.dogPicture = dogPicture
-            dogUser.email = email
+                dogUser.name = name
+                dogUser.dogName = dogName
+                dogUser.location = location
+                dogUser.availability = availability
+                dogUser.dogPicture = dogPicture
+                dogUser.email = email
             
-            // dogUser.save
-            try! realm.write {
-                realm.add(dogUser)
+                // dogUser.save
+                try! realm.write {
+                    realm.add(dogUser)
+                }
+                completionHandler(resultsArray)
             }
-            completionHandler(resultsArray)
+        } else {
+                let noMatches = "No Matches"
+                resultsArray.append([noMatches])
+                completionHandler(resultsArray)
+            }
         }
     }
-}

@@ -51,6 +51,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="jadedog" width="500" height="500"/>
+        <image name="jadedog" width="512" height="512"/>
     </resources>
 </document>

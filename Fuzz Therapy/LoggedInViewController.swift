@@ -35,7 +35,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
     func toggleAuthUI() {
        
         getCurrentUserData(){ myUser in
-            if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name == "placeholder"){
+            if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name != "placeholder"){
                 // Signed in, no Fuzz Therapy account
                 self.signInButton.hidden = true
                 self.signOutButton.hidden = false
@@ -43,7 +43,7 @@ class LoggedInViewController: UIViewController, GIDSignInUIDelegate {
                 self.editProfileButton.hidden = true
                 self.createProfileButton.hidden = false
                 self.searchButton.hidden = true
-            } else if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name != "placeholder") {
+            } else if (GIDSignIn.sharedInstance().hasAuthInKeychain() && CurrentUser.sharedInstance.user?.name == "placeholder") {
                 // Signed in, has a Fuzz Therapy account
                 self.signInButton.hidden = true
                 self.signOutButton.hidden = false
