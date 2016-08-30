@@ -1,4 +1,4 @@
-# Fuzz Therapy [Imgur](http://i.imgur.com/t0uI7tf.png)
+# Fuzz Therapy ![](http://i.imgur.com/t0uI7tf.png)
 
 This repository contains the iOS Swift code for my capstone project, Fuzz Therapy. It is an exploration in learning Swift 2.2 and backed by a custom Rails [API](https://github.com/jadevance/fuzz-therapy).
 
