@@ -1,4 +1,4 @@
-# Fuzz Therapy ![](http://i.imgur.com/t0uI7tf.png =100x)
+# Fuzz Therapy ![](http://i.imgur.com/t0uI7tf.png =100x100)
 
 This repository contains the iOS Swift code for my capstone project, Fuzz Therapy. It is an exploration in learning Swift 2.2 and backed by a custom Rails [API](https://github.com/jadevance/fuzz-therapy).
 
@@ -10,10 +10,20 @@ This repository contains the iOS Swift code for my capstone project, Fuzz Therap
 + [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
 + [Oauth2](https://en.wikipedia.org/wiki/OAuth)
 
-## Product
+## Getting Started
 
-## Market Research
+1. Download XCODE 7.3 or higher
+2. `git clone git@github.com:jadevance/fuzz-therapy-iOS.git`
+3. `cd fuzz-therapy-iOS`
+4. `pod install` (requires [CocoaPods](https://cocoapods.org))
+5. Open `Fuzz Therapy.xcworkspace` in Xcode
+6. probably have to convert Swift since 3.0 is coming out soon
 
-## User Personas
+## Important Caveats
 
-## Interesting Insights / Challenges 
+1. Image data is saved as a JPEG, compressed and sent to a backend API running Rails 5 and the Paperclip gem. Changing the file conversion type is fine, but will require reconfiguration on both the app and API. 
+2. This app assumes access to a Google account for oauth2 login.
+
+## Contribution
+
+Please feel free to contribute to this project by submitting a pull request or opening up an issue. This is my final project for ADA Developers Academy Cohort 5 in Seattle, WA.
